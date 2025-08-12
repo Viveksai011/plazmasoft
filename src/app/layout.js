@@ -5,9 +5,9 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Sathkrutha Tech Solutions - Innovation in Technology",
+  title: "PlazmaSoft IT Consulting and Services - Empowering Businesses with Innovative Technology",
   description:
-    "Leading technology solutions provider specializing in CRM, CPQ, CLM, AI, and Cloud services. Transform your business with our cutting-edge solutions.",
+    "PlazmaSoft is a leading IT consulting and services firm offering cutting-edge solutions in software development, cloud computing, AI, and digital transformation to help businesses achieve operational excellence and drive growth.",
 };
 
 export default function RootLayout({ children }) {
