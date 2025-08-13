@@ -61,7 +61,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      {/* <Circlecurve className="absolute right-0 bottom-0 z-[-1] opacity-30 lg:opacity-100" /> */}
       <Inversecirclecurve className="absolute right-0 bottom-0 z-[-1] opacity-30 lg:opacity-100 transform scale-x-100 rotate-180" />
       <Circlecurve className="absolute left-0 bottom-0 z-[-1] opacity-30 lg:opacity-100 transform scale-x-100 rotate-180" />
     </footer>

@@ -244,7 +244,6 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
           <Link
             href="/"
             className="flex items-center text-gray-700 hover:text-black space-x-2 h-28 w-40 relative"
@@ -252,7 +251,6 @@ const Header = () => {
             PlazmeSoft
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             <NavigationMenu>
               <NavigationMenuList>
@@ -305,14 +303,12 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
           <div className="hidden lg:block">
             <Button className="bg-customBg hover:bg-customBg/80 text-white px-6 py-2 rounded-full transition-all duration-200">
               Contact Us
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -333,7 +329,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         <div className={`lg:hidden ${isMobileMenuOpen ? "block" : "hidden"}`}>
           <div className="py-4 space-y-4 bg-white/95 backdrop-blur-md rounded-lg mt-2">
             {navItems.map((item) => (

@@ -27,7 +27,6 @@ const Miniservices = () => {
                   {category.description}
                 </p>
                 <div className="w-[100px] h-12 bg-[#F0FFF1] rounded-lg hover:animate-tada flex items-center justify-center">
-                  {/* Directly rendering the icon component here */}
                   {category.icon}
                 </div>
               </div>

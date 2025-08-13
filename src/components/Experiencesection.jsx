@@ -30,7 +30,6 @@ export function ExperienceSection() {
               </div>
             </div>
 
-            {/* Decorative elements - hidden on very small screens */}
             <div className="hidden sm:block absolute -top-4 -right-4 w-6 h-6 lg:w-8 lg:h-8 bg-secondarycustomBg rounded-full opacity-80"></div>
             <div className="hidden sm:block absolute -bottom-6 -left-6 w-8 h-8 lg:w-12 lg:h-12 bg-customBg rounded-full opacity-60"></div>
             <div className="hidden sm:block absolute top-1/4 -left-8 w-4 h-4 lg:w-6 lg:h-6 bg-green-400 rounded-full opacity-70"></div>
