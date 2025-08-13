@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 // import { ModalDemo } from '@/components/ModalDemo';
+import { navItems, Subnav, navigationData } from "@/utils/Headerdata";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -26,215 +27,8 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    { name: "Industry", href: "#industry" },
-    { name: "Services", href: "#services" },
-    { name: "Products", href: "#products" },
-    { name: "Popcorn Apps", href: "#apps" },
-    { name: "About Us", href: "#about" },
-  ];
+;
 
-  const Subnav = [
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Tech Blog", href: "#blog" },
-  ]
-
-  const navigationData = {
-    Industry: [
-      {
-        title: "FMS",
-        href: "#fms",
-        description: "Facility Management Services for streamlined operations",
-      },
-      {
-        title: "Retail",
-        href: "#retail",
-        description: "Retail management systems and e-commerce solutions",
-      },
-      {
-        title: "Software",
-        href: "#software",
-        description: "Custom software development and integration",
-      },
-      {
-        title: "Logistics",
-        href: "#logistics",
-        description: "Supply chain and logistics technology",
-      },
-      {
-        title: "Education",
-        href: "#education",
-        description: "EdTech solutions for schools and universities",
-      },
-      {
-        title: "Insurance",
-        href: "#insurance",
-        description: "Insurance technology for better risk management",
-      },
-      {
-        title: "Real Estate",
-        href: "#real-estate",
-        description: "Real estate management and automation solutions",
-      },
-      {
-        title: "E-Commerce",
-        href: "#e-commerce",
-        description: "End-to-end e-commerce solutions for businesses",
-      },
-      {
-        title: "Manufacturing",
-        href: "#manufacturing",
-        description: "Industrial automation and IoT solutions",
-      },
-    ],
-
-    Services: [
-      {
-        title: "ES",
-        href: "#es",
-        description: "Enterprise Solutions for large-scale operations",
-      },
-      {
-        title: "CLM",
-        href: "#clm",
-        description: "Contract Lifecycle Management for improved efficiency",
-      },
-      {
-        title: "CRM",
-        href: "#crm",
-        description:
-          "Customer Relationship Management to enhance customer interactions",
-      },
-      {
-        title: "CPQ",
-        href: "#cpq",
-        description: "Configure, Price, Quote automation for faster quoting",
-      },
-      {
-        title: "AI Services",
-        href: "#ai-services",
-        description: "AI-powered services for smarter decision making",
-      },
-      {
-        title: "Sales Cloud",
-        href: "#sales-cloud",
-        description: "Cloud-based sales management platform",
-      },
-      {
-        title: "Service Cloud",
-        href: "#service-cloud",
-        description: "Cloud solutions for customer service and support",
-      },
-      {
-        title: "Managed Services",
-        href: "#managed-services",
-        description: "End-to-end managed IT services",
-      },
-      {
-        title: "Annual Maintenance System",
-        href: "#ams",
-        description: "Comprehensive system maintenance and support",
-      },
-    ],
-    Products: [
-      {
-        title: "C-DART",
-        href: "#cdart",
-        description: "C-DART platform for digital asset management",
-      },
-      {
-        title: "Virtual Trion",
-        href: "#virtual-trion",
-        description: "Virtual reality-based solution for immersive experiences",
-      },
-      {
-        title: "Theft Prevention",
-        href: "#theft-prevention",
-        description: "Smart systems to prevent theft and security breaches",
-      },
-      {
-        title: "Digital Marketing",
-        href: "#digital-marketing",
-        description: "End-to-end digital marketing solutions",
-      },
-      {
-        title: "Inventory Management System",
-        href: "#inventory-management",
-        description: "Efficient inventory tracking and management platform",
-      },
-      {
-        title: "Smart Inventory",
-        href: "#smart-inventory",
-        description:
-          "AI-driven inventory management for optimized stock levels",
-      },
-      {
-        title: "SETA",
-        href: "#seta",
-        description:
-          "Smart Enterprise Technology Application for efficient operations",
-      },
-      {
-        title: "Biriyani Hub",
-        href: "#biriyani-hub",
-        description: "Online platform for biriyani lovers and restaurants",
-      },
-      {
-        title: "Doctor's Side Kick",
-        href: "#doctors-side-kick",
-        description: "Digital assistant for doctors to improve patient care",
-      },
-      {
-        title: "AI Lab",
-        href: "#ai-lab",
-        description: "AI-powered solutions to optimize business operations",
-      },
-      {
-        title: "Gully Cricket",
-        href: "#gully-cricket",
-        description: "Cricket gaming platform for fun and entertainment",
-      },
-    ],
-    "Popcorn Apps": [
-      {
-        title: "Quick Deploy",
-        href: "#quick-deploy",
-        description: "Rapid application deployment tools",
-      },
-      {
-        title: "Micro Services",
-        href: "#micro-services",
-        description: "Lightweight service components",
-      },
-      {
-        title: "API Gateway",
-        href: "#api-gateway",
-        description: "Centralized API management",
-      },
-      {
-        title: "DevOps Tools",
-        href: "#devops",
-        description: "Development and operations automation",
-      },
-    ],
-    "About Us": [
-      {
-        title: "Our Team",
-        href: "#our-team",
-        description: "Meet our talented team of experts",
-      },
-      {
-        title: "Overview",
-        href: "#overview",
-        description: "An overview of our company, mission, and values",
-      },
-      {
-        title: "Our Clients",
-        href: "#our-clients",
-        description: "Learn about the clients we’ve worked with",
-      },
-    ],
-  };
 
   return (
     <header
@@ -256,7 +50,7 @@ const Header = () => {
               <NavigationMenuList>
                 {Object.entries(navigationData).map(([key, items]) => (
                   <NavigationMenuItem key={key}>
-                    <NavigationMenuTrigger 
+                    <NavigationMenuTrigger
                       className={`bg-transparent hover:bg-transparent data-[state=open]:hover:bg-transparent  ${
                         isScrolled
                           ? "text-gray-700"
@@ -266,7 +60,7 @@ const Header = () => {
                       {key}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                      <ul className="grid w-[400px] gap-3 p-4 md:w-[600px] md:grid-cols-3 lg:w-[850px]">
                         {items.map((item) => (
                           <li key={item.title}>
                             <NavigationMenuLink asChild>
@@ -294,8 +88,10 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium ${
-                  isScrolled ? "text-gray-900" : "text-gray-700 hover:text-black"
+                className={`text-sm font-medium whitespace-nowrap ${
+                  isScrolled
+                    ? "text-gray-900"
+                    : "text-gray-700 hover:text-black"
                 }  transition-colors`}
               >
                 {item.name}
