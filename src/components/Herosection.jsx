@@ -30,7 +30,6 @@ const Herosection = () => {
       </div>
       <Circlecurve className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100" />
       <Inversecirclecurve className="absolute -left-0  top-0 z-[-1] opacity-30 lg:opacity-100" />
-      {/* <Linewind className="absolute bottom-0 left-0 right-10 z-[-1] opacity-30 lg:opacity-100" /> */}
     </section>
   );
 };

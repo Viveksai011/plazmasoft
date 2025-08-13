@@ -6,12 +6,12 @@ import { Carddata } from "@/utils/Carddata";
 
 const Miniservices = () => {
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto">
+    <section className="py-16 px-4 max-w-[92rem] mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {Carddata.map((category) => (
           <Card
             key={category.id}
-            className="bg-white p-8 relative rounded-lg shadow-sm border-0 hover:scale-110 transition-transform duration-300"
+            className="bg-white p-8 relative rounded-lg shadow-sm border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
           >
             <CardContent className="p-0">
               <span className="text-gray-400 text-sm absolute top-[-15px] right-[-19px] font-medium h-[80px] flex items-center justify-center w-[80px] bg-[#f4f6f8] rounded-full">
@@ -27,7 +27,6 @@ const Miniservices = () => {
                   {category.description}
                 </p>
                 <div className="w-[100px] h-12 bg-[#F0FFF1] rounded-lg hover:animate-tada flex items-center justify-center">
-                  {/* Directly rendering the icon component here */}
                   {category.icon}
                 </div>
               </div>
