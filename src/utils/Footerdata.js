@@ -14,6 +14,13 @@
     { text: "Google Ads", link: "#" },
   ];
 
+    export const locationItems = [
+    { text: "England", link: "#" },
+    { text: "+91 987656789", link: "#" },
+    { text: "Marketing@gmail.com", link: "#" },
+    { text: "Google Ads", link: "#" },
+  ];
+
   export const resourcesItems = [
     { text: "Online Guides", link: "#" },
     { text: "Conference Notes", link: "#" },

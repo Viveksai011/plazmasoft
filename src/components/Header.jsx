@@ -33,11 +33,11 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300  ${
-        isScrolled ? "bg-[#f2f2f2]" : "bg-transparent text-black"
+        isScrolled ? "bg-white/30 backdrop-blur-sm " : "bg-transparent text-black"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-16 ">
           <Link
             href="/"
             className="flex items-center text-gray-700 hover:text-black space-x-2 h-28 w-40 relative"
@@ -101,7 +101,7 @@ const Header = () => {
 
           <div className="hidden lg:block">
             <Button className="bg-customBg hover:bg-customBg/80 text-white px-6 py-2 rounded-full transition-all duration-200">
-              Contact Us
+              Book Consultation
             </Button>
           </div>
 

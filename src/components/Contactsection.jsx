@@ -7,7 +7,7 @@ import Contactform from "@/components/Contactform";
 
 const Contactsection = () => {
   return (
-    <section className="relative z-10 w-full overflow-hidden mx-auto p-5 lg:px-[150px] py-20 lg:py-[120px] ">
+    <section className="relative z-10 max-w-[100rem] w-full overflow-hidden mx-auto p-5 lg:px-[150px] py-20 lg:py-[120px] ">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap lg:justify-between">
           <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
@@ -68,9 +68,9 @@ const Contactsection = () => {
             </div>
           </div>
 
-          <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-            <Card className="relative rounded-lg bg-white p-8 shadow-lg sm:p-12 ">
-              <CardContent>
+          <div className="w-full px-4 lg:w-1/2 xl:w-4/12">
+            <Card className="relative rounded-lg bg-white p-8 shadow-lg">
+              <CardContent className="p-0">
                 <Contactform />
               </CardContent>
 

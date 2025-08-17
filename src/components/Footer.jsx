@@ -5,8 +5,8 @@ import {
   aboutUsItems,
   servicesItems,
   resourcesItems,
-  helpfulLinksItems,
   socialMediaLinks,
+  locationItems
 } from "@/utils/Footerdata";
 import Inversecirclecurve from "@/Icons/Inversecirclecurve";
 
@@ -30,9 +30,13 @@ const Footer = () => {
             <ListItem items={resourcesItems} />
           </div>
 
-          <div className="text-center sm:text-left">
+          {/* <div className="text-center sm:text-left">
             <p className="text-lg font-medium text-gray-900">Helpful Links</p>
             <ListItem items={helpfulLinksItems} />
+          </div> */}
+          <div className="text-center sm:text-left">
+            <p className="text-lg font-medium text-gray-900">Location Section</p>
+            <ListItem items={locationItems} />
           </div>
         </div>
 
