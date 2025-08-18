@@ -115,7 +115,7 @@ export function Servicesection() {
         <h2 className="font-serif font-bold text-3xl lg:text-5xl text-gray-900">
           Our Services
         </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
           Comprehensive IT solutions designed to accelerate your business growth
           and digital transformation journey.
         </p>

@@ -30,7 +30,7 @@ export default function FaqSection() {
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-purple-500 font-medium text-sm tracking-wider uppercase mb-6">
+            <p className="text-customBg font-medium text-sm tracking-wider uppercase mb-6">
               FREQUENTLY ASK QUESTION
             </p>
             <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-8">

@@ -79,7 +79,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Footer Bottom */}
           <div className="mt-16 sm:flex sm:items-center sm:justify-between">
             <p className="text-xl">{title}</p>
             <p className="mt-4 text-center text-sm text-gray-500 sm:mt-0 sm:text-right">
@@ -89,7 +88,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Decorative Icons */}
       <Inversecirclecurve className="absolute right-0 bottom-0 z-[-1] opacity-30 lg:opacity-100 transform scale-x-100 rotate-180" />
       <Circlecurve className="absolute left-0 bottom-0 z-[-1] opacity-30 lg:opacity-100 transform scale-x-100 rotate-180" />
     </footer>
