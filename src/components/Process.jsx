@@ -50,7 +50,7 @@ export function ProcessSection() {
   ];
 
   return (
-    <section className="pb-[100px] relative overflow-hidden">
+    <section className="py-12  relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
           <div className="inline-block">
@@ -58,13 +58,13 @@ export function ProcessSection() {
               Our Process
             </h2>
           </div>
-          <p className="text-xl text-gray-700 max-w-4xl mx-auto font-medium">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
             Work with groundbreakers who create top-notch mobile and web apps on
             time & on budget
           </p>
         </div>
 
-        <div className="hidden lg:block relative">
+        <div className="hidden lg:block relative mb-[80px]">
           <svg
             className="absolute inset-0 w-full h-full z-0"
             viewBox="0 0 1200 400"
@@ -90,7 +90,7 @@ export function ProcessSection() {
             </defs>
           </svg>
 
-          <div className="relative z-10 flex justify-between items-start pt-8">
+          <div className="relative z-10 flex justify-between items-start">
             {processSteps.map((step, index) => {
               const IconComponent = step.icon;
               const positions = [
