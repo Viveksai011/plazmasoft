@@ -14,6 +14,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { title } from "@/utils/Comapanytitle";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +43,7 @@ const Header = () => {
             href="/"
             className="flex items-center text-gray-700 hover:text-black space-x-2 h-28 w-40 relative"
           >
-            PlazmeSoft
+            {title}
           </Link>
 
           <nav className="hidden lg:flex items-center space-x-8">

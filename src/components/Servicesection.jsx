@@ -23,34 +23,34 @@ import React from "react";
 import Photoshopicons from "@/Icons/Photoshopicons";
 
 const featureIcons = {
-  "React Native": <Reacticon className="w-2 h-2" />,
-  Flutter: <Flutter className="w-6 h-6 " />,
-  "Android App": <Androidicon className="w-2 h-2" />,
-  "iOS App": <Appstore className="w-6 h-6" />,
+  "React Native": <Reacticon className="w-2 h-2" color="#1e8545" />,
+  Flutter: <Flutter className="w-6 h-6 " color="#1e8545" />,
+  "Android App": <Androidicon className="w-2 h-2" color="#1e8545" />,
+  "iOS App": <Appstore className="w-6 h-6" color="#1e8545" />,
 
-  Laravel: <CodeIcon className="w-6 h-6 text-purple-600" />,
-  "Node.js": <NodeIcons className="w-6 h-6 " />,
-  "Angular.js": <Angular className="w-6 h-6 " />,
-  "React.js": <Reacttwo className="w-6 h-6 " />,
+  Laravel: <CodeIcon className="w-6 h-6 text-green-700" />,
+  "Node.js": <NodeIcons className="w-6 h-6 " color="#1e8545" />,
+  "Angular.js": <Angular className="w-6 h-6 " color="#1e8545" />,
+  "React.js": <Reacttwo className="w-6 h-6 " color="#1e8545" />,
 
-  Figma: <Figmaicons className="w-6 h-6 " />,
-  "Adobe XD": <Adobexdicons className="w-6 h-6 " />,
-  Sketch: <DesignIcon className="w-6 h-6 text-purple-600" />,
-  Photoshop: <Photoshopicons className="w-6 h-6 " />,
+  Figma: <Figmaicons className="w-6 h-6 " color="#1e8545" />,
+  "Adobe XD": <Adobexdicons className="w-6 h-6 " color="#1e8545" />,
+  Sketch: <DesignIcon className="w-6 h-6 text-green-700" />,
+  Photoshop: <Photoshopicons className="w-6 h-6 " color="#1e8545" />,
 
-  "React Native App Maintenance": <Reacticon className="w-2 h-2" />,
-  "Flutter App Maintenance": <Flutter className="w-6 h-6 " />,
-  "Android App Maintenance": <Androidicon className="w-2 h-2" />,
-  "iOS App Maintenance": <Appstore className="w-6 h-6" />,
+  "React Native App Maintenance": <Reacticon className="w-2 h-2" color="#1e8545" />,
+  "Flutter App Maintenance": <Flutter className="w-6 h-6 " color="#1e8545" />,
+  "Android App Maintenance": <Androidicon className="w-2 h-2" color="#1e8545" />,
+  "iOS App Maintenance": <Appstore className="w-6 h-6" color="#1e8545"/>,
 
-  "IoT Apps": <IoTIcon className="w-6 h-6 text-purple-600" />,
-  "IoT Dashboard & Analytics": <WebIcon className="w-6 h-6 text-purple-600" />,
-  "SaaS App Development": <ServerIcon className="w-6 h-6 text-purple-600" />,
-  "IoT Software": <IoTIcon className="w-6 h-6 text-purple-600" />,
+  "IoT Apps": <IoTIcon className="w-6 h-6 text-green-700" />,
+  "IoT Dashboard & Analytics": <WebIcon className="w-6 h-6 text-green-700" />,
+  "SaaS App Development": <ServerIcon className="w-6 h-6 text-green-700" />,
+  "IoT Software": <IoTIcon className="w-6 h-6 text-green-700" />,
 
-  OpenAI: <BrainIcon className="w-6 h-6 text-purple-600" />,
-  "ChatGPT Development": <AIIcon className="w-6 h-6 text-purple-600" />,
-  "ChatGPT Bots": <ChatIcon className="w-6 h-6 text-purple-600" />,
+  OpenAI: <BrainIcon className="w-6 h-6 text-green-700" />,
+  "ChatGPT Development": <AIIcon className="w-6 h-6 text-green-700" />,
+  "ChatGPT Bots": <ChatIcon className="w-6 h-6 text-green-700" />,
 };
 
 const services = [

@@ -7,9 +7,9 @@ export const faqs = [
   },
   {
     id: "item-2",
-    question: "How to apply saturn to our project?",
+    question: "How to apply plazmesoft to our project?",
     answer:
-      "Our team will guide you through the complete integration process, providing documentation and support to ensure smooth implementation of saturn into your existing workflow.",
+      "Our team will guide you through the complete integration process, providing documentation and support to ensure smooth implementation of plazmesoft into your existing workflow.",
   },
   {
     id: "item-3",

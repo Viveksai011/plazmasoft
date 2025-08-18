@@ -8,6 +8,8 @@ import Miniaboutsection from "@/components/Miniaboutsection";
 import Miniservices from "@/components/Miniservices";
 import { ProcessSection } from "@/components/Process";
 import { Servicesection } from "@/components/Servicesection";
+import { TestimonialsSection } from "@/components/Testimonial/testimonials-section";
+
 
 export default function Home() {
   return (
@@ -21,6 +23,7 @@ export default function Home() {
       <ExperienceSection />
       <DevelopmentSection />
       <ProcessSection />
+      <TestimonialsSection />
       <FaqSection />
       <Contactsection />
     </main>

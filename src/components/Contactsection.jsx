@@ -68,8 +68,8 @@ const Contactsection = () => {
             </div>
           </div>
 
-          <div className="w-full px-4 lg:w-1/2 xl:w-4/12">
-            <Card className="relative rounded-lg bg-white p-8 shadow-lg">
+          <div className="w-full px-4 lg:w-1/2 xl:w-[38%]">
+            <Card className="relative rounded-lg bg-white p-7 shadow-lg">
               <CardContent className="p-0">
                 <Contactform />
               </CardContent>
