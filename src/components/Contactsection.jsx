@@ -58,7 +58,7 @@ const Contactsection = () => {
                 </div>
                 <div className="w-full">
                   <h4 className="mb-1 text-xl font-bold text-dark ">
-                    Email Address
+                    Emails Address
                   </h4>
                   <p className="text-base text-body-color ">
                     info@yourdomain.com
