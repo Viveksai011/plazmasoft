@@ -24,8 +24,8 @@ export default function Home() {
       <DevelopmentSection />
       <ProcessSection />
       <TestimonialsSection />
-      <FaqSection />
       <Contactsection />
+      <FaqSection />
     </main>
   );
 }

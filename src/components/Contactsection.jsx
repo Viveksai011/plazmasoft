@@ -9,8 +9,8 @@ import { processSteps } from "@/utils/Contactdata";
 
 const Contactsection = () => {
   return (
-    <section className="relative z-10 max-w-[100rem] w-full overflow-hidden mx-auto p-5 lg:px-[150px] py-20 lg:py-[120px] ">
-      <div className="container mx-auto">
+    <section className="relative z-10 max-w-[100rem] w-full overflow-hidden mx-auto p-5 lg:px-[100px] py-20 lg:py-[120px] ">
+  
         <div className="-mx-4 flex flex-wrap lg:justify-between">
           <div className="w-full px-4 xl:w-[58%]">
             <div className="mb-12 w-full xl:max-w-[800px] h-full xl:mb-0">
@@ -103,7 +103,6 @@ const Contactsection = () => {
             </Card>
           </div>
         </div>
-      </div>
     </section>
   );
 };

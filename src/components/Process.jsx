@@ -10,6 +10,7 @@ export function ProcessSection() {
       color: "from-green-600 to-green-700",
       bgColor: "bg-green-50",
       borderColor: "border-green-600/50",
+      gifurl: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmVtODkyazR4N3ZxaWZhd2hjdDhmNjcwd2d3NDI0MGpxNDY0azEzZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/F4nBKBWxcWzcdMJX2W/giphy.gif"
     },
     {
       icon: Palette,
@@ -65,31 +66,6 @@ export function ProcessSection() {
         </div>
 
         <div className="hidden lg:block relative mb-[80px]">
-          <svg
-            className="absolute inset-0 w-full h-full z-0"
-            viewBox="0 0 1200 400"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M100 200 Q300 100 500 200 T900 200 Q1000 150 1100 200"
-              stroke="url(#gradient)"
-              strokeWidth="4"
-              strokeDasharray="10,5"
-              fill="none"
-              className="animate-pulse"
-            />
-            <defs>
-              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#15803d" />
-                <stop offset="25%" stopColor="#2563eb" />
-                <stop offset="50%" stopColor="#16a34a" />
-                <stop offset="75%" stopColor="#1d4ed8" />
-                <stop offset="100%" stopColor="#166534" />
-              </linearGradient>
-            </defs>
-          </svg>
-
           <div className="relative z-10 flex justify-between items-start">
             {processSteps.map((step, index) => {
               const IconComponent = step.icon;
@@ -126,7 +102,7 @@ export function ProcessSection() {
                     </div>
 
                     <div
-                      className={`${step.bgColor} rounded-2xl p-6 shadow-xl border-2 ${step.borderColor} transform transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-1 max-w-xs`}
+                      className={`${step.bgColor} group relative rounded-2xl p-6 shadow-xl border-2 ${step.borderColor} transform transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-1 max-w-xs`}
                     >
                       <h3 className="text-xl font-bold text-blue-900 mb-3">
                         {step.title}
@@ -134,6 +110,13 @@ export function ProcessSection() {
                       <p className="text-sm text-gray-600 leading-relaxed">
                         {step.description}
                       </p>
+                      <div
+                        class={`absolute inset-0 rounded-2xl p-6 shadow-xl border-2 ${step.borderColor} transform bg-cover bg-center opacity-0 transition-opacity duration-500 group-hover:opacity-100`}
+                        style={{
+                          backgroundImage:
+                            "url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmVtODkyazR4N3ZxaWZhd2hjdDhmNjcwd2d3NDI0MGpxNDY0azEzZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/F4nBKBWxcWzcdMJX2W/giphy.gif')",
+                        }}
+                      ></div>
                     </div>
                   </div>
                 </div>
