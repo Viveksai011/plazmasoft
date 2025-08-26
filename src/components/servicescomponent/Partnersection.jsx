@@ -23,7 +23,7 @@ const PartnersSection = () => {
     <section className="py-16 max-w-[86rem] w-full container mx-auto px-6">
       <div className="flex flex-col items-start gap-5 mb-12">
         <h2 className="text-4xl font-semibold text-black border-b-4 border-customBg w-fit pb-4">
-          Our Partners
+          OUR PARTNERS
         </h2>
         <p className="text-lg text-black/80">Companies we've worked with</p>
       </div>

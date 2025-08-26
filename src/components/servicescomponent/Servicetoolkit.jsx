@@ -32,6 +32,7 @@ const toolkitData = {
         category: "Backend",
       },
       { name: "Express", level: "Expert", icon: "⚡", category: "Backend" },
+       { name: ".Net", level: "Advanced", icon: "🖥️", category: "Frontend" },
     ],
   },
 };
@@ -42,7 +43,7 @@ export function Servicetoolkit() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="font-serif font-bold text-3xl mb-5 lg:text-5xl text-gray-900">
-            Development Toolkit
+            DEVELOPMENT TOOLKIT
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
             At our company, we leverage scalable and cutting-edge frameworks and

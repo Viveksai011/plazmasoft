@@ -1,9 +1,9 @@
 import FaqSection from '@/components/FaqSection'
+import { ProcessSection } from '@/components/Process'
 import DevelopmentServices from '@/components/servicescomponent/Developmentservices'
 import HeroSection from '@/components/servicescomponent/Herosection'
 import PartnersSection from '@/components/servicescomponent/Partnersection'
 import ProjectsSection from '@/components/servicescomponent/Projectsection'
-import { Servicesprocess } from '@/components/servicescomponent/Servicesprocess'
 import { Servicetoolkit } from '@/components/servicescomponent/Servicetoolkit'
 import TestimonialCarousel from '@/components/servicescomponent/TestimonialCarousel'
 
@@ -15,7 +15,7 @@ const page = () => {
       <HeroSection/>
       <PartnersSection/>
       <Servicetoolkit />
-      <Servicesprocess/>
+      <ProcessSection />
       <DevelopmentServices/>
       <ProjectsSection/>
       <TestimonialCarousel/>

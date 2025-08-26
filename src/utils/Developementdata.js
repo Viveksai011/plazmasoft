@@ -15,6 +15,7 @@ export const toolkitData = {
       { name: "Django", level: "Advanced", icon: "🐍", category: "Backend" },
       { name: "Laravel", level: "Advanced", icon: <CodeIcon className="w-6 h-6 text-purple-700" />, category: "Backend" },
       { name: "Express", level: "Expert", icon: "⚡", category: "Backend" },
+      { name: ".Net", level: "Advanced", icon: "🖥️", category: "Frontend" },
     ],
   },
   "Mobile Development": {
@@ -29,6 +30,7 @@ export const toolkitData = {
       { name: "Dart", level: "Expert", icon: "🎯", category: "Language" },
       { name: "Xamarin", level: "Advanced", icon: "🔷", category: "Cross-platform" },
       { name: "Ionic", level: "Advanced", icon: "⚡", category: "Hybrid" },
+       { name: ".Net", level: "Advanced", icon: "🖥️", category: "Frontend" },
     ],
   },
   "Database & Backend": {
@@ -43,6 +45,7 @@ export const toolkitData = {
       { name: "AWS", level: "Expert", icon: "☁️", category: "Cloud" },
       { name: "Docker", level: "Advanced", icon: "🐳", category: "DevOps" },
       { name: "GraphQL", level: "Advanced", icon: "🔗", category: "API" },
+       { name: "Oracle SQL", level: "Advanced", icon: "🛢️", category: "Database" },
     ],
   },
   "DevOps & Cloud": {
@@ -57,6 +60,7 @@ export const toolkitData = {
       { name: "Jenkins", level: "Advanced", icon: "🔧", category: "CI/CD" },
       { name: "GitLab", level: "Advanced", icon: "🦊", category: "CI/CD" },
       { name: "Terraform", level: "Expert", icon: "🏗️", category: "Infrastructure" },
+      { name: "Salesforce", level: "Expert", icon: "💭", category: "Cloud/CRM" },
     ],
   },
 };

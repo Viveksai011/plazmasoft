@@ -25,18 +25,18 @@ const servicesData = [
       "We build visually stunning and fast-performing mobile apps for iOS and Android using Flutter.",
     icon: <Flutter width="38px" />,
   },
-  {
-    title: "MERN Stack",
-    description:
-      "Our skilled team develops cutting-edge iOS apps that align with your business objectives.",
-    icon: <Layers className="h-10 w-10 text-[#963beb]" />,
-  },
-  {
-    title: "React js",
-    description:
-      "Our skilled team develops cutting-edge iOS apps that align with your business objectives.",
-    icon: <Reacticon width="38px" height="38px" />,
-  },
+  // {
+  //   title: "MERN Stack",
+  //   description:
+  //     "Our skilled team develops cutting-edge iOS apps that align with your business objectives.",
+  //   icon: <Layers className="h-10 w-10 text-[#963beb]" />,
+  // },
+  // {
+  //   title: "React js",
+  //   description:
+  //     "Our skilled team develops cutting-edge iOS apps that align with your business objectives.",
+  //   icon: <Reacticon width="38px" height="38px" />,
+  // },
 ];
 
 export default function DevelopmentServices() {
@@ -55,7 +55,8 @@ export default function DevelopmentServices() {
 
       <div className="container max-w-[86rem] w-full mx-auto px-4">
         <h2 className="text-4xl text-center  font-semibold text-black">
-          Professional Web App Development Services
+        PROFESSIONAL WEB APP DEVELOPMENT SERVICES
+
         </h2>
 
         <div className="mt-4 mb-6 h-1 w-32 bg-secondarycustomBg mx-auto"></div>
@@ -73,7 +74,7 @@ export default function DevelopmentServices() {
           {servicesData.map((service, index) => (
             <div
               key={index}
-              className="block relative z-10 rounded-lg border  bg-white p-8 text-left shadow-[0_4px_16px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.12)] transition-shadow duration-300 group overflow-hidden"
+              className="block relative z-10 rounded-lg border bg-[#F0FFF1] p-8 text-left shadow-[0_4px_16px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.12)] transition-shadow duration-300 group overflow-hidden"
             >
               <div className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-[rgba(150,59,235,0.1)] to-transparent transition-all duration-600 ease-in-out group-hover:left-[100%]"></div>
 

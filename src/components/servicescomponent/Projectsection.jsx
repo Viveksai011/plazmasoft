@@ -6,7 +6,7 @@ export default function ProjectsSection() {
     <section className="py-16 px-4 max-w-[86rem] mx-auto">
       <div className="text-center mb-12">
         <h2 className="text-4xl text-center font-semibold text-black">
-          Our Project
+          OUR PROJECT
         </h2>
 
         <div className="mt-4 mb-6 h-1 w-32 bg-secondarycustomBg mx-auto"></div>
