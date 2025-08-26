@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Calendar } from "lucide-react";
 import Image from "next/image";
 
 export function ExperienceSection() {
@@ -60,9 +61,9 @@ export function ExperienceSection() {
           <div className="pt-2 sm:pt-4">
             <Button
               size="lg"
-              className="bg-customBg hover:bg-customBg/80 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-3xl font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 text-sm sm:text-base w-full sm:w-auto"
+              className="bg-customBg hover:bg-customBg/80 text-white px-6 py-2  sm:px-8 sm:py-3 rounded-3xl font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 text-sm sm:text-base w-full sm:w-auto"
             >
-              📅 Get Started
+              <Calendar className="h-2.5 w-2.5 mr-1" /> Get Started
             </Button>
           </div>
         </div>

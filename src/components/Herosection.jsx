@@ -3,12 +3,13 @@ import Linewind from "@/Icons/Linewind";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Inversecirclecurve from "@/Icons/Inversecirclecurve";
+import { Star, Medal, Headphones, Code, FileCheck } from "lucide-react";
 
 const Herosection = () => {
   return (
     <section
       id="home"
-      className="relative z-10 overflow-hidden  pb-16 pt-[120px] md:pb-[100px] md:pt-[150px] xl:pb-[100px] xl:pt-[180px] 2xl:pb-[100px] 2xl:pt-[210px]"
+      className="relative z-10 overflow-hidden  pb-16 pt-[120px] md:pb-[80px] md:pt-[150px]  xl:pt-[180px] xl:pb-[60px]  2xl:pt-[210px]"
     >
       <div className="container w-full mx-auto">
         <div className=" flex flex-wrap px-4 mx-auto text-center justify-center">
@@ -22,9 +23,46 @@ const Herosection = () => {
               to life!
             </p>
 
-            <Button className="bg-customBg p-6 rounded-2xl text-base font-semibold text-white duration-300 ease-in-out hover:bg-customBg/80">
+            <Button className="bg-customBg p-6  rounded-2xl text-base font-semibold text-white duration-300 ease-in-out hover:bg-customBg/80">
               Book Your Free Consultation
             </Button>
+            
+            <div className=" mt-[40px] bg-purple-100 p-4 rounded-xl border border-purple-400 !max-w-[660px] !w-full mx-auto">
+              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-customBg">
+                <div className="flex items-center">
+                  <span className="flex  text-yellow-400 mr-1">⭐⭐⭐⭐⭐</span>
+                  <span>100+ Upwork Reviews</span>
+                </div>
+
+                <div className="hidden sm:block w-px h-4 bg-customBg"></div>
+
+                <div className="flex items-center">
+                  <Medal className="text-customBg mr-2" />
+                  <span>Top Rated Plus</span>
+                </div>
+
+                <div className="hidden sm:block w-px h-4 bg-customBg"></div>
+
+                <div className="flex items-center">
+                  <Headphones className="text-customBg mr-2" />
+                  <span>30 Days Free Support</span>
+                </div>
+
+                <div className="hidden md:block w-px h-4 bg-customBg"></div>
+
+                <div className="flex items-center">
+                  <Code className="text-customBg mr-2" />
+                  <span>100% Code Ownership</span>
+                </div>
+
+                <div className="hidden md:block w-px h-4 bg-customBg"></div>
+
+                <div className="flex items-center">
+                  <FileCheck className="text-customBg mr-2" />
+                  <span>Risk-Free Contract</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
