@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toolkitData } from "@/utils/Developementdata";
+import { CircleCheckBig } from "lucide-react";
 
 export function DevelopmentSection() {
   const [activeTab, setActiveTab] = useState("Web Development");
@@ -13,7 +14,7 @@ export function DevelopmentSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="font-serif font-bold text-3xl mb-5 lg:text-5xl text-gray-900">
-            Development Toolkit
+            DEVELOPMENT TOOLKIT
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
             At our company, we leverage scalable and cutting-edge frameworks and
@@ -40,10 +41,10 @@ export function DevelopmentSection() {
             ))}
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-8">
-            <Card className="lg:max-w-[400px] w-full shadow-lg border-0">
+          <div className="flex flex-col  lg:flex-row gap-8">
+            <Card className="lg:max-w-[400px] bg-[#F0FFF1] w-full shadow-lg border-0">
               <CardHeader className="pb-3">
-                <CardTitle className="text-2xl font-bold text-green-700">
+                <CardTitle className="text-2xl font-bold text-purple-700">
                   {activeTab}
                 </CardTitle>
               </CardHeader>
@@ -64,21 +65,8 @@ export function DevelopmentSection() {
                       "Agile development process",
                     ].map((benefit, index) => (
                       <div key={index} className="flex items-start gap-3">
-                        <div className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
-                          <svg
-                            className="w-3 h-3 text-green-600"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="3"
-                              d="M5 13l4 4L19 7"
-                            ></path>
-                          </svg>
+                        <div className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center">
+                          <CircleCheckBig className="w-5 h-5 text-purple-600" />
                         </div>
                         <span className="text-gray-700">{benefit}</span>
                       </div>
@@ -92,11 +80,11 @@ export function DevelopmentSection() {
               <h4 className="text-lg font-semibold text-gray-900 mb-6 pb-2 border-b border-gray-200">
                 Technologies We Use
               </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {toolkitData[activeTab].technologies.map((tech, index) => (
                   <Card
                     key={tech.name}
-                    className="group transition-all duration-300 hover:shadow-md hover:border-green-300"
+                    className="group transition-all relative duration-300 hover:shadow-md hover:border-green-300"
                   >
                     <CardContent className="p-4">
                       <div className="flex items-start gap-4">
@@ -107,7 +95,7 @@ export function DevelopmentSection() {
                               {tech.name}
                             </h5>
                             {tech.level === "Expert" && (
-                              <span className="text-xs px-2 py-0.5 bg-green-100 text-green-800 rounded-full">
+                              <span className="text-xs absolute top-2 w-fit right-2  px-2 py-0.5 bg-green-100 text-green-800 rounded-full">
                                 Expert
                               </span>
                             )}

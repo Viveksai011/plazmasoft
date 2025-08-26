@@ -7,15 +7,15 @@ import { Carddata } from "@/utils/Carddata";
 const Miniservices = () => {
   return (
     <section className="py-16 px-4 max-w-[92rem] mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {Carddata.map((category) => (
           <Card
             key={category.id}
-            className="bg-white p-8 relative rounded-lg shadow-sm border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            className="bg-[#F0FFF1] p-8 relative rounded-lg shadow-sm border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
           >
             <CardContent className="p-0">
               <span className="text-gray-400 text-sm absolute top-[-15px] right-[-19px] font-medium h-[80px] flex items-center justify-center w-[80px] bg-[#f0ecfa]  rounded-full">
-                <span className="p-4 bg-white rounded-full text-gray-500 font-semibold">
+                <span className="p-4 bg-white rounded-full text-customBg font-semibold">
                   {String(category.id).padStart(2, "0")}
                 </span>
               </span>

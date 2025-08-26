@@ -97,12 +97,6 @@ export const navigationData = {
         "Harness the potential of conversational AI with our end-to-end ChatGPT development services.",
       href: "#chatgpt-development",
     },
-    {
-      title: "IoT Development",
-      description:
-        "We can create innovative IoT-enabled solutions that optimize processes, enhance decision-making, and drive business growth.",
-      href: "#iot-development",
-    },
   ],
   Solutions: [
     {
