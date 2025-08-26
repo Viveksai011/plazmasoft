@@ -1,8 +1,8 @@
 import React from "react";
 
-const Disney = ({ color }) => {
+const Disney = ({ color, width="92", height="39" }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="94" height="39">
+    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height}>
       <path
         fill={color}
         fillRule="nonzero"

@@ -1,8 +1,8 @@
 import React from "react";
 
-const Sass = ({ color }) => {
+const Sass = ({ color, width = "56", height = "42" }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="42">
+    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height}>
       <path
         fill={color}
         fillRule="nonzero"

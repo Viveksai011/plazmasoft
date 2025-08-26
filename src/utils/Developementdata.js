@@ -1,3 +1,7 @@
+import NodeIcons from "@/Icons/NodeIcons";
+import Vueicons from "@/Icons/Vueicons";
+import { CodeIcon } from "lucide-react";
+
 export const toolkitData = {
   "Web Development": {
     description:
@@ -5,11 +9,11 @@ export const toolkitData = {
     technologies: [
       { name: "React", level: "Expert", icon: "⚛️", category: "Frontend" },
       { name: "Next.js", level: "Expert", icon: "▲", category: "Full-stack" },
-      { name: "Vue.js", level: "Advanced", icon: "🟢", category: "Frontend" },
+      { name: "Vue.js", level: "Advanced", icon: <Vueicons width="30px"/>, category: "Frontend" },
       { name: "Angular", level: "Advanced", icon: "🅰️", category: "Frontend" },
-      { name: "Node.js", level: "Expert", icon: "🟢", category: "Backend" },
+      { name: "Node.js", level: "Expert", icon: <NodeIcons width="30px" />, category: "Backend" },
       { name: "Django", level: "Advanced", icon: "🐍", category: "Backend" },
-      { name: "Laravel", level: "Advanced", icon: "🔴", category: "Backend" },
+      { name: "Laravel", level: "Advanced", icon: <CodeIcon className="w-6 h-6 text-purple-700" />, category: "Backend" },
       { name: "Express", level: "Expert", icon: "⚡", category: "Backend" },
     ],
   },
@@ -20,8 +24,8 @@ export const toolkitData = {
       { name: "Flutter", level: "Expert", icon: "🐦", category: "Cross-platform" },
       { name: "React Native", level: "Expert", icon: "⚛️", category: "Cross-platform" },
       { name: "Swift", level: "Advanced", icon: "🦉", category: "iOS" },
-      { name: "Kotlin", level: "Advanced", icon: "🟣", category: "Android" },
-      { name: "Java", level: "Advanced", icon: "☕", category: "Android" },
+      { name: "Kotlin", level: "Advanced", icon: "🅺", category: "Android" },
+      { name: "Java", level: "Advanced", icon: "☕︎", category: "Android" },
       { name: "Dart", level: "Expert", icon: "🎯", category: "Language" },
       { name: "Xamarin", level: "Advanced", icon: "🔷", category: "Cross-platform" },
       { name: "Ionic", level: "Advanced", icon: "⚡", category: "Hybrid" },

@@ -13,9 +13,9 @@ const Miniaboutsection = () => {
               <p className="text-sm font-medium py-1 px-3 w-fit rounded-2xl bg-white text-gray-600 tracking-wide uppercase">
                 {Ourcompanydata.companyLabel}
               </p>
-              <h1 className="text-[27px] sm:text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
+              <h2 className="text-[27px] sm:text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
                 {Ourcompanydata.heading}
-              </h1>
+              </h2>
             </div>
             <div className="flex flex-col justify-center items-start space-y-4">
               <p className="text-gray-600 text-sm leading-relaxed max-w-md">
@@ -55,27 +55,53 @@ const Miniaboutsection = () => {
             </div>
           </div>
 
-          <div className=" flex max-sm:flex-col  justify-between rounded-3xl bg-white px-8 py-4 items-center">
-            <div className="flex flex-col space-y-2">
-              <p className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
-                {" "}
-                {Ourcompanydata.completedWork}
-                <span className="text-2xl">k</span>
-              </p>
-              <p className="text-gray-600 font-medium">
-                {Ourcompanydata.completedWorkLabel}
-              </p>
+          <div className=" flex flex-col  justify-between rounded-3xl bg-white px-8 py-4 items-center">
+            <div className="flex items-center w-full justify-between">
+              <div className="flex flex-col space-y-2">
+                <p className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
+                  {" "}
+                  {Ourcompanydata.completedWork}
+                  <span className="text-2xl">k</span>
+                </p>
+                <p className="text-gray-600 font-medium">
+                  {Ourcompanydata.completedWorkLabel}
+                </p>
+              </div>
+              <hr className="bg-gray-200 h-16 w-[1px]  max-sm:my-4" />
+              <div className="flex flex-col space-y-2">
+                <p className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
+                  {" "}
+                  {Ourcompanydata.expertTeam}
+                  <span className="text-2xl">+</span>
+                </p>
+                <p className="text-gray-600 font-medium">
+                  {Ourcompanydata.expertTeamLabel}
+                </p>
+              </div>
             </div>
-            <hr className="bg-gray-200 sm:h-16 w-[1px] max-sm:w-full max-sm:my-4" />
-            <div className="flex flex-col space-y-2">
-              <p className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
-                {" "}
-                {Ourcompanydata.expertTeam}
-                <span className="text-2xl">+</span>
-              </p>
-              <p className="text-gray-600 font-medium">
-                {Ourcompanydata.expertTeamLabel}
-              </p>
+            <hr className="bg-gray-200  w-full my-4" />
+            <div className="flex items-start w-full justify-between ">
+              <div className="flex flex-col space-y-2">
+                <p className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
+                  {" "}
+                  {Ourcompanydata.completedWork}
+                  <span className="text-2xl">k</span>
+                </p>
+                <p className="text-gray-600 font-medium">
+                  {Ourcompanydata.completedWorkLabel}
+                </p>
+              </div>
+              <hr className="bg-gray-200 h-16 w-[1px]  max-sm:my-4" />
+              <div className="flex flex-col space-y-2">
+                <p className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
+                  {" "}
+                  {Ourcompanydata.expertTeam}
+                  <span className="text-2xl">+</span>
+                </p>
+                <p className="text-gray-600 font-medium">
+                  {Ourcompanydata.expertTeamLabel}
+                </p>
+              </div>
             </div>
           </div>
         </div>

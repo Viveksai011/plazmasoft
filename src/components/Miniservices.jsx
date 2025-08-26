@@ -11,11 +11,11 @@ const Miniservices = () => {
         {Carddata.map((category) => (
           <Card
             key={category.id}
-            className="bg-white p-8 relative rounded-lg shadow-sm border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            className="bg-[#F0FFF1] p-8 relative rounded-lg shadow-sm border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
           >
             <CardContent className="p-0">
               <span className="text-gray-400 text-sm absolute top-[-15px] right-[-19px] font-medium h-[80px] flex items-center justify-center w-[80px] bg-[#f0ecfa]  rounded-full">
-                <span className="p-4 bg-white rounded-full text-gray-500 font-semibold">
+                <span className="p-4 bg-white rounded-full text-customBg font-semibold">
                   {String(category.id).padStart(2, "0")}
                 </span>
               </span>

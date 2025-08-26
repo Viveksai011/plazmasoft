@@ -1,14 +1,42 @@
-"use client";
-
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { toolkitData } from "@/utils/Developementdata";
-import { CircleCheckBig } from "lucide-react";
+import { CircleCheckBig, CodeIcon } from "lucide-react";
 
-export function DevelopmentSection() {
-  const [activeTab, setActiveTab] = useState("Web Development");
+import NodeIcons from "@/Icons/NodeIcons";
+import Vueicons from "@/Icons/Vueicons";
 
+const toolkitData = {
+  "Web Development": {
+    description:
+      "We employ an agile methodology and robust technology framework to develop web applications that exceed your expectations.",
+    technologies: [
+      { name: "React", level: "Expert", icon: "⚛️", category: "Frontend" },
+      { name: "Next.js", level: "Expert", icon: "▲", category: "Full-stack" },
+      {
+        name: "Vue.js",
+        level: "Advanced",
+        icon: <Vueicons width="30px" />,
+        category: "Frontend",
+      },
+      { name: "Angular", level: "Advanced", icon: "🅰️", category: "Frontend" },
+      {
+        name: "Node.js",
+        level: "Expert",
+        icon: <NodeIcons width="30px" />,
+        category: "Backend",
+      },
+      { name: "Django", level: "Advanced", icon: "🐍", category: "Backend" },
+      {
+        name: "Laravel",
+        level: "Advanced",
+        icon: <CodeIcon className="w-6 h-6 text-purple-700" />,
+        category: "Backend",
+      },
+      { name: "Express", level: "Expert", icon: "⚡", category: "Backend" },
+    ],
+  },
+};
+
+export function Servicetoolkit() {
   return (
     <section className="py-12 sm:py-16 lg:py-20">
       <div className="container mx-auto px-4">
@@ -24,33 +52,16 @@ export function DevelopmentSection() {
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-3 mb-8 sm:mb-12">
-            {Object.keys(toolkitData).map((tab) => (
-              <Button
-                key={tab}
-                variant={activeTab === tab ? "default" : "outline"}
-                onClick={() => setActiveTab(tab)}
-                className={`px-5 py-2 rounded-full font-medium transition-all duration-300 text-sm sm:text-base ${
-                  activeTab === tab
-                    ? "bg-customBg hover:bg-customBg/80 text-white shadow-lg"
-                    : "border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-customBg/80 hover:text-customBg"
-                }`}
-              >
-                {tab}
-              </Button>
-            ))}
-          </div>
-
-          <div className="flex flex-col  lg:flex-row gap-8">
+          <div className="flex flex-col lg:flex-row gap-8">
             <Card className="lg:max-w-[400px] bg-[#F0FFF1] w-full shadow-lg border-0">
               <CardHeader className="pb-3">
                 <CardTitle className="text-2xl font-bold text-purple-700">
-                  {activeTab}
+                  Web Development
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  {toolkitData[activeTab].description}
+                  {toolkitData["Web Development"].description}
                 </p>
 
                 <div className="space-y-4">
@@ -81,7 +92,7 @@ export function DevelopmentSection() {
                 Technologies We Use
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {toolkitData[activeTab].technologies.map((tech, index) => (
+                {toolkitData["Web Development"].technologies.map((tech) => (
                   <Card
                     key={tech.name}
                     className="group transition-all relative duration-300 hover:shadow-md hover:border-green-300"
