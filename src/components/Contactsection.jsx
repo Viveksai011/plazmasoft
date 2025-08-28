@@ -30,7 +30,7 @@ const Contactsection = () => {
               {processSteps.map((step, index) => (
                 <Card
                   key={index}
-                  className="group relative bg-[#F0FFF1] overflow-hidden hover:border-t-4 hover:border-t-purple-500  border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  className="group relative bg-thirdbg overflow-hidden hover:border-t-4 hover:border-t-purple-500  border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
                   <CardContent className="p-6">
                     <div className="flex items-center gap-3 mb-4">

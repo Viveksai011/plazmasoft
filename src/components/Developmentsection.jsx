@@ -42,7 +42,7 @@ export function DevelopmentSection() {
           </div>
 
           <div className="flex flex-col  lg:flex-row gap-8">
-            <Card className="lg:max-w-[400px] bg-[#F0FFF1] w-full shadow-lg border-0">
+            <Card className="lg:max-w-[400px] bg-thirdbg w-full shadow-lg border-0">
               <CardHeader className="pb-3">
                 <CardTitle className="text-2xl font-bold text-purple-700">
                   {activeTab}

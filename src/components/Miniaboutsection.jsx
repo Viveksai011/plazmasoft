@@ -55,7 +55,7 @@ const Miniaboutsection = () => {
             </div>
           </div>
 
-          <div className=" flex flex-col  justify-between rounded-3xl bg-[#F0FFF1] px-8 py-4 items-center">
+          <div className=" flex flex-col  justify-between rounded-3xl bg-thirdbg px-8 py-4 items-center">
             <div className="flex items-center w-full justify-between">
               <div className="flex flex-col space-y-2">
                 <p className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">

@@ -23,29 +23,25 @@ import React from "react";
 import Photoshopicons from "@/Icons/Photoshopicons";
 
 const featureIcons = {
-  "React Native": <Reacticon className="w-2 h-2"  />,
-  Flutter: <Flutter className="w-6 h-6 "  />,
-  "Android App": <Androidicon className="w-2 h-2"  />,
-  "iOS App": <Appstore className="w-6 h-6"  />,
+  "React Native": <Reacticon className="w-2 h-2" />,
+  Flutter: <Flutter className="w-6 h-6 " />,
+  "Android App": <Androidicon className="w-2 h-2" />,
+  "iOS App": <Appstore className="w-6 h-6" />,
 
   Laravel: <CodeIcon className="w-6 h-6 text-purple-700" />,
-  "Node.js": <NodeIcons className="w-6 h-6 "  />,
-  "Angular.js": <Angular className="w-6 h-6 "  />,
-  "React.js": <Reacttwo className="w-6 h-6 "  />,
+  "Node.js": <NodeIcons className="w-6 h-6 " />,
+  "Angular.js": <Angular className="w-6 h-6 " />,
+  "React.js": <Reacttwo className="w-6 h-6 " />,
 
-  Figma: <Figmaicons className="w-6 h-6 "  />,
-  "Adobe XD": <Adobexdicons className="w-6 h-6 "  />,
+  Figma: <Figmaicons className="w-6 h-6 " />,
+  "Adobe XD": <Adobexdicons className="w-6 h-6 " />,
   Sketch: <DesignIcon className="w-6 h-6 text-purple-700" />,
-  Photoshop: <Photoshopicons className="w-6 h-6 "  />,
+  Photoshop: <Photoshopicons className="w-6 h-6 " />,
 
-  "React Native App Maintenance": (
-    <Reacticon className="w-2 h-2"  />
-  ),
-  "Flutter App Maintenance": <Flutter className="w-6 h-6 "  />,
-  "Android App Maintenance": (
-    <Androidicon className="w-2 h-2"  />
-  ),
-  "iOS App Maintenance": <Appstore className="w-6 h-6"  />,
+  "React Native App Maintenance": <Reacticon className="w-2 h-2" />,
+  "Flutter App Maintenance": <Flutter className="w-6 h-6 " />,
+  "Android App Maintenance": <Androidicon className="w-2 h-2" />,
+  "iOS App Maintenance": <Appstore className="w-6 h-6" />,
 
   "IoT Apps": <IoTIcon className="w-6 h-6 text-purple-700" />,
   "IoT Dashboard & Analytics": <WebIcon className="w-6 h-6 text-purple-700" />,
@@ -129,7 +125,7 @@ export function Servicesection() {
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-[#F0FFF1] p-8 hover:border-t-4 group hover:border-t-purple-500 relative rounded-lg shadow-sm  hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            className="bg-thirdbg p-8 hover:border-t-4 group hover:border-t-purple-500 relative rounded-lg shadow-sm  hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
           >
             <div className="p-0">
               <span className="text-gray-400 text-sm  group-hover:border-4 group-hover:border-purple-500 transition-all duration-300 hover:-translate-y-2 absolute top-[-15px] right-[-19px] font-medium h-[80px] flex items-center justify-center w-[80px] bg-[#f0ecfa] rounded-full">

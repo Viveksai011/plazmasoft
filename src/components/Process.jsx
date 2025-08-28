@@ -27,7 +27,7 @@ export function ProcessSection() {
       description:
         "Development team starts the coding. The process is divided into sprints. Our agile model allow you to assess what we're building and provide you with weekly updates.",
       color: "from-green-700 to-green-800",
-      bgColor: "bg-[#F0FFF1]",
+      bgColor: "bg-thirdbg",
       borderColor: "border-green-600/50",
       gifurl: "/img/full-stack-development.gif",
     },
@@ -114,7 +114,7 @@ export function ProcessSection() {
                         {step.description}
                       </p>
                       <div
-                        class={`absolute inset-0 rounded-2xl p-6 shadow-xl border-2 ${step.borderColor} transform bg-cover bg-center opacity-0 transition-opacity duration-500 group-hover:opacity-100`}
+                        className={`absolute inset-0 rounded-2xl p-6 shadow-xl border-2 ${step.borderColor} transform bg-cover bg-center opacity-0 transition-opacity duration-500 group-hover:opacity-100`}
                         style={{
                           backgroundImage: `url(${step.gifurl})`,
                         }}

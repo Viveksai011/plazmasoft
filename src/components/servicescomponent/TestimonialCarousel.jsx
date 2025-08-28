@@ -55,12 +55,28 @@ const testimonials = [
 
 const TestimonialCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [visibleSlides, setVisibleSlides] = useState(1);
 
   const getVisibleSlides = () => {
     return typeof window !== "undefined" && window.innerWidth < 640 ? 1 : 2;
   };
 
-  const visibleSlides = getVisibleSlides();
+  useEffect(() => {
+    const handleResize = () => {
+      const newVisibleSlides = getVisibleSlides();
+      setVisibleSlides(newVisibleSlides);
+    };
+
+    // Set initial visibleSlides on mount
+    setVisibleSlides(getVisibleSlides());
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const maxSlides = testimonials.length - visibleSlides;
 
   const nextSlide = () => {
@@ -70,22 +86,6 @@ const TestimonialCarousel = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev <= 0 ? maxSlides : prev - 1));
   };
-
-  // Handle window resize
-  useEffect(() => {
-    const handleResize = () => {
-      // Recalculate current slide based on new visible slides
-      const newVisibleSlides = getVisibleSlides();
-      const newMaxSlides = testimonials.length - newVisibleSlides;
-
-      if (currentSlide > newMaxSlides) {
-        setCurrentSlide(newMaxSlides);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [currentSlide]);
 
   return (
     <section className="py-24 mx-auto max-w-[86rem] px-4">
@@ -130,47 +130,49 @@ const TestimonialCarousel = () => {
               }%)`,
             }}
           >
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={testimonial.id}
-                className={`flex-shrink-0 w-full sm:w-[calc(50%-8px)] bg-white border border-solid rounded-2xl p-6 transition-all duration-500 group ${
-                  index >= currentSlide && index < currentSlide + visibleSlides
-                    ? "border-indigo-600"
-                    : "border-gray-300 hover:border-indigo-600"
-                }`}
-              >
-                <div className="flex items-center gap-5 mb-3 ">
-                  <Image
-                    src={testimonial.avatar || "/img/avatarfallback.webp"}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover mr-4"
-                    width={100}
-                    height={100}
-                  />
-                  <div className="grid gap-1">
-                    <h5
-                      className={` font-medium transition-all duration-500 ${
-                        index >= currentSlide &&
-                        index < currentSlide + visibleSlides
-                          ? "text-customBg"
-                          : ""
-                      }`}
-                    >
-                      {testimonial.name}
-                    </h5>
-                    <span className="text-sm leading-6 text-gray-500">
-                      {testimonial.role}
-                    </span>
+            {testimonials.map((testimonial, index) => {
+              const isActive =
+                index >= currentSlide && index < currentSlide + visibleSlides;
+
+              return (
+                <div
+                  key={testimonial.id}
+                  className={`flex-shrink-0 w-full sm:w-[calc(50%-8px)] bg-white border border-solid rounded-2xl p-6 transition-all duration-500 group ${
+                    isActive
+                      ? "border-indigo-600"
+                      : "border-gray-300 hover:border-indigo-600"
+                  }`}
+                >
+                  <div className="flex items-center gap-5 mb-3 ">
+                    <Image
+                      src={testimonial.avatar || "/img/avatarfallback.webp"}
+                      alt={testimonial.name}
+                      className="w-12 h-12 rounded-full object-cover mr-4"
+                      width={100}
+                      height={100}
+                    />
+                    <div className="grid gap-1">
+                      <h5
+                        className={`font-medium transition-all duration-500 ${
+                          isActive ? "text-customBg" : ""
+                        }`}
+                      >
+                        {testimonial.name}
+                      </h5>
+                      <span className="text-sm leading-6 text-gray-500">
+                        {testimonial.role}
+                      </span>
+                    </div>
                   </div>
+
+                  <StarRating rating={testimonial.rating} />
+
+                  <p className="text-sm text-gray-500 leading-6 mt-2 transition-all duration-500 min-h-24 group-hover:text-gray-800">
+                    {testimonial.content}
+                  </p>
                 </div>
-
-                <StarRating rating={testimonial.rating} />
-
-                <p className="text-sm text-gray-500 leading-6 mt-2 transition-all duration-500 min-h-24 group-hover:text-gray-800">
-                  {testimonial.content}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="flex justify-center mt-8 gap-2">

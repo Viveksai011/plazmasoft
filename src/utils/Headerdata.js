@@ -65,37 +65,37 @@ export const navigationData = {
       title: "Mobile App Development",
       description:
         "iOS Development, Android Development, Flutter, React Native",
-      href: "#mobile-app-development",
+      href: "/services/mobile-app-development",
     },
     {
       title: "Web App Development",
       description:
         "Craft intuitive and scalable web applications that resonate with your business needs.",
-      href: "#web-app-development",
+      href: "/services/web-app-development",
     },
     {
       title: "UI/UX Design",
       description:
         "Get world-class Mobile and Web App designing with our striking and user-friendly UI/UX design approach.",
-      href: "#ui-ux-design",
+      href: "/services/ui-ux-design",
     },
     {
       title: "MVP Development",
       description:
         "Quickly validate your product concept and gather valuable user feedback with our MVP development services.",
-      href: "#mvp-development",
+      href: "/services/mvp-development",
     },
     {
       title: "App Maintenance",
       description:
         "Ensure the longevity and efficiency of your mobile application. We guarantee optimal performance and timely updates.",
-      href: "#app-maintenance",
+      href: "/services/app-maintenance",
     },
     {
       title: "ChatGPT Development",
       description:
         "Harness the potential of conversational AI with our end-to-end ChatGPT development services.",
-      href: "#chatgpt-development",
+      href: "/services/chatgpt-development",
     },
   ],
   Solutions: [

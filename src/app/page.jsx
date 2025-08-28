@@ -2,6 +2,7 @@ import Contactsection from "@/components/Contactsection";
 import { DevelopmentSection } from "@/components/Developmentsection";
 import { ExperienceSection } from "@/components/Experiencesection";
 import  FaqSection  from "@/components/FaqSection";
+import { faqs } from "@/utils/Faqdata";
 import Herosection from "@/components/Herosection";
 import Marque from "@/components/Marque";
 import Miniaboutsection from "@/components/Miniaboutsection";
@@ -25,7 +26,7 @@ export default function Home() {
       <ProcessSection />
       <TestimonialsSection />
       <Contactsection />
-      <FaqSection />
+      <FaqSection faqs={faqs} />
     </main>
   );
 }

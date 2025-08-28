@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import Faqcurve from "@/Icons/Faqcurve";
 import { ArrowRight, CircleX, Shield } from "lucide-react";
-import { faqs } from "@/utils/Faqdata";
+
 import { CircleCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -25,7 +25,7 @@ const comparisonData = {
   ],
 };
 
-export default function FaqSection() {
+export default function FaqSection({ faqs }) {
   return (
     <div className="flex flex-col lg:flex-row lg:justify-between relative max-w-[92rem] max-md:p-4 w-full mx-auto">
       <div className="absolute top-20 right-20 text-yellow-400 text-4xl">✦</div>

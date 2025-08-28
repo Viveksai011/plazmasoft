@@ -1,9 +1,16 @@
 import Image from "next/image";
-import { projects } from "@/utils/Projectdata";
+import ProjectModal from "@/components/servicescomponent/Projectmodal";
 
-export default function ProjectsSection() {
+export default function ProjectsSection({projects}) {
   return (
-    <section className="py-16 px-4 max-w-[86rem] mx-auto">
+    <section className="py-16 relative px-4 max-w-[86rem] mx-auto">
+      <div className="absolute inset-0 opacity-10">
+        {/* Decorative elements */}
+        <div className="absolute top-8 right-8 w-40 h-40 border-2 bg-rose-500 border-primary-foreground rounded-full"></div>
+        <div className="absolute top-8 left-8 w-40 h-40 border-2 bg-rose-500 border-primary-foreground rounded-full"></div>
+        <div className="absolute bottom-12 left-8 w-40 h-40 border-2 bg-yellow-500 border-primary-foreground rounded-full"></div>
+        <div className="absolute top-1/2 right-16 w-40 h-40 border-2 bg-blue-600 border-primary-foreground rounded-full"></div>
+      </div>
       <div className="text-center mb-12">
         <h2 className="text-4xl text-center font-semibold text-black">
           OUR PROJECT
@@ -17,6 +24,7 @@ export default function ProjectsSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         {projects.map((project) => (
+          <ProjectModal key={project.id} project={project}>
           <div
             key={project.id}
             className={`group relative backdrop-blur-sm bg-white/70 border border-white/20 shadow-lg rounded-2xl overflow-hidden hover:border-purple-500/30 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 hover:transform hover:scale-[1.02] ${
@@ -60,6 +68,7 @@ export default function ProjectsSection() {
 
             <div className="absolute inset-0 bg-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
+          </ProjectModal>
         ))}
       </div>
     </section>
