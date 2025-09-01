@@ -1,16 +1,22 @@
-// components/servicescomponent/Developmentservices.tsx
-
 import React from "react";
-import Html from "@/Icons/Html";  // Import icons
+import Html from "@/Icons/Html";
 import NodeIcons from "@/Icons/NodeIcons";
 import Flutter from "@/Icons/Flutter";
 import Reacticon from "@/Icons/Reacticon";
 
-export default function DevelopmentServices({ services = [] }) {
+export default function DevelopmentServices({ services = [], heading={ } }) {
+  const defaultHeading = {
+    title: "Professional Web App Development Services",
+    description:
+      "Our expert web app development services deliver scalable, secure, and user-friendly solutions tailored to your business needs.",
+  };
+
+  const { title, description } = { ...defaultHeading, ...heading };
+
+
   return (
     <section className="relative py-20">
       <div className="absolute inset-0 opacity-10">
-        {/* Decorative elements */}
         <div className="absolute top-8 right-8 w-40 h-40 border-2 bg-rose-500 border-primary-foreground rounded-full"></div>
         <div className="absolute top-8 left-8 w-40 h-40 border-2 bg-rose-500 border-primary-foreground rounded-full"></div>
         <div className="absolute bottom-12 left-8 w-40 h-40 border-2 bg-yellow-500 border-primary-foreground rounded-full"></div>
@@ -19,17 +25,11 @@ export default function DevelopmentServices({ services = [] }) {
 
       <div className="container max-w-[86rem] w-full mx-auto px-4">
         <h2 className="text-4xl text-center  font-semibold text-black">
-          Professional Web App Development Services
+          {title}
         </h2>
         <div className="mt-4 mb-6 h-1 w-32 bg-secondarycustomBg mx-auto"></div>
         <p className="text-black/80 text-center max-w-3xl mx-auto">
-          Get ready to avail expert web{" "}
-          <a href="#" className="text-customBg hover:underline">
-            app development services
-          </a>{" "}
-          to create tailored, efficient, and user-friendly solutions for your
-          business needs. Contact us for a competitive edge in the digital
-          landscape.
+          {description}
         </p>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -44,7 +44,6 @@ export default function DevelopmentServices({ services = [] }) {
               <div className="my-3 h-[2px] w-10 bg-secondarycustomBg" />
 
               <div className="my-4 flex h-10 items-center">
-                {/* Render icons dynamically */}
                 {service.icon === "html" && <Html width="38" height="38" />}
                 {service.icon === "node" && <NodeIcons width="38" />}
                 {service.icon === "flutter" && <Flutter width="38" />}

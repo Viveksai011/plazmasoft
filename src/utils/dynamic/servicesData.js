@@ -1,5 +1,20 @@
 import { CodeIcon } from "lucide-react";
-import {mobileapp, webapp, chatgpt, mvp, appmaintenance, uiux } from "@/utils/dynamic/faqdynamic"
+import {
+  mobileapp,
+  webapp,
+  chatgpt,
+  mvp,
+  appmaintenance,
+  uiux,
+} from "@/utils/dynamic/faqdynamic";
+import {
+  mobileAppDevTestimonials,
+  webAppDevTestimonials,
+  uiUxDesignTestimonials,
+  mvpDevTestimonials,
+  appMaintenanceTestimonials,
+  chatGptDevTestimonials,
+} from "@/utils/dynamic/testimonal";
 import NodeIcons from "@/Icons/NodeIcons";
 import Vueicons from "@/Icons/Vueicons";
 import { faqs } from "@/utils/Faqdata";
@@ -37,6 +52,8 @@ export const servicesData = {
     description:
       "Our expert team builds scalable and performant mobile and web applications.",
     developmenttool: {
+      subPara: "Dummy as of now",
+
       title: "App Development Tools",
       description:
         "We use cutting-edge tools and frameworks to develop high-performance mobile applications for iOS and Android.",
@@ -67,6 +84,11 @@ export const servicesData = {
         { name: "Ionic", level: "Advanced", icon: "⚡", category: "Hybrid" },
         { name: ".Net", level: "Advanced", icon: "🖥️", category: "Frontend" },
       ],
+    },
+    servicesheading: {
+      title: "Our Mobile & Web App Development Services",
+      description:
+        "We offer a comprehensive suite of mobile and web app development services designed to bring your ideas to life and drive business growth.",
     },
     services: [
       {
@@ -99,6 +121,7 @@ export const servicesData = {
         featured: true,
       },
     ],
+    testimonal: mobileAppDevTestimonials,
     faq: mobileapp,
   },
 
@@ -107,6 +130,7 @@ export const servicesData = {
     description:
       "Design user-centric interfaces that create seamless experiences and drive user engagement.",
     developmenttool: {
+      subPara: "Dummy as of now",
       title: "UI/UX Design",
       description:
         "We use industry-leading design tools to create stunning, user-friendly interfaces and optimize the user experience.",
@@ -122,6 +146,11 @@ export const servicesData = {
           category: "Prototyping",
         },
       ],
+    },
+    servicesheading: {
+      title: "Our UI/UX Design Services",
+      description:
+        "We offer a comprehensive range of UI/UX design services to create engaging and user-friendly digital experiences.",
     },
     services: [
       {
@@ -153,6 +182,7 @@ export const servicesData = {
         tags: ["UI/UX Design", "UX Research"],
       },
     ],
+    testimonal: uiUxDesignTestimonials,
     faq: uiux,
   },
 
@@ -161,6 +191,7 @@ export const servicesData = {
     description:
       "Quickly launch a Minimum Viable Product (MVP) to validate your business ideas and attract early-stage feedback from users.",
     developmenttool: {
+      subPara: "Dummy as of now",
       title: "MVP Development",
       description:
         "We use a set of powerful tools and frameworks to build your MVP quickly, focusing on efficiency and scalability.",
@@ -186,6 +217,11 @@ export const servicesData = {
           category: "Frontend",
         },
       ],
+    },
+    servicesheading: {
+      title: "Our MVP Development Services",
+      description:
+        "We provide end-to-end MVP development services to help startups and businesses quickly validate their ideas and enter the market.",
     },
     services: [
       {
@@ -218,6 +254,7 @@ export const servicesData = {
         featured: true,
       },
     ],
+    testimonal: mvpDevTestimonials,
     faq: mvp,
   },
 
@@ -226,6 +263,7 @@ export const servicesData = {
     description:
       "Ensure your mobile and web apps remain up-to-date, secure, and running smoothly with ongoing maintenance services.",
     developmenttool: {
+      subPara: "Dummy as of now",
       title: "App Maintenance",
       description:
         "We utilize the latest tools to monitor, update, and maintain the health and security of your app.",
@@ -251,6 +289,11 @@ export const servicesData = {
           category: "Analytics",
         },
       ],
+    },
+    servicesheading: {
+      title: "Our App Maintenance Services",
+      description:
+        "We offer comprehensive app maintenance services to ensure your applications remain secure, up-to-date, and perform optimally.",
     },
     services: [
       {
@@ -283,6 +326,7 @@ export const servicesData = {
         featured: true,
       },
     ],
+    testimonal: appMaintenanceTestimonials,
     faq: appmaintenance,
   },
 
@@ -291,6 +335,7 @@ export const servicesData = {
     description:
       "Develop advanced conversational AI applications using ChatGPT to automate communication and improve customer engagement.",
     developmenttool: {
+      subPara: "Dummy as of now",
       title: "ChatGPT Development",
       description:
         "We leverage advanced AI frameworks and integration tools to develop intelligent conversational agents.",
@@ -316,6 +361,11 @@ export const servicesData = {
         },
         { name: "Rasa", level: "Expert", icon: "🗣️", category: "NLP" },
       ],
+    },
+    servicesheading: {
+      title: "Our ChatGPT Development Services",
+      description:
+        "We provide end-to-end ChatGPT development services to help businesses leverage conversational AI for enhanced customer engagement and automation.",
     },
     services: [
       {
@@ -348,6 +398,7 @@ export const servicesData = {
         featured: true,
       },
     ],
+    testimonal: chatGptDevTestimonials,
     faq: chatgpt,
   },
 
@@ -356,6 +407,7 @@ export const servicesData = {
     description:
       "PlazmaSoft offers comprehensive web app development services, specializing in creating custom, responsive, and user-friendly web applications. Our expert web app developers leverage the latest technologies to deliver innovative solutions tailored to clients' specific needs.",
     developmenttool: {
+      subPara: "Dummy as of now",
       title: "Web Development",
       description:
         "We employ a variety of tools and frameworks to create robust and scalable web applications.",
@@ -366,6 +418,11 @@ export const servicesData = {
         "Agile development process",
       ],
       technologiesused: commonTechnologies,
+    },
+    servicesheading: {
+      title: "Our Web Development Services",
+      description:
+        "We offer a wide range of web development services to help businesses establish a strong online presence and deliver exceptional user experiences.",
     },
     services: [
       {
@@ -414,6 +471,7 @@ export const servicesData = {
         tags: ["Web Development", "UX Research"],
       },
     ],
+    testimonal: mobileAppDevTestimonials,
     faq: webapp,
   },
 
@@ -422,6 +480,7 @@ export const servicesData = {
     description:
       "PlazmaSoft offers comprehensive web app development services, specializing in creating custom, responsive, and user-friendly web applications. Our expert web app developers leverage the latest technologies to deliver innovative solutions tailored to clients' specific needs.",
     developmenttool: {
+      subPara: "Dummy as of now",
       title: "Web Development",
       description:
         "We employ a variety of tools and frameworks to create robust and scalable web applications.",
@@ -432,6 +491,11 @@ export const servicesData = {
         "Agile development process",
       ],
       technologiesused: commonTechnologies,
+    },
+    servicesheading: {
+      title: "Our Web Development Services",
+      description:
+        "We offer a wide range of web development services to help businesses establish a strong online presence and deliver exceptional user experiences.",
     },
     services: [
       {
@@ -504,6 +568,7 @@ export const servicesData = {
         tags: ["Graphic Design", "UX Research"],
       },
     ],
+    testimonal: webAppDevTestimonials,
     faq: faqs,
   },
 };

@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CircleCheckBig, CodeIcon } from "lucide-react";
 
 export function Servicetoolkit({ developmenttool }) {
-  // Early return with null if developmenttool is not provided or invalid
+
   if (!developmenttool || typeof developmenttool !== "object") {
     return null;
   }
@@ -15,9 +15,7 @@ export function Servicetoolkit({ developmenttool }) {
             DEVELOPMENT TOOLKIT
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
-            At our company, we leverage scalable and cutting-edge frameworks and
-            technologies to build mobile apps, backend systems, and web
-            applications for our clients.
+            {developmenttool.description}
           </p>
         </div>
 

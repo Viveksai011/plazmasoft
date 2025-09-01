@@ -3,7 +3,8 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const HeroSection = ({ title, description}) => {
+const HeroSection = ({ title, description, text }) => {
+
   return (
     <section className=" py-20 max-w-[86rem] w-full  mx-auto px-6 lg:py-24">
       <div className="flex flex-col md:flex-row justify-between w-full gap-12 items-center">
@@ -43,8 +44,7 @@ const HeroSection = ({ title, description}) => {
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-[1.2]">
             <span className="text-customBg">{title}</span>
             <br />
-            Services
-          </h1>
+            {text ? "Solutions" : "Services"}          </h1>
 
           <p className="text-base text-text-secondary leading-relaxed max-w-[580px] mx-auto lg:mx-0">
             {description}

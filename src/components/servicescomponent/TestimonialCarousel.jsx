@@ -5,7 +5,8 @@ import { ArrowRight, ArrowLeft } from "lucide-react";
 import { StarRating } from "@/components/Testimonial/star-rating";
 import Image from "next/image";
 
-const testimonials = [
+const TestimonialCarousel = ({ testimonials = [] }) => {
+  const defaultTestimonials = [
   {
     id: 1,
     name: "Jane D",
@@ -26,7 +27,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Jane D",
+    name: "Jhone",
     role: "CEO",
     avatar: null,
     content:
@@ -35,7 +36,7 @@ const testimonials = [
   },
   {
     id: 4,
-    name: "Harsh P.",
+    name: "Harish.",
     role: "Product Designer",
     avatar: null,
     content:
@@ -44,7 +45,7 @@ const testimonials = [
   },
   {
     id: 5,
-    name: "Harsh P.",
+    name: "Alex",
     role: "Product ",
     avatar: null,
     content:
@@ -53,7 +54,8 @@ const testimonials = [
   },
 ];
 
-const TestimonialCarousel = () => {
+  const data = testimonials.length > 0 ? testimonials : defaultTestimonials;
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const [visibleSlides, setVisibleSlides] = useState(1);
 
@@ -77,7 +79,7 @@ const TestimonialCarousel = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const maxSlides = testimonials.length - visibleSlides;
+  const maxSlides = data.length - visibleSlides;
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev >= maxSlides ? 0 : prev + 1));
@@ -130,7 +132,7 @@ const TestimonialCarousel = () => {
               }%)`,
             }}
           >
-            {testimonials.map((testimonial, index) => {
+            {data.map((testimonial, index) => {
               const isActive =
                 index >= currentSlide && index < currentSlide + visibleSlides;
 
