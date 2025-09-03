@@ -1,4 +1,4 @@
-import { servicesData } from "@/utils/dynamic/servicesData";
+import { solutionData } from "@/utils/solutiondynamic/solutionData";
 import HeroSection from "@/components/servicescomponent/Herosection";
 import DevelopmentServices from "@/components/servicescomponent/Developmentservices";
 import PartnersSection from "@/components/servicescomponent/Partnersection";
@@ -9,36 +9,40 @@ import { ProcessSection } from "@/components/Process";
 import FaqSection from "@/components/FaqSection";
 
 export async function generateMetadata({ params }) {
-  const service = servicesData[params.service] || servicesData.default;
+  const solution = solutionData[params.solution] || solutionData.default;
   return {
-    title: service.heroTitle || "PlazmaSoft Services",
+    title: solution.heroTitle || "PlazmaSoft Services",
     description:
-      service.description ||
+      solution.description ||
       "PlazmaSoft offers comprehensive IT services and solutions.",
   };
 }
 
-export default function ServicePage({ params }) {
-  const serviceSlug = params.service;
-  const currentService = servicesData[serviceSlug] || servicesData.default;
+export default function solutionPage({ params }) {
+  const solutionSlug = params.solution;
+
+
+  const currentSolution = solutionData[solutionSlug] || solutionData.default;
+
 
   return (
     <div className="w-full mx-auto">
       <HeroSection
-        title={currentService.heroTitle}
-        description={currentService.description}
+        title={currentSolution.heroTitle}
+        description={currentSolution.description}
+        text={solutionSlug}
       />
       <PartnersSection />
 
-      <Servicetoolkit developmenttool={currentService.developmenttool} />
+      <Servicetoolkit developmenttool={currentSolution.developmenttool} />
 
       <ProcessSection />
 
-      <DevelopmentServices services={currentService.services} heading={currentService.servicesheading} />
+      <DevelopmentServices services={currentSolution.services} />
 
-      <ProjectsSection projects={currentService.projects} />
-      <TestimonialCarousel testimonials={currentService.testimonal} />
-      <FaqSection faqs={currentService.faq} />
+      <ProjectsSection projects={currentSolution.projects} />
+      <TestimonialCarousel />
+      <FaqSection faqs={currentSolution.faq} />
     </div>
   );
 }

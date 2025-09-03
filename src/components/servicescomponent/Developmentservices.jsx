@@ -1,95 +1,205 @@
-import { Layers } from "lucide-react";
+
+
 import React from "react";
+import * as motion from "motion/react-client";
 import Html from "@/Icons/Html";
 import NodeIcons from "@/Icons/NodeIcons";
 import Flutter from "@/Icons/Flutter";
 import Reacticon from "@/Icons/Reacticon";
 
-const servicesData = [
-  {
-    title: "Front-end Development",
+export default function DevelopmentServices({ services = [], heading = {} }) {
+  const defaultHeading = {
+    title: "Professional Web App Development Services",
     description:
-      "We create user-friendly and robust Android apps tailored to your business needs.",
-    icon: <Html width="40" height="40" color="#963beb" />,
-  },
-  {
-    title: "Back-end Development",
-    description:
-      "Reach a wider audience with apps that work seamlessly on iOS, Android, and Windows.",
-    icon: <NodeIcons width="38px" />,
-    href: "#",
-  },
-  {
-    title: "Full Stack Development",
-    description:
-      "We build visually stunning and fast-performing mobile apps for iOS and Android using Flutter.",
-    icon: <Flutter width="38px" />,
-  },
-  // {
-  //   title: "MERN Stack",
-  //   description:
-  //     "Our skilled team develops cutting-edge iOS apps that align with your business objectives.",
-  //   icon: <Layers className="h-10 w-10 text-[#963beb]" />,
-  // },
-  // {
-  //   title: "React js",
-  //   description:
-  //     "Our skilled team develops cutting-edge iOS apps that align with your business objectives.",
-  //   icon: <Reacticon width="38px" height="38px" />,
-  // },
-];
+      "Our expert web app development services deliver scalable, secure, and user-friendly solutions tailored to your business needs.",
+  };
 
-export default function DevelopmentServices() {
+  const { title, description } = { ...defaultHeading, ...heading };
+
+  const circleVariants = {
+    initial: { 
+      scale: 1,
+      opacity: 0.1,
+    },
+    hover: {
+      scale: 1.2,
+      opacity: 0.15,
+      transition: {
+        type: "spring",
+        damping: 10,
+        stiffness: 100,
+        duration: 0.8,
+      },
+    },
+  };
+
+  // Individual circle movement variants
+  const circle1Variants = {
+    initial: { x: 0, y: 0 },
+    hover: { x: 40, y: -30 }
+  };
+  
+  const circle2Variants = {
+    initial: { x: 0, y: 0 },
+    hover: { x: -50, y: 40 }
+  };
+  
+  const circle3Variants = {
+    initial: { x: 0, y: 0 },
+    hover: { x: 60, y: 50 }
+  };
+  
+  const circle4Variants = {
+    initial: { x: 0, y: 0 },
+    hover: { x: -60, y: -40 }
+  };
+
+  // Animation for service cards
+  const cardVariants = {
+    initial: { 
+      opacity: 0, 
+      y: 20 
+    },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+    hover: {
+      y: -8,
+      boxShadow: "0 20px 40px rgba(0,0,0,0.15)",
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  // Stagger animation for cards container
+  const containerVariants = {
+    initial: { opacity: 0 },
+    animate: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
   return (
-    <section className="relative py-20  ">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-8 right-8 w-40 h-40 border-2 bg-rose-500 border-primary-foreground rounded-full">
-          <div className="absolute bottom-0 top-[50%] right-[70%] w-20 h-20 border-2 bg-rose-500 border-primary-foreground rounded-full"></div>
-        </div>
-        <div className="absolute top-8 left-8 w-40 h-40 border-2 bg-rose-500 border-primary-foreground rounded-full">
-          <div className="absolute bottom-0 top-[50%] left-[70%] w-20 h-20 border-2 bg-rose-500 border-primary-foreground rounded-full"></div>
-        </div>
-        <div className="absolute bottom-12 left-8 w-40 h-40 border-2 bg-yellow-500 border-primary-foreground rounded-full"></div>
-        <div className="absolute top-1/2 right-16 w-40 h-40 border-2 bg-blue-600 border-primary-foreground rounded-full"></div>
-      </div>
+    <motion.section 
+      className="relative py-20 overflow-hidden"
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, margin: "-100px" }}
+    >
+      <motion.div 
+        className="absolute inset-0 opacity-10"
+        whileHover="hover"
+        initial="initial"
+      >
+        <motion.div 
+          variants={circle1Variants}
+          initial="initial"
+          whileHover="hover"
+          transition={{ type: "spring", stiffness: 100, damping: 10 }}
+          className="absolute top-8 right-8 w-40 h-40 border-2 border-blue-300 bg-rose-500 border-primary-foreground rounded-full"
+        />
+        <motion.div 
+          variants={circle2Variants}
+          initial="initial"
+          whileHover="hover"
+          transition={{ type: "spring", stiffness: 100, damping: 10 }}
+          className="absolute top-8 left-8 w-40 h-40 border-2 bg-rose-500 border-primary-foreground rounded-full"
+        />
+        <motion.div 
+          variants={circle3Variants}
+          initial="initial"
+          whileHover="hover"
+          transition={{ type: "spring", stiffness: 100, damping: 10 }}
+          className="absolute bottom-12 left-8 w-40 h-40 border-2 bg-yellow-500 border-primary-foreground rounded-full"
+        />
+        <motion.div 
+          variants={circle4Variants}
+          initial="initial"
+          whileHover="hover"
+          transition={{ type: "spring", stiffness: 100, damping: 10 }}
+          className="absolute top-1/2 right-16 w-40 h-40 border-2 bg-blue-600 border-primary-foreground rounded-full"
+        />
+      </motion.div>
 
-      <div className="container max-w-[86rem] w-full mx-auto px-4">
-        <h2 className="text-4xl text-center  font-semibold text-black">
-        PROFESSIONAL WEB APP DEVELOPMENT SERVICES
+      <div className="container max-w-[86rem] w-full mx-auto px-4 relative z-10">
+        <motion.h2 
+          className="text-4xl text-center font-semibold text-black"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          {title}
+        </motion.h2>
+        
+        <motion.div 
+          className="mt-4 mb-6 h-1 w-32 bg-secondarycustomBg mx-auto"
+          initial={{ width: 0 }}
+          whileInView={{ width: 128 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        />
+        
+        <motion.p 
+          className="text-black/80 text-center max-w-3xl mx-auto"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
+          {description}
+        </motion.p>
 
-        </h2>
-
-        <div className="mt-4 mb-6 h-1 w-32 bg-secondarycustomBg mx-auto"></div>
-        <p className="text-black/80 text-center max-w-3xl mx-auto">
-          Get ready to avail expert web{" "}
-          <a href="#" className="text-customBg hover:underline">
-            app development services
-          </a>{" "}
-          to create tailored, efficient, and user-friendly solutions for your
-          business needs. Contact us for a competitive edge in the digital
-          landscape.
-        </p>
-
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {servicesData.map((service, index) => (
-            <div
+        <motion.div 
+          className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          variants={containerVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          {services.map((service, index) => (
+            <motion.div
               key={index}
-              className="block relative z-10 rounded-lg border bg-[#F0FFF1] p-8 text-left shadow-[0_4px_16px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.12)] transition-shadow duration-300 group overflow-hidden"
+              variants={cardVariants}
+              whileHover="hover"
+              className="block relative z-10 rounded-lg border bg-white p-8 text-left shadow-[0_4px_16px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.12)] transition-shadow duration-300 group overflow-hidden"
             >
-              <div className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-[rgba(150,59,235,0.1)] to-transparent transition-all duration-600 ease-in-out group-hover:left-[100%]"></div>
-
               <h4 className="text-xl font-semibold text-foreground">
                 {service.title}
               </h4>
-              <div className="my-3 h-[2px] w-10 bg-secondarycustomBg" />
-              <div className="my-4 flex h-10 items-center">{service.icon}</div>
+              
+              <motion.div 
+                className="my-3 h-[2px] w-10 bg-secondarycustomBg"
+                initial={{ width: 0 }}
+                whileInView={{ width: 40 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
+              />
+
+              <div className="my-4 flex h-10 items-center">
+                {service.icon === "html" && <Html width="38" height="38" />}
+                {service.icon === "node" && <NodeIcons width="38" />}
+                {service.icon === "flutter" && <Flutter width="38" />}
+                {service.icon === "react" && <Reacticon width="38" />}
+              </div>
+              
               <p className="text-sm text-black/80 leading-relaxed">
                 {service.description}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
