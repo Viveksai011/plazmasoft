@@ -24,10 +24,10 @@ export const servicesItems = [
 ];
 
 export const locationItems = [
-  { icon: <MapPin className="size-2" />, text: "England", link: "#" },
-  { icon: <Mail className="size-2" />, text: "+91 987656789", link: "#" },
+  { icon: <MapPin className="h-5 w-5 text-secondarycustomBg transition hover:text-white/65 hover:transition duration-200 " />, text: "England", link: "#" },
+  { icon: <Mail className="h-5 w-5 text-secondarycustomBg transition hover:text-white/65 hover:transition duration-200 " />, text: "+91 987656789", link: "#" },
   {
-    icon: <Phone className="size-2" />,
+    icon: <Phone className="h-5 w-5 text-secondarycustomBg transition hover:text-white/65 hover:transition duration-200 " />,
     text: "Marketing@gmail.com",
     link: "#",
   },
