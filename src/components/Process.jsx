@@ -1,4 +1,6 @@
+import * as motion from "motion/react-client";
 import { Lightbulb, Palette, Code, Bug, Rocket } from "lucide-react";
+
 export function ProcessSection() {
   const processSteps = [
     {
@@ -53,10 +55,113 @@ export function ProcessSection() {
     },
   ];
 
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const titleVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const iconVariants = {
+    hidden: { scale: 0, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 200,
+        damping: 15,
+        duration: 0.5
+      }
+    },
+    hover: {
+      scale: 1.1,
+      rotate: 5,
+      transition: { duration: 0.3 }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    },
+    hover: {
+      y: -10,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const numberVariants = {
+    hidden: { scale: 0, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 15,
+        delay: 0.2
+      }
+    }
+  };
+
+  const gifOverlayVariants = {
+    hidden: { opacity: 0 },
+    hover: {
+      opacity: 1,
+      transition: { duration: 0.4 }
+    }
+  };
+
   return (
-    <section className="py-12  relative overflow-hidden">
+    <motion.section 
+      className="py-12 relative overflow-hidden"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={containerVariants}
+    >
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-20">
+        <motion.div className="text-center mb-20" variants={titleVariants}>
           <div className="inline-block">
             <h2 className="font-serif font-bold mb-5 text-3xl lg:text-5xl text-gray-900">
               OUR PROCESS
@@ -66,9 +171,12 @@ export function ProcessSection() {
             Work with groundbreakers who create top-notch mobile and web apps on
             time & on budget
           </p>
-        </div>
+        </motion.div>
 
-        <div className="hidden lg:block relative mb-[80px]">
+        <motion.div 
+          className="hidden lg:block relative mb-[80px]"
+          variants={containerVariants}
+        >
           <div className="relative z-10 flex justify-between items-start">
             {processSteps.map((step, index) => {
               const IconComponent = step.icon;
@@ -81,31 +189,43 @@ export function ProcessSection() {
               ];
 
               return (
-                <div
+                <motion.div
                   key={index}
                   className={`flex-1 relative ${positions[index]} group`}
+                  variants={itemVariants}
+                  whileHover="hover"
                 >
                   <div className="flex flex-col items-center text-center px-2">
-                    <div
-                      className={`relative mb-6 transform transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2`}
+                    <motion.div
+                      className="relative mb-6"
+                      variants={iconVariants}
                     >
                       <div
                         className={`absolute inset-0 bg-gradient-to-r ${step.color} rounded-full blur-xl opacity-30 scale-150`}
                       ></div>
 
-                      <div
+                      <motion.div
                         className={`relative w-20 h-20 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center shadow-2xl border-4 border-white`}
+                        whileHover={{ 
+                          scale: 1.1,
+                          rotate: 5,
+                          transition: { duration: 0.3 }
+                        }}
                       >
                         <IconComponent className="w-10 h-10 text-white drop-shadow-lg" />
-                      </div>
+                      </motion.div>
 
-                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center text-sm font-bold text-gray-700 shadow-lg border-2 border-gray-200">
+                      <motion.div 
+                        className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center text-sm font-bold text-gray-700 shadow-lg border-2 border-gray-200"
+                        variants={numberVariants}
+                      >
                         {index + 1}
-                      </div>
-                    </div>
+                      </motion.div>
+                    </motion.div>
 
-                    <div
-                      className={`${step.bgColor} group relative rounded-2xl p-6 shadow-xl border-2 ${step.borderColor} transform transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-1 max-w-xs`}
+                    <motion.div
+                      className={`${step.bgColor} group relative rounded-2xl p-6 shadow-xl border-2 ${step.borderColor} max-w-xs`}
+                      variants={cardVariants}
                     >
                       <h3 className="text-xl font-bold text-black mb-3">
                         {step.title}
@@ -113,43 +233,64 @@ export function ProcessSection() {
                       <p className="text-sm text-gray-600 leading-relaxed">
                         {step.description}
                       </p>
-                      <div
-                        className={`absolute inset-0 rounded-2xl p-6 shadow-xl border-2 ${step.borderColor} transform bg-cover bg-center opacity-0 transition-opacity duration-500 group-hover:opacity-100`}
+                      <motion.div
+                        className={`absolute inset-0 rounded-2xl p-6 shadow-xl border-2 ${step.borderColor} bg-cover bg-center opacity-0`}
                         style={{
                           backgroundImage: `url(${step.gifurl})`,
                         }}
-                      ></div>
-                    </div>
+                        variants={gifOverlayVariants}
+                      ></motion.div>
+                    </motion.div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="lg:hidden space-y-8">
+        <motion.div 
+          className="lg:hidden space-y-8"
+          variants={containerVariants}
+        >
           {processSteps.map((step, index) => {
             const IconComponent = step.icon;
             return (
-              <div key={index} className="relative">
+              <motion.div 
+                key={index} 
+                className="relative"
+                variants={itemVariants}
+              >
                 {index < processSteps.length - 1 && (
-                  <div className="absolute left-10 top-20 w-0.5 h-16  z-0"></div>
+                  <div className="absolute left-10 top-20 w-0.5 h-16 bg-gradient-to-b from-gray-300 to-transparent z-0"></div>
                 )}
 
-                <div
+                <motion.div
                   className={`${step.bgColor} rounded-2xl p-6 shadow-xl border-2 ${step.borderColor} relative z-10`}
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.3 }}
+                  variants={cardVariants}
                 >
                   <div className="flex max-sm:flex-col max-sm:gap-2 items-start space-x-4">
-                    <div className="relative flex-shrink-0">
-                      <div
+                    <motion.div 
+                      className="relative flex-shrink-0"
+                      variants={iconVariants}
+                    >
+                      <motion.div
                         className={`relative w-16 h-16 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center shadow-lg border-4 border-white`}
+                        whileHover={{ 
+                          scale: 1.05,
+                          transition: { duration: 0.2 }
+                        }}
                       >
                         <IconComponent className="w-8 h-8 text-white" />
-                      </div>
-                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-white rounded-full flex items-center justify-center text-xs font-bold text-gray-700 shadow border border-gray-200">
+                      </motion.div>
+                      <motion.div 
+                        className="absolute -top-1 -right-1 w-6 h-6 bg-white rounded-full flex items-center justify-center text-xs font-bold text-gray-700 shadow border border-gray-200"
+                        variants={numberVariants}
+                      >
                         {index + 1}
-                      </div>
-                    </div>
+                      </motion.div>
+                    </motion.div>
 
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-blue-900 mb-3">
@@ -160,12 +301,12 @@ export function ProcessSection() {
                       </p>
                     </div>
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -4,7 +4,6 @@ import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = ({ title, description, text }) => {
-
   return (
     <section className=" py-20 max-w-[86rem] w-full  mx-auto px-6 lg:py-24">
       <div className="flex flex-col md:flex-row justify-between w-full gap-12 items-center">
@@ -41,22 +40,19 @@ const HeroSection = ({ title, description, text }) => {
             </ol>
           </nav>
 
-          <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-[1.2]">
+          <h1 className=" font-bold text-black leading-10 text-[2.25rem] lg:leading-[1.2] lg:text-[3rem]">
             <span className="text-customBg">{title}</span>
             <br />
-            {text ? "Solutions" : "Services"}          </h1>
+            {text ? "Solutions" : "Services"}{" "}
+          </h1>
 
           <p className="text-base text-text-secondary leading-relaxed max-w-[580px] mx-auto lg:mx-0">
             {description}
           </p>
 
-         
-            <Button
-              className="bg-customBg text-white font-medium px-8 py-3 rounded-full text-base shadow-md hover:bg-customBg/85 transition-all duration-300"
-            >
-              Connect with Experts
-            </Button>
-         
+          <Button className="bg-customBg text-white font-medium px-8 py-3 rounded-full text-base shadow-md hover:bg-customBg/85 transition-all duration-300">
+            Connect with Experts
+          </Button>
         </div>
 
         <div className="h-full w-full flex justify-end">

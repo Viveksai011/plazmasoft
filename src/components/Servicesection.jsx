@@ -1,3 +1,4 @@
+import * as motion from "motion/react-client";
 import Androidicon from "@/Icons/Androidicon";
 import Reacticon from "@/Icons/Reacticon";
 import Flutter from "@/Icons/Flutter";
@@ -121,11 +122,15 @@ export function Servicesection() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-thirdbg p-8 hover:border-t-4 group hover:border-t-purple-500 relative rounded-lg shadow-sm  hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: index * 0.2 + 0.3, duration: 0.8 }}
+            className="bg-thirdbg p-8 hover:border-t-4 group hover:border-t-purple-500 relative rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
           >
             <div className="p-0">
               <span className="text-gray-400 text-sm  group-hover:border-4 group-hover:border-purple-500 transition-all duration-300 hover:-translate-y-2 absolute top-[-15px] right-[-19px] font-medium h-[80px] flex items-center justify-center w-[80px] bg-[#f0ecfa] rounded-full">
@@ -155,9 +160,9 @@ export function Servicesection() {
                 </ul>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

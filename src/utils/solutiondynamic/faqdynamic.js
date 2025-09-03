@@ -29,6 +29,12 @@ export const fintechFaq = [
     answer:
       "The development timeline varies depending on the features and complexity, but on average, a fintech app takes 4 to 6 months to develop.",
   },
+  {
+    id: "item-6",
+    question: "What is the typical development timeline for a fintech app?",
+    answer:
+      "The development timeline varies depending on the features and complexity, but on average, a fintech app takes 4 to 6 months to develop.",
+  }
 ];
 
 
@@ -59,6 +65,12 @@ export const onDemandFaq = [
   },
   {
     id: "item-5",
+    question: "How long does it take to develop an on-demand app?",
+    answer:
+      "The development timeline for an on-demand app typically ranges from 3 to 6 months, depending on the complexity and features.",
+  },
+  {
+    id: "item-6",
     question: "How long does it take to develop an on-demand app?",
     answer:
       "The development timeline for an on-demand app typically ranges from 3 to 6 months, depending on the complexity and features.",

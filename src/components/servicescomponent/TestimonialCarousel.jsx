@@ -103,7 +103,6 @@ const TestimonialCarousel = ({ testimonials = [] }) => {
             </span>
           </h2>
 
-          {/* Slider controls */}
           <div className="flex items-center justify-center lg:justify-start gap-10">
             <button
               onClick={prevSlide}

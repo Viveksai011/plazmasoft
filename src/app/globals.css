@@ -70,7 +70,39 @@
   }
   body {
     @apply bg-background text-foreground;
+    cursor: auto;
   }
+
+  
+  a,
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  [role="button"],
+  [tabindex="0"] {
+    cursor: pointer; 
+  }
+}
+
+
+.custom-cursor {
+  will-change: transform;
+}
+
+.cursor-circle {
+  transition: transform 0.2s ease;
+}
+
+
+a:hover ~ .custom-cursor .cursor-circle,
+button:hover ~ .custom-cursor .cursor-circle,
+input[type="button"]:hover ~ .custom-cursor .cursor-circle,
+input[type="submit"]:hover ~ .custom-cursor .cursor-circle,
+input[type="reset"]:hover ~ .custom-cursor .cursor-circle,
+[role="button"]:hover ~ .custom-cursor .cursor-circle,
+[tabindex="0"]:hover ~ .custom-cursor .cursor-circle {
+  transform: scale(1.5);
 }
 
 @keyframes tada {
