@@ -7,6 +7,7 @@ import Spark from "@/Icons/spark";
 import Samsung from "@/Icons/samsung";
 import Quora from "@/Icons/quora";
 import Sass from "@/Icons/sass";
+import * as motion from "motion/react-client";
 
 const logos = [
   { Component: Facebook, alt: "Facebook" },
@@ -24,9 +25,15 @@ const Marque = () => {
 
   return (
     <div className="w-full overflow-hidden">
-      <h2 className="text-xl mx-auto text-customBg  font-semibold text-center p-3  ">
+      <motion.h2
+        className="text-xl mx-auto text-customBg  font-semibold text-center p-3  "
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         Our Happy Clients
-      </h2>
+      </motion.h2>
       <div className="flex animate-infinite-scroll gap-16 whitespace-nowrap py-4">
         {duplicatedLogos.map(({ Component, alt }, index) => (
           <div key={index} className="flex-shrink-0 h-16 flex items-center">

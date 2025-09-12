@@ -65,117 +65,117 @@ export const navigationData = {
       title: "Mobile App Development",
       description:
         "iOS Development, Android Development, Flutter, React Native",
-      href: "#mobile-app-development",
+      href: "/services/mobile-app-development",
     },
     {
       title: "Web App Development",
       description:
         "Craft intuitive and scalable web applications that resonate with your business needs.",
-      href: "#web-app-development",
+      href: "/services/web-app-development",
     },
     {
       title: "UI/UX Design",
       description:
         "Get world-class Mobile and Web App designing with our striking and user-friendly UI/UX design approach.",
-      href: "#ui-ux-design",
+      href: "/services/ui-ux-design",
     },
     {
       title: "MVP Development",
       description:
         "Quickly validate your product concept and gather valuable user feedback with our MVP development services.",
-      href: "#mvp-development",
+      href: "/services/mvp-development",
     },
     {
       title: "App Maintenance",
       description:
         "Ensure the longevity and efficiency of your mobile application. We guarantee optimal performance and timely updates.",
-      href: "#app-maintenance",
+      href: "/services/app-maintenance",
     },
     {
       title: "ChatGPT Development",
       description:
         "Harness the potential of conversational AI with our end-to-end ChatGPT development services.",
-      href: "#chatgpt-development",
+      href: "/services/chatgpt-development",
     },
   ],
   Solutions: [
     {
       title: "Fintech App Development",
-      href: "#fintech",
+      href: "/solutions/fintech-app-development",
       description: "Custom Native iPhone App Development and support",
     },
     {
       title: "Restaurant Food Ordering App",
-      href: "#restaurant-food-ordering",
+      href: "/solutions/restaurant-food-ordering",
       description: "On-demand android development for your business",
     },
     {
       title: "QR Code-Based Food Ordering",
-      href: "#qr-code-food-ordering",
+      href: "/solutions/qr-code-food-ordering",
       description: "Helping startups, small businesses and growing enterprises",
     },
     {
       title: "On-Demand App Development",
-      href: "#on-demand-app-development",
+      href: "/solutions/on-demand-app-development",
       description:
         "Controlled remotely and can be used to monitor the connected product's condition",
     },
     {
       title: "Fantasy App Development",
-      href: "#fantasy-app-development",
+      href: "/solutions/fantasy-app-development",
       description:
         "iOS and Android mobile applications in an industry-driving structure",
     },
     {
       title: "Transport Industry App Development",
-      href: "#transport-industry-app-development",
+      href: "/solutions/transport-industry-app-development",
       description: "We build bespoke websites and web applications",
     },
     {
       title: "Taxi Booking App Development",
-      href: "#taxi-booking-app-development",
+      href: "/solutions/taxi-booking-app-development",
       description:
         "We build easy-to-use taxi booking websites and web applications",
     },
     {
       title: "Healthcare App Development",
-      href: "#healthcare-app-development",
+      href: "/solutions/healthcare-app-development",
       description: "App development using flutter and react technology",
     },
     {
       title: "Fitness App Development",
-      href: "#fitness-app-development",
+      href: "/solutions/fitness-app-development",
       description:
         "Empower businesses with our skilled technology capabilities in AR/VR",
     },
     {
       title: "Social Media App Development",
-      href: "#social-media-app-development",
+      href: "/solutions/social-media-app-development",
       description: "We build social media websites and web applications",
     },
     {
       title: "Dating App Development",
-      href: "#dating-app-development",
+      href: "/solutions/dating-app-development",
       description: "We build dating websites and web applications",
     },
     {
       title: "Sports Betting App Development",
-      href: "#sports-betting-app-development",
+      href: "/solutions/sports-betting-app-development",
       description: "We build sports betting websites and web applications",
     },
     {
       title: "Stock Trading App Development",
-      href: "#stock-trading-app-development",
+      href: "/solutions/stock-trading-app-development",
       description: "We build stock trading websites and web applications",
     },
     {
       title: "Grocery Delivery App Development",
-      href: "#grocery-delivery-app-development",
+      href: "/solutions/grocery-delivery-app-development",
       description: "We build grocery delivery websites and web applications",
     },
     {
       title: "Video Streaming App Development",
-      href: "#video-streaming-app-development",
+      href: "/solutions/video-streaming-app-development",
       description: "We build video streaming websites and web applications",
     },
   ],

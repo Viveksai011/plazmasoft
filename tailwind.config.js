@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         customBg: "#5603AD",
         secondarycustomBg: "#8367C7",
+        thirdbg: "#F0FFF1",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

@@ -1,3 +1,5 @@
+import * as motion from "motion/react-client";
+
 import Curve from "@/Icons/curve";
 import Dotline from "@/Icons/Dotline";
 import Lightcurve from "@/Icons/lightcurve";
@@ -9,12 +11,31 @@ import { processSteps } from "@/utils/Contactdata";
 
 const Contactsection = () => {
   return (
-    <section className="relative z-10 max-w-[100rem] w-full overflow-hidden mx-auto p-5 lg:px-[100px] py-20 lg:py-[120px] ">
+    <motion.section
+      className="relative z-10 max-w-[100rem] w-full overflow-hidden mx-auto p-5 lg:px-[100px] py-20 lg:py-[120px]"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <div className="-mx-4 flex flex-wrap lg:justify-between">
+       
         <div className="w-full px-4 xl:w-[58%]">
-          <div className="mb-12 w-full xl:max-w-[800px] h-full xl:mb-0">
-            <div className="mb-8">
-              <h2 className="mb-6  font-bold text-gray-900 text-3xl lg:text-4xl leading-tight">
+          <motion.div
+            className="mb-12 w-full xl:max-w-[800px] h-full xl:mb-0"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <motion.div
+              className="mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <h2 className="mb-6 font-bold text-gray-900 text-3xl lg:text-4xl leading-tight">
                 <div className="inline">
                   <Rocket className="w-9 h-9 mr-2 text-purple-600 inline" />
                   Our "Demo in 21 Days" Process{" "}
@@ -24,15 +45,19 @@ const Contactsection = () => {
               <p className="text-lg text-gray-600 leading-relaxed">
                 Here's exactly how we turn your idea into reality:
               </p>
-            </div>
+            </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {processSteps.map((step, index) => (
-                <Card
+                <motion.div
                   key={index}
-                  className="group relative bg-[#F0FFF1] overflow-hidden hover:border-t-4 hover:border-t-purple-500  border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.2 + 0.5, duration: 0.5 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="group relative bg-thirdbg overflow-hidden rounded-2xl hover:border-t-4 hover:scale-105 hover:border-t-purple-500 border-0 shadow-lg hover:shadow-xl transition-all duration-300 "
                 >
-                  <CardContent className="p-6">
+                  <div className="p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <div
                         className={`bg-gradient-to-t  from-secondarycustomBg to-customBg p-3 rounded-xl text-white flex-shrink-0`}
@@ -63,16 +88,23 @@ const Contactsection = () => {
                         {step.impact}
                       </p>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="w-full px-4  xl:w-[38%]">
+        
+        <div className="w-full px-4 xl:w-[38%]">
           <Card className="relative rounded-lg bg-white p-7 shadow-lg">
-            <div className="bg-gradient-to-t  from-secondarycustomBg to-customBg  mb-8 rounded-2xl p-6 text-white">
+            <motion.div
+              className="bg-gradient-to-t from-secondarycustomBg to-customBg mb-8 rounded-2xl p-6 text-white"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <h3 className="font-bold text-lg mb-3">The Result?</h3>
               <p className="mb-6 text-purple-100 leading-relaxed">
                 You're testing with real users while your competitors are still
@@ -87,7 +119,7 @@ const Contactsection = () => {
                   - No Commitment Required
                 </span>
               </Button>
-            </div>
+            </motion.div>
             <CardContent className="p-0">
               <Contactform />
             </CardContent>
@@ -106,7 +138,7 @@ const Contactsection = () => {
           </Card>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

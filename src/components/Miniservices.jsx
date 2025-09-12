@@ -1,17 +1,21 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carddata } from "@/utils/Carddata";
-
-
+import * as motion from "motion/react-client"
 
 const Miniservices = () => {
   return (
     <section className="py-16 px-4 max-w-[92rem] mx-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {Carddata.map((category) => (
-          <Card
+          <motion.div
             key={category.id}
-            className="bg-[#F0FFF1] p-8 relative rounded-lg shadow-sm border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            className="bg-thirdbg p-8 relative rounded-lg shadow-sm border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: category.id * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
           >
             <CardContent className="p-0">
               <span className="text-gray-400 text-sm absolute top-[-15px] right-[-19px] font-medium h-[80px] flex items-center justify-center w-[80px] bg-[#f0ecfa]  rounded-full">
@@ -26,12 +30,12 @@ const Miniservices = () => {
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {category.description}
                 </p>
-                <div className="w-[100px] h-12 bg-[#F0FFF1] rounded-lg hover:animate-tada flex items-center justify-center">
+                <div className="w-[100px] h-12 bg-thirdbg rounded-lg hover:animate-tada flex items-center justify-center">
                   {category.icon}
                 </div>
               </div>
             </CardContent>
-          </Card>
+          </motion.div>
         ))}
       </div>
     </section>
