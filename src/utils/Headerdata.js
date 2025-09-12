@@ -219,16 +219,16 @@ export const navigationData = {
     },
   ],
 
-  "About Us": [
+  "ToolKit": [
     {
-      title: "Our Team",
-      href: "#our-team",
-      description: "Meet our talented team of experts",
+      title: "Prompt Generator",
+      href: "/toolpage/prompt-generator",
+      description: "Generate optimized prompts for AI models to get the best results",
     },
     {
-      title: "Overview",
+      title: "PDF to Text Converter",
       href: "#overview",
-      description: "An overview of our company, mission, and values",
+      description: "Convert PDF documents into editable text format seamlessly",
     },
     {
       title: "Our Clients",
