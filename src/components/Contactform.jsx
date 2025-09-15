@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Send, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -19,6 +19,32 @@ const Contactform = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailConfig, setEmailConfig] = useState({
+    serviceId: "",
+    templateId: "",
+    userId: "",
+  });
+
+  useEffect(() => {
+    const fetchEmailConfig = async () => {
+      try {
+        const response = await fetch("/api/email-config");
+        if (!response.ok) {
+          throw new Error("Failed to fetch email configuration");
+        }
+        const config = await response.json();
+        setEmailConfig(config);
+      } catch (error) {
+        console.error("Error fetching email configuration:", error);
+        toast("Configuration Error", {
+          description: "Failed to load email service configuration.",
+          variant: "destructive",
+        });
+      }
+    };
+
+    fetchEmailConfig();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -58,6 +84,19 @@ const Contactform = () => {
       return;
     }
 
+    if (
+      !emailConfig.serviceId ||
+      !emailConfig.templateId ||
+      !emailConfig.userId
+    ) {
+      toast("Configuration Error", {
+        description: "Email service is not properly configured.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
     const templateParams = {
       from_name: `${firstName} ${lastName}`,
       from_email: email,
@@ -67,10 +106,10 @@ const Contactform = () => {
 
     try {
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        emailConfig.serviceId,
+        emailConfig.templateId,
         templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+        emailConfig.userId
       );
 
       toast("Message Sent!", {
