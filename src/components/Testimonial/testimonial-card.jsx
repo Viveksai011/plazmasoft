@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function TestimonialCard({ testimonial }) {
   return (
-    <div className="flex flex-col justify-between gap-2 bg-white/70 backdrop-blur-sm rounded-2xl h-full p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-200/50 hover:border-purple-300/70 hover:bg-white/80">
+    <div className="flex flex-col justify-between gap-2 bg-white/70 backdrop-blur-sm rounded-2xl h-full p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-200/50 hover:border-customBg/60 hover:bg-white/80">
       <StarRating rating={testimonial.rating} />
 
       <p className="text-gray-700 text-sm leading-relaxed ">

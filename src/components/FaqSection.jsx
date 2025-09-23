@@ -176,9 +176,9 @@ export default function FaqSection({ faqs }) {
                 >
                   <AccordionItem
                     value={faq.id}
-                    className="border border-purple-100 rounded-lg px-6 py-2 bg-white/80 hover:bg-white/90 transition-colors"
+                    className="border border-customBg/10 rounded-lg px-6 py-2 bg-white/80 hover:bg-white/90 transition-colors"
                   >
-                    <AccordionTrigger className="text-left text-lg font-semibold text-gray-800 hover:text-purple-600 transition-colors">
+                    <AccordionTrigger className="text-left text-lg font-semibold text-gray-800 hover:text-customBg transition-colors">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-gray-600 pt-4 pb-2">
@@ -193,7 +193,7 @@ export default function FaqSection({ faqs }) {
       </div>
 
       <motion.div 
-        className="bg-gradient-to-br lg:mt-[210px] max-lg:container mx-auto h-fit from-customBg to-secondarycustomBg text-primary-foreground rounded-2xl px-4 py-7 md:p-8 shadow-xl relative overflow-hidden"
+        className="bg-gradient-to-br lg:mt-[210px] max-lg:container mx-auto h-fit from-customBg to-[#033049] text-primary-foreground rounded-2xl px-4 py-7 md:p-8 shadow-xl relative overflow-hidden"
         variants={comparisonCardVariants}
       >
         <div className="absolute inset-0 opacity-10">

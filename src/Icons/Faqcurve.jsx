@@ -10,14 +10,14 @@ const Faqcurve = ({ className }) => {
     >
       <path
         d="M439,345 C6,204 400,100 396,108"
-        stroke="url(#gradient1)"
+        stroke="#06507A"
         strokeWidth="2"
         fill="none"
       />
 
       <path
         d="M761,345 C1194,204 800,100 804,108"
-        stroke="url(#gradient1)"
+        stroke="#06507A"
         strokeWidth="2"
         fill="none"
       />

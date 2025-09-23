@@ -4,11 +4,12 @@ export const navItems = [
   { name: "Solutions", href: "#solutions" },
   { name: "Hire Developers", href: "#apps" },
   { name: "About Us", href: "#about" },
+  {name: "Why Hire Us", href: "/hire-us"}
 ];
 
 export const Subnav = [
-  { name: "Portfolio", href: "#portfolio" },
   { name: "Tech Blog", href: "#blog" },
+  {name: "Why Hire Us", href: "/hire-us"}
 ];
 
 export const navigationData = {

@@ -125,7 +125,7 @@ export function ExperienceSection() {
                 className="bg-white/95 backdrop-blur-sm rounded-full w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 flex flex-col items-center justify-center shadow-xl border border-green-100"
                 animate={pulseAnimation}
               >
-                <div className="text-3xl sm:text-4xl lg:text-6xl font-bold text-secondarycustomBg mb-1 lg:mb-2">
+                <div className="text-3xl sm:text-4xl lg:text-6xl font-bold text-customBg mb-1 lg:mb-2">
                   15+
                 </div>
                 <div className="text-gray-700 font-medium text-center leading-tight text-xs sm:text-sm lg:text-base">
@@ -137,7 +137,7 @@ export function ExperienceSection() {
             </motion.div>
 
             <motion.div
-              className="hidden sm:block absolute -top-4 -right-4 w-6 h-6 lg:w-8 lg:h-8 bg-secondarycustomBg rounded-full opacity-80"
+              className="hidden sm:block absolute -top-4 -right-4 w-6 h-6 lg:w-8 lg:h-8 bg-customBg/50 rounded-full opacity-80"
               variants={floatingOrbs}
               animate={{
                 y: [0, -10, 0],

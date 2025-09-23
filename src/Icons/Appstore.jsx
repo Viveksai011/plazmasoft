@@ -1,6 +1,6 @@
 import React from "react";
 
-const Appstore = ({ color = "#963beb", width = "25px" }) => {
+const Appstore = ({ color = "#0871AC", width = "25px" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

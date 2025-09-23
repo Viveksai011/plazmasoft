@@ -96,9 +96,9 @@ const Miniaboutsection = () => {
                 {Ourcompanydata.description}
               </motion.p>
               <motion.div variants={fadeIn}>
-                <Button className="bg-customBg hover:bg-customBg/80 w-fit group text-white px-8 py-6 text-base font-medium rounded-full transform transition-all duration-200 ease-out hover:scale-105">
+                <Button className="bg-customBg hover:bg-customBg/80 w-fit group text-white px-8 py-6 text-base font-medium rounded-xl transform transition-all duration-200 ease-out hover:scale-105">
                   {Ourcompanydata.button}
-                  <ArrowUpRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:rotate-45" />
+                  <ArrowUpRight className="ml-2 transition-transform duration-300 group-hover:rotate-45" />
                 </Button>
               </motion.div>
             </div>
@@ -113,7 +113,7 @@ const Miniaboutsection = () => {
               alt="Business professionals working together"
               width={540}
               height={480}
-              className="w-full max-w-[1000px] rounded-3xl h-80 object-cover transform transition-all duration-400 ease-out hover:scale-105"
+              className="w-full max-w-[1000px] rounded-xl h-80 object-cover transform transition-all duration-400 ease-out hover:scale-105"
             />
           </motion.div>
         </motion.div>
@@ -123,7 +123,7 @@ const Miniaboutsection = () => {
           variants={fadeIn}
         >
           <motion.div 
-            className="relative rounded-3xl "
+            className="relative rounded-xl "
             variants={rightSlideIn}
           >
             <Image
@@ -131,7 +131,7 @@ const Miniaboutsection = () => {
               alt="Business team collaboration"
               width={380}
               height={380}
-              className="w-full h-80 object-cover rounded-3xl transform transition-all duration-400 ease-out hover:scale-105"
+              className="w-full h-80 object-cover rounded-xl transform transition-all duration-400 ease-out hover:scale-105"
             />
             <div className="absolute inset-0 flex items-center justify-center">
               <Button 
@@ -143,7 +143,7 @@ const Miniaboutsection = () => {
           </motion.div>
 
           <motion.div 
-            className=" flex flex-col  justify-between rounded-3xl bg-thirdbg px-8 py-4 items-center"
+            className=" flex flex-col  justify-between rounded-xl bg-thirdbg px-8 py-4 items-center"
             variants={fadeIn}
             whileHover={{ y: -5, transition: { duration: 0.3 } }}
           >

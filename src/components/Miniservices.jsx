@@ -10,7 +10,7 @@ const Miniservices = () => {
         {Carddata.map((category) => (
           <motion.div
             key={category.id}
-            className="bg-thirdbg p-8 relative rounded-lg shadow-sm border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            className="bg-white p-8 relative rounded-lg shadow-sm border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
               initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: category.id * 0.1 }}
@@ -18,7 +18,7 @@ const Miniservices = () => {
                 whileHover={{ y: -5 }}
           >
             <CardContent className="p-0">
-              <span className="text-gray-400 text-sm absolute top-[-15px] right-[-19px] font-medium h-[80px] flex items-center justify-center w-[80px] bg-[#f0ecfa]  rounded-full">
+              <span className="text-gray-400 text-sm absolute top-[-15px] right-[-19px] font-medium h-[80px] flex items-center justify-center w-[80px] bg-[#E7F6FE]  rounded-full">
                 <span className="p-4 bg-white rounded-full text-customBg font-semibold">
                   {String(category.id).padStart(2, "0")}
                 </span>
@@ -30,7 +30,7 @@ const Miniservices = () => {
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {category.description}
                 </p>
-                <div className="w-[100px] h-12 bg-thirdbg rounded-lg hover:animate-tada flex items-center justify-center">
+                <div className="w-[100px] h-12 rounded-lg hover:animate-tada flex items-center justify-center">
                   {category.icon}
                 </div>
               </div>

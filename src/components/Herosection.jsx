@@ -1,6 +1,4 @@
 import Circlecurve from "@/Icons/Circlecurve";
-import Linewind from "@/Icons/Linewind";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Inversecirclecurve from "@/Icons/Inversecirclecurve";
 import { Star, Medal, Headphones, Code, FileCheck } from "lucide-react";
@@ -27,7 +25,7 @@ const Herosection = () => {
               Book Your Free Consultation
             </Button>
             
-            <div className=" mt-[40px] bg-purple-100 p-4 rounded-xl border border-purple-400 !max-w-[660px] !w-full mx-auto">
+            <div className=" mt-[40px] bg-[#F5FBFF] p-4 rounded-xl border border-[#90C0DC] !max-w-[660px] !w-full mx-auto">
               <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-customBg">
                 <div className="flex items-center">
                   <span className="flex  text-yellow-400 mr-1">⭐⭐⭐⭐⭐</span>

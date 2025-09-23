@@ -9,9 +9,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        customBg: "#5603AD",
+        customBg: "#0871AC",
         secondarycustomBg: "#8367C7",
-        thirdbg: "#F0FFF1",
+        thirdbg: "white",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

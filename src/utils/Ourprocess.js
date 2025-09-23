@@ -52,3 +52,70 @@ export const processSteps = [
     gifurl: "/img/rocket.gif",
   },
 ];
+
+
+
+
+
+export const processstepsHire = [
+  {
+    step: "01",
+    title: "Discovery & Strategy",
+    duration: "Week 1",
+    whatHappens: [
+      "Audit current setup and interview team",
+      "Analyze competition and market positioning",
+      "Create detailed roadmap with ROI projections",
+    ],
+    clientRequirements: [
+      "Client requirement gathering",
+      "Analytics setup and training",
+      "Performance reports and recommendations",
+    ],
+  },
+  {
+    step: "02",
+    title: "Design & Approval",
+    duration: "Week 2–3",
+    whatHappens: [
+      "Create interactive wireframes and prototypes",
+      "Develop content strategy and user flows",
+      "Get approval before any coding begins",
+    ],
+    clientRequirements: [
+      "Client requirement gathering",
+      "Analytics setup and training",
+      "Performance reports and recommendations",
+    ],
+  },
+  {
+    step: "03",
+    title: "Development & Testing",
+    duration: "Week 4–8",
+    whatHappens: [
+      "Build solution with weekly progress updates",
+      "Allow real-time change requests",
+      "Test on multiple devices and browsers",
+    ],
+    clientRequirements: [
+      "Client requirement gathering",
+      "Analytics setup and training",
+      "Performance reports and recommendations",
+    ],
+  },
+  {
+    step: "04",
+    title: "Launch & Optimization",
+    duration: "Week 9+",
+    whatHappens: [
+      "Launch and monitor performance",
+      "Optimize based on real user data",
+      "90 days included support and improvements",
+    ],
+    clientRequirements: [
+      "Client requirement gathering",
+      "Analytics setup and training",
+      "Performance reports and recommendations",
+    ],
+  },
+];

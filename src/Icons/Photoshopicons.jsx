@@ -1,6 +1,6 @@
 import React from "react";
 
-const Photoshopicons = ({ color = "#963beb", width = "28px" }) => {
+const Photoshopicons = ({ color = "#0871AC", width = "28px" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,6 @@ const Photoshopicons = ({ color = "#963beb", width = "28px" }) => {
       width={width}
       height={width}
       viewBox="0 0 48 48"
-      
     >
       <path
         fill={color}
