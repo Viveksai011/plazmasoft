@@ -1,5 +1,5 @@
 import { TestimonialCard } from "@/components/Testimonial/testimonial-card";
-import { title } from "@/utils/Comapanytitle";
+
 
 const testimonials = [
   {
@@ -61,15 +61,11 @@ const testimonials = [
 const firstRow = testimonials.slice(0, 3);
 const secondRow = testimonials.slice(3, 6);
 
-export function TestimonialsSection() {
+export function TestimonialsSection({ children }) {
   return (
     <section className="py-20 px-4 max-w-[92rem] w-full relative overflow-hidden mx-auto">
       <div className="text-center mb-16">
-        <h2 className="font-serif font-bold text-3xl lg:text-5xl text-gray-900">
-          Customer said
-          <br />
-          about <span className="italic text-customBg">{title}</span>
-        </h2>
+        {children}
       </div>
 
       <div className="z-10 absolute left-0 h-[75%] top-[28%] inset-y-0 w-[15%] bg-gradient-to-r from-[#E7F6FE] to-transparent" />

@@ -156,7 +156,7 @@ const Herosection = () => {
           title="Stop Wasting Money On"
           subtitle="Developers who disappear"
           img1="https://res.cloudinary.com/dko4n7zoc/image/upload/v1758381157/2_v0dzt5.webp"
-          img2="https://res.cloudinary.com/dko4n7zoc/image/upload/v1758381157/2_v0dzt5.webp"
+          img2="https://res.cloudinary.com/dko4n7zoc/image/upload/v1758381157/5_dy2xnb.webp"
         />
 
         <ParallaxSection

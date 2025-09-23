@@ -9,7 +9,7 @@ import PricingProcrastination from '@/components/hire-us/Pricingprocasting'
 import { TestimonialsSection } from '@/components/Testimonial/testimonials-section'
 import Guaranteesection from '@/components/hire-us/Guaranteesection'
 import Actionablesection from '@/components/hire-us/Actionablesection'
-import Herosection from '@/components/Parallaxscroll/Background'
+import Herosection from '@/components/Parallaxscroll/Heroparallax'
 
 const page = () => {
   return (
@@ -23,7 +23,11 @@ const page = () => {
      <ComparisonTable/>
       <Guaranteesection/>
       <Actionablesection/>
-      <TestimonialsSection />
+      <TestimonialsSection>
+        <h2 className="font-serif font-bold text-3xl lg:text-5xl text-gray-900">
+          Social Proof & Testimonials
+        </h2>
+      </TestimonialsSection>
      <PricingProcrastination/>
     </>
   )

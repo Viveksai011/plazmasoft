@@ -24,7 +24,13 @@ export default function Home() {
       <ExperienceSection />
       <DevelopmentSection />
       <ProcessSection />
-      <TestimonialsSection />
+       <TestimonialsSection>
+              <h2 className="font-serif font-bold text-3xl lg:text-5xl text-gray-900">
+                Customer said
+                <br />
+                about <span className="italic text-customBg">Krishly</span>
+              </h2>
+            </TestimonialsSection>
       <Contactsection />
       <FaqSection faqs={faqs} />
     </main>
