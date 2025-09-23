@@ -18,13 +18,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} min-h-screen flex bg-[#f0ecfa] flex-col overflow-x-hidden`}
+        className={`${inter.className} min-h-screen flex bg-[#E7F6FE] flex-col overflow-x-hidden`}
       >
         <Header />
         {children}
         <Footer />
         <Toaster />
-        <CustomCursor />
+        {/* <CustomCursor /> */}
       </body>
     </html>
   );

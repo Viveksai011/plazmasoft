@@ -19,7 +19,6 @@ const Contactsection = () => {
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <div className="-mx-4 flex flex-wrap lg:justify-between">
-       
         <div className="w-full px-4 xl:w-[58%]">
           <motion.div
             className="mb-12 w-full xl:max-w-[800px] h-full xl:mb-0"
@@ -37,7 +36,7 @@ const Contactsection = () => {
             >
               <h2 className="mb-6 font-bold text-gray-900 text-3xl lg:text-4xl leading-tight">
                 <div className="inline">
-                  <Rocket className="w-9 h-9 mr-2 text-purple-600 inline" />
+                  <Rocket className="w-9 h-9 mr-2 text-customBg inline" />
                   Our "Demo in 21 Days" Process{" "}
                 </div>
               </h2>
@@ -55,19 +54,19 @@ const Contactsection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.2 + 0.5, duration: 0.5 }}
                   viewport={{ once: true, amount: 0.3 }}
-                  className="group relative bg-thirdbg overflow-hidden rounded-2xl hover:border-t-4 hover:scale-105 hover:border-t-purple-500 border-0 shadow-lg hover:shadow-xl transition-all duration-300 "
+                  className="group relative bg-thirdbg overflow-hidden rounded-2xl hover:border-t-4 hover:scale-105 hover:border-t-customBg border-0 shadow-lg hover:shadow-xl transition-all duration-300 "
                 >
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <div
-                        className={`bg-gradient-to-t  from-secondarycustomBg to-customBg p-3 rounded-xl text-white flex-shrink-0`}
+                        className={`bg-customBg p-3 rounded-xl text-white flex-shrink-0`}
                       >
                         {" "}
                         <step.icon className="w-5 h-5" />
                       </div>
                       <div>
                         <span
-                          className={`px-2 py-1 bg-gradient-to-t  from-secondarycustomBg to-customBg text-white rounded-full text-xs font-bold`}
+                          className={`px-2 py-1 bg-customBg text-white rounded-full text-xs font-bold`}
                         >
                           {step.step}
                         </span>
@@ -95,11 +94,10 @@ const Contactsection = () => {
           </motion.div>
         </div>
 
-        
         <div className="w-full px-4 xl:w-[38%]">
           <Card className="relative rounded-lg bg-white p-7 shadow-lg">
             <motion.div
-              className="bg-gradient-to-t from-secondarycustomBg to-customBg mb-8 rounded-2xl p-6 text-white"
+              className="bg-customBg mb-8 rounded-2xl p-6 text-white"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}

@@ -4,7 +4,8 @@ export const Carddata = [
   {
     id: 1,
     title: "E-Commerce",
-    description: "Transform your retail strategy with powerful e-commerce solutions.",
+    description:
+      "Transform your retail strategy with powerful e-commerce solutions.",
     icon: <Server className="w-6 h-6 text-[#B3E9C7] hover:animate-tada" />,
     seoKeywords: "online shopping, e-commerce development, retail solutions",
   },
@@ -13,19 +14,22 @@ export const Carddata = [
     title: "On-Demand Solutions",
     description: "Build on-demand platforms for seamless user experiences.",
     icon: <Server className="w-6 h-6 text-[#B3E9C7] hover:animate-tada" />,
-    seoKeywords: "on-demand services, mobile app development, instant solutions",
+    seoKeywords:
+      "on-demand services, mobile app development, instant solutions",
   },
   {
     id: 3,
     title: "Social Networking",
-    description: "Create social platforms that connect and engage users globally.",
+    description:
+      "Create social platforms that connect and engage users globally.",
     icon: <Server className="w-6 h-6 text-[#B3E9C7] hover:animate-tada" />,
     seoKeywords: "social media, social networking development, community apps",
   },
   {
     id: 4,
     title: "Healthcare",
-    description: "Revolutionize healthcare services with innovative digital solutions.",
+    description:
+      "Revolutionize healthcare services with innovative digital solutions.",
     icon: <Server className="w-6 h-6 text-[#B3E9C7] hover:animate-tada" />,
     seoKeywords: "healthcare IT, telemedicine, digital health solutions",
   },
@@ -39,11 +43,27 @@ export const Carddata = [
   {
     id: 6,
     title: "Tours and Travel",
-    description: "Elevate the travel experience with cutting-edge tech solutions.",
+    description:
+      "Elevate the travel experience with cutting-edge tech solutions.",
     icon: <Server className="w-6 h-6 text-[#B3E9C7] hover:animate-tada" />,
     seoKeywords: "travel app development, tourism solutions, booking platforms",
   },
 ];
 
-
-
+export const cardTexts = [
+  {
+    id: 1,
+    title: "Guaranteed Results",
+    icon: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1758387390/1-1_m1i1ex.webp",
+  },
+  {
+    id: 2,
+    title: "Transparent Pricing",
+    icon: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1758387390/1-3_jpnj5g.webp",
+  },
+  {
+    id: 3,
+    title: "Real Business Focus",
+    icon: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1758387390/1-2_epieby.webp",
+  },
+];

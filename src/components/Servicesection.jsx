@@ -29,14 +29,14 @@ const featureIcons = {
   "Android App": <Androidicon className="w-2 h-2" />,
   "iOS App": <Appstore className="w-6 h-6" />,
 
-  Laravel: <CodeIcon className="w-6 h-6 text-purple-700" />,
+  Laravel: <CodeIcon className="w-6 h-6 text-customBg" />,
   "Node.js": <NodeIcons className="w-6 h-6 " />,
   "Angular.js": <Angular className="w-6 h-6 " />,
   "React.js": <Reacttwo className="w-6 h-6 " />,
 
   Figma: <Figmaicons className="w-6 h-6 " />,
   "Adobe XD": <Adobexdicons className="w-6 h-6 " />,
-  Sketch: <DesignIcon className="w-6 h-6 text-purple-700" />,
+  Sketch: <DesignIcon className="w-6 h-6 text-customBg" />,
   Photoshop: <Photoshopicons className="w-6 h-6 " />,
 
   "React Native App Maintenance": <Reacticon className="w-2 h-2" />,
@@ -44,14 +44,14 @@ const featureIcons = {
   "Android App Maintenance": <Androidicon className="w-2 h-2" />,
   "iOS App Maintenance": <Appstore className="w-6 h-6" />,
 
-  "IoT Apps": <IoTIcon className="w-6 h-6 text-purple-700" />,
-  "IoT Dashboard & Analytics": <WebIcon className="w-6 h-6 text-purple-700" />,
-  "SaaS App Development": <ServerIcon className="w-6 h-6 text-purple-700" />,
-  "IoT Software": <IoTIcon className="w-6 h-6 text-purple-700" />,
+  "IoT Apps": <IoTIcon className="w-6 h-6 text-customBg" />,
+  "IoT Dashboard & Analytics": <WebIcon className="w-6 h-6 text-customBg" />,
+  "SaaS App Development": <ServerIcon className="w-6 h-6 text-customBg" />,
+  "IoT Software": <IoTIcon className="w-6 h-6 text-customBg" />,
 
-  OpenAI: <BrainIcon className="w-6 h-6 text-purple-700" />,
-  "ChatGPT Development": <AIIcon className="w-6 h-6 text-purple-700" />,
-  "ChatGPT Bots": <ChatIcon className="w-6 h-6 text-purple-700" />,
+  OpenAI: <BrainIcon className="w-6 h-6 text-customBg" />,
+  "ChatGPT Development": <AIIcon className="w-6 h-6 text-customBg" />,
+  "ChatGPT Bots": <ChatIcon className="w-6 h-6 text-customBg" />,
 };
 
 const services = [
@@ -130,13 +130,13 @@ export function Servicesection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ delay: index * 0.2 + 0.3, duration: 0.8 }}
-            className="bg-thirdbg p-8 hover:border-t-4 group hover:border-t-purple-500 relative rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            className="bg-thirdbg p-8 hover:border-t-4 group hover:border-t-customBg relative rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
           >
             <div className="p-0">
-              <span className="text-gray-400 text-sm  group-hover:border-4 group-hover:border-purple-500 transition-all duration-300 hover:-translate-y-2 absolute top-[-15px] right-[-19px] font-medium h-[80px] flex items-center justify-center w-[80px] bg-[#f0ecfa] rounded-full">
+              <span className="text-gray-400 text-sm  group-hover:border-4 group-hover:border-customBg transition-all duration-300 hover:-translate-y-2 absolute top-[-15px] right-[-19px] font-medium h-[80px] flex items-center justify-center w-[80px] bg-[#E7F6FE] rounded-full">
                 <span className="p-4 bg-white rounded-full text-gray-500 font-semibold">
                   {React.createElement(service.icon, {
-                    className: "!text-purple-600",
+                    className: "!text-customBg ",
                   })}
                 </span>
               </span>

@@ -178,7 +178,7 @@ export function DevelopmentSection() {
               >
                 <Card className="lg:max-w-[400px] bg-thirdbg w-full shadow-lg border-0">
                   <CardHeader className="pb-3">
-                    <CardTitle className="text-2xl font-bold text-purple-700">
+                    <CardTitle className="text-2xl font-bold text-customBg">
                       {activeTab}
                     </CardTitle>
                   </CardHeader>
@@ -210,7 +210,7 @@ export function DevelopmentSection() {
                             variants={benefitItemVariants}
                           >
                             <div className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center">
-                              <CircleCheckBig className="w-5 h-5 text-purple-600" />
+                              <CircleCheckBig className="w-5 h-5 text-customBg" />
                             </div>
                             <span className="text-gray-700">{benefit}</span>
                           </motion.div>

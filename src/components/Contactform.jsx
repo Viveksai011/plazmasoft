@@ -144,7 +144,7 @@ const Contactform = () => {
             value={formData.firstName}
             onChange={handleChange}
             placeholder="Jane"
-            className="bg-white/5 border ring-1 ring-purple-400 rounded-lg px-4 py-2 text-secondarycustomBg placeholder:text-gray-400 outline-none"
+            className="bg-white/5 border ring-1 ring-[#E7F6FE]rounded-lg px-4 py-2 text-customBg placeholder:text-gray-400 outline-none"
           />
         </div>
         <div className="flex flex-col gap-2 w-full md:w-1/2">
@@ -154,7 +154,7 @@ const Contactform = () => {
             value={formData.lastName}
             onChange={handleChange}
             placeholder="Smith"
-            className="bg-white/5 border ring-1 ring-purple-400 rounded-lg px-4 py-2 text-secondarycustomBg placeholder:text-gray-400 outline-none"
+            className="bg-white/5 border ring-1 ring-[#E7F6FE]rounded-lg px-4 py-2 text-customBg placeholder:text-gray-400 outline-none"
           />
         </div>
       </div>
@@ -168,7 +168,7 @@ const Contactform = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="jane@framer.com"
-            className="bg-white/5 border ring-1 ring-purple-400 rounded-lg px-4 py-2 text-secondarycustomBg placeholder:text-gray-400 outline-none"
+            className="bg-white/5 border ring-1 ring-[#E7F6FE]rounded-lg px-4 py-2 text-customBg placeholder:text-gray-400 outline-none"
           />
         </div>
         <div className="flex flex-col gap-2 w-full md:w-1/2">
@@ -178,7 +178,7 @@ const Contactform = () => {
             value={formData.company}
             onChange={handleChange}
             placeholder="Framer"
-            className="bg-white/5 border ring-1 ring-purple-400 rounded-lg px-4 py-2 text-secondarycustomBg placeholder:text-gray-400 outline-none"
+            className="bg-white/5 border ring-1 ring-[#E7F6FE]rounded-lg px-4 py-2 text-customBg placeholder:text-gray-400 outline-none"
           />
         </div>
       </div>
@@ -191,7 +191,7 @@ const Contactform = () => {
           onChange={handleChange}
           rows={4}
           placeholder="Describe your problem"
-          className="bg-white/5 border ring-1 ring-purple-400 rounded-lg px-4 py-2 text-secondarycustomBg placeholder:text-gray-400 outline-none"
+          className="bg-white/5 border ring-1 ring-[#E7F6FE]rounded-lg px-4 py-2 text-customBg placeholder:text-gray-400 outline-none"
         />
       </div>
 

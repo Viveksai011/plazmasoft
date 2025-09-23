@@ -68,12 +68,12 @@ export function TestimonialsSection() {
         <h2 className="font-serif font-bold text-3xl lg:text-5xl text-gray-900">
           Customer said
           <br />
-          about <span className="italic text-purple-700">{title}</span>
+          about <span className="italic text-customBg">{title}</span>
         </h2>
       </div>
 
-      <div className="z-10 absolute left-0 h-[75%] top-[28%] inset-y-0 w-[15%] bg-gradient-to-r from-[#f0ecfa] to-transparent" />
-      <div className="z-10 absolute right-0 h-[75%] top-[28%] inset-y-0 w-[15%] bg-gradient-to-l from-[#f0ecfa] to-transparent" />
+      <div className="z-10 absolute left-0 h-[75%] top-[28%] inset-y-0 w-[15%] bg-gradient-to-r from-[#E7F6FE] to-transparent" />
+      <div className="z-10 absolute right-0 h-[75%] top-[28%] inset-y-0 w-[15%] bg-gradient-to-l from-[#E7F6FE] to-transparent" />
 
       <div className="flex animate-marquee-left hover:[animation-play-state:paused] mb-8">
         {[...firstRow, ...firstRow, ...firstRow].map((testimonial, index) => (
