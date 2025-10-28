@@ -403,9 +403,82 @@ export const servicesData = {
   },
 
   "web-app-development": {
-    heroTitle: "Web App Development",
-    description:
-      "PlazmaSoft offers comprehensive web app development services, specializing in creating custom, responsive, and user-friendly web applications. Our expert web app developers leverage the latest technologies to deliver innovative solutions tailored to clients' specific needs.",
+    heroSection: {
+      heroTitle: "Web Development That Actually",
+      subtitle: "Grows Your Business",
+      description:
+        "Your website should be your #1 salesperson, not your biggest headache. We build web solutions that convert visitors into customers and problems into profit.",
+      cta: "Book Your Free Consultation Now",
+      image: "/img/svgviewer.svg",
+      imageText: "Get your custom website estimate in 72 hours",
+    },
+    BenefitsSectiontext: [
+      {
+        title: "Results-Focused Approach",
+
+        Icon: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1760180324/benifitis-3_ymdj0y.webp",
+        bullets: [
+          "Growth-Driven Design",
+          "Conversion-Centered Decisions",
+          "Business Impact First",
+          "Beyond Aesthetics",
+        ],
+      },
+      {
+        title: "Guaranteed Performance",
+        Icon: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1760180323/benifitis-2_fw5hoq.webp",
+        bullets: [
+          "30-Day Launch Guarantee",
+          "100% Mobile-Responsive",
+          "Page Speed Promise",
+          "Conversion Optimization",
+        ],
+      },
+      {
+        title: "Complete Transparency",
+        Icon: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1760180323/benifitis-1_lw9klu.webp",
+        bullets: [
+          "Real-Time Project Dashboard",
+          "Fixed-Price Contracts",
+          "Plain-English Communication",
+          "Full Code Ownership",
+        ],
+      },
+    ],
+    Stoplosing: {
+      header: {
+        title: "Stop Losing Customers to",
+        subtitle: {
+          part1: "Slow & Outdated",
+          part2: "Websites",
+        },
+      },
+      stats: [
+        { value: "7%", label: "Conversions drop every extra second" },
+        {
+          value: "25%",
+          label: "Visitors leave if load time > 4s",
+        },
+        {
+          value: "57%",
+          label: "Users won’t recommend poor mobile sites",
+        },
+        {
+          value: "88%",
+          label: "Customers don’t return after bad experience",
+        },
+      ],
+      cta: {
+        heading: "Take Action Today",
+        description: {
+          part1: "Get your personalized audit in 48 hours.",
+          part2:
+            "We'll analyze your current site and show you exactly what’s costing you customers.",
+        },
+        buttonText: "Get Free Audit",
+        securityNote: "Secure process. No credit card required.",
+      },
+    },
     developmenttool: {
       subPara: "Dummy as of now",
       title: "Web Development",
@@ -444,6 +517,68 @@ export const servicesData = {
         icon: "ecommerce",
       },
     ],
+    processsteps: [
+      {
+        step: "01",
+        title: "Discovery & Strategy",
+        duration: "Week 1",
+        whatHappens: [
+          "Audit current setup and interview team",
+          "Analyze competition and market positioning",
+          "Create detailed roadmap with ROI projections",
+        ],
+        clientRequirements: [
+          "Client requirement gathering",
+          "Analytics setup and training",
+          "Performance reports and recommendations",
+        ],
+      },
+      {
+        step: "02",
+        title: "Design & Approval",
+        duration: "Week 2–3",
+        whatHappens: [
+          "Create interactive wireframes and prototypes",
+          "Develop content strategy and user flows",
+          "Get approval before any coding begins",
+        ],
+        clientRequirements: [
+          "Client requirement gathering",
+          "Analytics setup and training",
+          "Performance reports and recommendations",
+        ],
+      },
+      {
+        step: "03",
+        title: "Development & Testing",
+        duration: "Week 4–8",
+        whatHappens: [
+          "Build solution with weekly progress updates",
+          "Allow real-time change requests",
+          "Test on multiple devices and browsers",
+        ],
+        clientRequirements: [
+          "Client requirement gathering",
+          "Analytics setup and training",
+          "Performance reports and recommendations",
+        ],
+      },
+      {
+        step: "04",
+        title: "Launch & Optimization",
+        duration: "Week 9+",
+        whatHappens: [
+          "Launch and monitor performance",
+          "Optimize based on real user data",
+          "90 days included support and improvements",
+        ],
+        clientRequirements: [
+          "Client requirement gathering",
+          "Analytics setup and training",
+          "Performance reports and recommendations",
+        ],
+      },
+    ],
     projects: [
       {
         id: 1,
@@ -471,19 +606,125 @@ export const servicesData = {
         tags: ["Web Development", "UX Research"],
       },
     ],
-    testimonal: mobileAppDevTestimonials,
-    faq: webapp,
+    testimonal: [
+      {
+        id: 1,
+        name: "Sam L.",
+        title: "Mobile Developer",
+        avatar: null,
+        content:
+          "The mobile app development service was exceptional. They delivered exactly what we envisioned.",
+        rating: 5,
+      },
+      {
+        id: 2,
+        name: "Emma G.",
+        title: "CTO",
+        avatar: null,
+        content:
+          "Their team understood our needs and built a flawless app with perfect UI. Highly recommend!",
+        rating: 5,
+      },
+      {
+        id: 3,
+        name: "Daniel B.",
+        title: "Product Manager",
+        avatar: null,
+        content:
+          "We needed a cross-platform solution, and their Flutter expertise delivered beyond our expectations.",
+        rating: 5,
+      },
+      {
+        id: 4,
+        name: "Alex T.",
+        title: "Founder",
+        avatar: null,
+        content:
+          "Great experience. The app is not only functional but also beautifully designed.",
+        rating: 5,
+      },
+      {
+        id: 5,
+        name: "Mia W.",
+        title: "CEO",
+        avatar: null,
+        content:
+          "The mobile app development team provided top-tier support from start to finish. The app is smooth and fast.",
+        rating: 5,
+      },
+    ],
+    faq: [
+      {
+        id: "item-1",
+        question: "What technologies do you use for web app development?",
+        answer:
+          "We use modern web development frameworks such as React, Angular, Vue.js, and Node.js to build scalable and interactive web applications.",
+      },
+      {
+        id: "item-2",
+        question: "Can you develop custom web apps for our business?",
+        answer:
+          "Yes, we specialize in custom web application development tailored to your business needs, whether it's a small business tool or a complex enterprise solution.",
+      },
+      {
+        id: "item-3",
+        question: "Do you offer web app maintenance and updates?",
+        answer:
+          "Absolutely! We provide ongoing support, maintenance, and updates to ensure your web application remains secure, functional, and up-to-date with the latest technology.",
+      },
+      {
+        id: "item-4",
+        question: "Is your web app development scalable?",
+        answer:
+          "Yes, we design and develop scalable web applications that can grow with your business, ensuring long-term performance and adaptability.",
+      },
+      {
+        id: "item-5",
+        question: "How do you ensure web app security?",
+        answer:
+          "We implement best practices for web security, including encryption, authentication, and regular security audits to ensure that your web application is protected from vulnerabilities.",
+      },
+      {
+        id: "item-6",
+        question: "What is the average development timeline for a web app?",
+        answer:
+          "The timeline can vary depending on the project complexity, but most custom web applications take between 3 to 6 months to develop from start to finish.",
+      },
+      {
+        id: "item-7",
+        question: "What is the average development timeline for a web app?",
+        answer:
+          "The timeline can vary depending on the project complexity, but most custom web applications take between 3 to 6 months to develop from start to finish.",
+      },
+    ],
+    comparisonData: {
+      withoutUs: [
+        "Endless Delays",
+        "Budget Nightmares",
+        "Technical Confusion",
+        "Poor Results",
+        "No Support",
+        "Wasted Investment",
+      ],
+      withUs: [
+        "Guaranteed Launch Dates",
+        "Fixed-Price Projects",
+        "Weekly Progress Calls",
+        "Conversion-Focused Design",
+        "90-Day Support Included",
+        "Measurable ROI",
+      ],
+    },
   },
 
   default: {
-    heroTitle: "Web App Development",
-    description:
-      "PlazmaSoft offers comprehensive web app development services, specializing in creating custom, responsive, and user-friendly web applications. Our expert web app developers leverage the latest technologies to deliver innovative solutions tailored to clients' specific needs.",
+    heroTitle: "Web Development That Actually",
+    description: "Grows Your Business",
     developmenttool: {
       subPara: "Dummy as of now",
       title: "Web Development",
       description:
-        "We employ a variety of tools and frameworks to create robust and scalable web applications.",
+        "We employ a variety of tools and frameworks to create robust and scalable web applicasca.",
       unorderlist: [
         "Industry-leading performance",
         "Scalable architecture",

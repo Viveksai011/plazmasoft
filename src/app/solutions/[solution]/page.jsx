@@ -7,6 +7,7 @@ import { Servicetoolkit } from "@/components/servicescomponent/Servicetoolkit";
 import TestimonialCarousel from "@/components/servicescomponent/TestimonialCarousel";
 import { ProcessSection } from "@/components/Process";
 import FaqSection from "@/components/FaqSection";
+import { TestimonialsSection } from "@/components/Testimonial/testimonials-section";
 
 export async function generateMetadata({ params }) {
   const solution = solutionData[params.solution] || solutionData.default;
@@ -21,9 +22,7 @@ export async function generateMetadata({ params }) {
 export default function solutionPage({ params }) {
   const solutionSlug = params.solution;
 
-
   const currentSolution = solutionData[solutionSlug] || solutionData.default;
-
 
   return (
     <div className="w-full mx-auto">
@@ -41,7 +40,13 @@ export default function solutionPage({ params }) {
       <DevelopmentServices services={currentSolution.services} />
 
       <ProjectsSection projects={currentSolution.projects} />
-      <TestimonialCarousel />
+      <TestimonialsSection testimonials={currentSolution.testimonal}>
+        <h2 className="font-serif font-bold text-3xl lg:text-5xl text-gray-900">
+          Customer said
+          <br />
+          about <span className="italic text-customBg">Krishly</span>
+        </h2>
+      </TestimonialsSection>
       <FaqSection faqs={currentSolution.faq} />
     </div>
   );

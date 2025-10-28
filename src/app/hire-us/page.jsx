@@ -10,6 +10,9 @@ import { TestimonialsSection } from '@/components/Testimonial/testimonials-secti
 import Guaranteesection from '@/components/hire-us/Guaranteesection'
 import Actionablesection from '@/components/hire-us/Actionablesection'
 import Herosection from '@/components/Parallaxscroll/Heroparallax'
+import { processstepsHire } from "@/utils/Ourprocess";
+import { Testimonaldata } from '@/utils/Hometestimonials'
+
 
 const page = () => {
   return (
@@ -19,11 +22,11 @@ const page = () => {
     <Techsection/>
      <ExpandingCardsDemo />
      <DifferenceSection/>
-     <ProcessSteps/>
+     <ProcessSteps processstepsHire={processstepsHire}/>
      <ComparisonTable/>
       <Guaranteesection/>
       <Actionablesection/>
-      <TestimonialsSection>
+      <TestimonialsSection testimonials={Testimonaldata}>
         <h2 className="font-serif font-bold text-3xl lg:text-5xl text-gray-900">
           Social Proof & Testimonials
         </h2>
