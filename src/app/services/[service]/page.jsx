@@ -29,28 +29,39 @@ export default function ServicePage({ params }) {
 
   return (
     <div className="w-full mx-auto">
-      <HeroSection HeroSection={currentService.heroSection} />
+      <HeroSection HeroSection={currentService.heroSection || {
+        heroTitle: currentService.heroTitle,
+        subtitle: "",
+        description: currentService.description,
+        cta: "Contact Us",
+        image: ""
+      }} />
       <PartnersSection />
-      <Stoplosingcustomer Stoplosing={currentService.Stoplosing} />
-      <BenefitsSection />
-      <Ourservices />
-      <Servicetoolkit developmenttool={currentService.developmenttool} />
+      {currentService.Stoplosing && <Stoplosingcustomer Stoplosing={currentService.Stoplosing} />}
+      {currentService.BenefitsSectiontext && <BenefitsSection groups={currentService.BenefitsSectiontext} />}
+      {currentService.Ourservices && <Ourservices differenceData={currentService.Ourservices} />}
+      {currentService.developmenttool && <Servicetoolkit developmenttool={currentService.developmenttool} />}
 
-      <ProcessSteps processstepsHire={currentService.processsteps} />
+      {currentService.processsteps && <ProcessSteps processstepsHire={currentService.processsteps} />}
 
-      <ProjectsSection projects={currentService.projects} />
-      <TestimonialsSection testimonials={currentService.testimonal}>
-        <h2 className="font-serif font-bold text-3xl lg:text-5xl text-gray-900">
-          <span className=" text-customBg">23k+ </span>
-          Customers gave their Feedback
-          <br />
-        </h2>
-      </TestimonialsSection>
-      <FaqSection
-        faqs={currentService.faq}
-        comparisonData={currentService.comparisonData}
-      />
-      <GuaranteeSection />
+      {currentService.projects && <ProjectsSection projects={currentService.projects} />}
+      {currentService.testimonal && (
+        <TestimonialsSection testimonials={currentService.testimonal}>
+          <h2 className="font-serif font-bold text-3xl lg:text-5xl text-gray-900">
+            <span className=" text-customBg">23k+ </span>
+            Customers gave their Feedback
+            <br />
+          </h2>
+        </TestimonialsSection>
+      )}
+      
+      {(currentService.faq || currentService.comparisonData) && (
+        <FaqSection
+          faqs={currentService.faq}
+          comparisonData={currentService.comparisonData}
+        />
+      )}
+      {currentService.Guarantee && <GuaranteeSection items={currentService.Guarantee} />}
       <Bannersection />
     </div>
   );

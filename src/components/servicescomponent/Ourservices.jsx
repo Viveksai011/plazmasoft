@@ -1,57 +1,7 @@
 import * as motion from "motion/react-client";
 import React from "react";
 
-const differenceData = [
-  {
-    title: "Business-First Approach",
-    icon: "🎯",
-    subpara: "Tailored, responsive websites designed to reflect your brand",
-    icones: ["🎯", "⚡", "🛡️", "📊"], // Array of icons
-    features: [
-      "Don't just build pretty websites – build profit-generating machines",
-      "Every design decision based on conversion data, not personal preference",
-      "Focus on ROI and measurable business impact",
-    ],
-  },
-  {
-    title: "Same-Day Communication",
-    icon: "⚡",
-    subpara:
-      "Secure, scalable platforms for smooth online shopping experiences",
-    icones: ["🎯", "⚡", "🛡️", "📊"], // Array of icons
-    features: [
-      "Questions answered within 4 hours, not 4 days",
-      "Emergency support available 24/7",
-      "Direct access to your developer (no account managers)",
-    ],
-  },
-  {
-    title: "No-Excuses Guarantee",
-    icon: "🛡️",
-    subpara:
-      "Robust web apps ensuring efficiency, scalability, and performance",
-    icones: ["🎯", "⚡", "🛡️", "📊"], // Array of icons
-    features: [
-      "Miss deadline = next milestone free",
-      "No ROI improvement in 90 days = free work until you get results",
-      "Bug-free guarantee with immediate fixes",
-    ],
-  },
-  {
-    title: "ROI-Focused Results",
-    icon: "📊",
-    subpara:
-      "Reliable updates, monitoring, and round-the-clock technical support",
-    icones: ["🎯", "⚡", "🛡️", "📊"],
-    features: [
-      "Measure success by business metrics: leads, conversion rates, reduced costs",
-      "If it doesn’t impact your bottom line, we don’t build it",
-      "Regular performance reporting and optimization",
-    ],
-  },
-];
-
-const Ourservices = () => {
+const Ourservices = ({differenceData}) => {
   return (
     <section className="flex flex-col max-w-[80rem] w-full mx-auto max-md:px-6 py-24 gap-9">
       <h3 className="text-center text-3xl md:text-5xl font-bold mb-12 md:col-span-2 lg:col-span-3">

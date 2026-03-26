@@ -21,9 +21,9 @@ export function Servicetoolkit({ developmenttool }) {
 
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-8">
-            <Card className="lg:max-w-[400px] bg-thirdbg w-full shadow-lg border-0">
+            <Card className="lg:max-w-[400px] bg-gradient-to-b from-customBg/5 to-white w-full shadow-lg border-2 border-white">
               <CardHeader className="pb-3">
-                <CardTitle className="text-2xl font-bold text-purple-700">
+                <CardTitle className="text-2xl font-bold text-customBg">
                   {developmenttool.title}
                 </CardTitle>
               </CardHeader>
@@ -41,7 +41,7 @@ export function Servicetoolkit({ developmenttool }) {
                       developmenttool.unorderlist.map((benefit, index) => (
                         <div key={index} className="flex items-start gap-3">
                           <div className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center">
-                            <CircleCheckBig className="w-5 h-5 text-purple-600" />
+                            <CircleCheckBig className="w-5 h-5 text-customBg" />
                           </div>
                           <span className="text-gray-700">{benefit}</span>
                         </div>
@@ -54,21 +54,21 @@ export function Servicetoolkit({ developmenttool }) {
             {developmenttool.technologiesused &&
               developmenttool.technologiesused.length > 0 && (
                 <div className="flex-1">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-6 pb-2 border-b border-gray-200">
+                  <h4 className="text-[24px] font-poppins md:text-[28px] lg:text-[36px] font-semibold text-customBg mb-6 pb-2 ">
                     Technologies We Use
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {developmenttool.technologiesused.map((tech, index) => (
                       <Card
                         key={tech.name || index}
-                        className="group transition-all relative duration-300 hover:shadow-md hover:border-green-300"
+                        className="group transition-all relative duration-300 bg-gradient-to-b from-customBg/5 to-white w-full shadow-lg border border-white"
                       >
                         <CardContent className="p-4">
                           <div className="flex items-start gap-4">
                             <div className="text-2xl mt-0.5">{tech.icon}</div>
                             <div>
                               <div className="flex items-center gap-2">
-                                <h5 className="font-semibold text-gray-900 group-hover:text-green-700">
+                                <h5 className="font-semibold text-gray-900 ">
                                   {tech.name}
                                 </h5>
                                 {tech.level === "Expert" && (

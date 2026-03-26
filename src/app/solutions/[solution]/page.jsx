@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function solutionPage({ params }) {
+export default function SolutionPage({ params }) {
   const solutionSlug = params.solution;
 
   const currentSolution = solutionData[solutionSlug] || solutionData.default;

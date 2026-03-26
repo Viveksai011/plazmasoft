@@ -2,26 +2,8 @@ import * as motion from "motion/react-client";
 import { Card } from "@/components/ui/card"
 import { Check } from "lucide-react"
 
-const items = [
-  {
-    title: "30-Day Launch Promise",
-    desc: "Your website goes live within 30 days of project start, or you receive 50% of your final invoice.",
-  },
-  {
-    title: "100% Satisfaction Guarantee",
-    desc: "We’ll work with you until you’re completely happy with your website, or we’ll refund your investment.",
-  },
-  {
-    title: "90-Day Support Included",
-    desc: "Full technical support, training, and minor updates included for 90 days after launch.",
-  },
-  {
-    title: "Performance Promise",
-    desc: "Your website will load in under 3 seconds and work perfectly on all devices, guaranteed.",
-  },
-]
 
-export default function GuaranteeSection() {
+export default function GuaranteeSection({ items }) {
   return (
     <section className="space-y-10 container mx-auto px-5 lg:px-0 py-20 max-w-[70rem]">
       <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 md:col-span-2 lg:col-span-3">

@@ -13,7 +13,7 @@ const Stoplosingcustomer = ({Stoplosing}) => {
         {Stoplosing.header.subtitle.part2}
       </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+      <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {Stoplosing.stats.map((s, i) => (
           <motion.div
             key={s.value + s.label}
@@ -21,7 +21,7 @@ const Stoplosingcustomer = ({Stoplosing}) => {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ delay: i * 0.05, duration: 0.35 }}
-            className="rounded-full :w-[200px] h-[200px] md:w-[250px] md:h-[250px] grid place-items-center border border-white bg-gradient-to-b from-transparent to-white  aspect-square"
+            className="rounded-full w-[200px] h-[200px] md:w-[250px] md:h-[250px] grid place-items-center border border-white bg-gradient-to-b from-transparent to-white  aspect-square"
           >
             <div className="text-center p-3 md:p-4">
               <div className="text-[1.5rem] justify-center md:text-[40px] text-customBg flex items-center font-bold ">

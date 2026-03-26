@@ -1,41 +1,9 @@
 import * as motion from "motion/react-client";
 import Image from "next/image";
 
-const groups = [
-  {
-    title: "Results-Focused Approach",
 
-    Icon: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1760180324/benifitis-3_ymdj0y.webp",
-    bullets: [
-      "Growth-Driven Design",
-      "Conversion-Centered Decisions",
-      "Business Impact First",
-      "Beyond Aesthetics",
-    ],
-  },
-  {
-    title: "Guaranteed Performance",
-    Icon: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1760180323/benifitis-2_fw5hoq.webp",
-    bullets: [
-      "30-Day Launch Guarantee",
-      "100% Mobile-Responsive",
-      "Page Speed Promise",
-      "Conversion Optimization",
-    ],
-  },
-  {
-    title: "Complete Transparency",
-    Icon: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1760180323/benifitis-1_lw9klu.webp",
-    bullets: [
-      "Real-Time Project Dashboard",
-      "Fixed-Price Contracts",
-      "Plain-English Communication",
-      "Full Code Ownership",
-    ],
-  },
-];
 
-export default function BenefitsSection() {
+export default function BenefitsSection({ groups }) {
   return (
     <div className="space-y-12">
       <h2 className="text-3xl md:text-5xl font-extrabold text-black text-center mb-10">
