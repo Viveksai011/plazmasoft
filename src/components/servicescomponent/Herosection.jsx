@@ -7,8 +7,8 @@ import Inversecirclecurve from "@/Icons/Inversecirclecurve";
 
 const HeroSection = ({ HeroSection }) => {
   return (
-    <section className=" py-20 max-w-[86rem] w-full  mx-auto px-6 lg:py-24">
-      <div className="flex flex-col md:flex-row justify-between w-full gap-4 items-center">
+    <section className="py-20 w-full px-4 relative overflow-hidden">
+      <div className="flex max-w-[86rem] mx-auto mt-10 w-full flex-col md:flex-row justify-between w-full gap-4 items-center">
         <div className="space-y-6 text-center max-w-[900px] w-full lg:text-left">
           <div>
             <h1 className=" font-bold text-black leading-10 text-[2.2rem] lg:leading-[1.2] lg:text-[2.6rem]">

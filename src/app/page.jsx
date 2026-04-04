@@ -31,7 +31,7 @@ export default function Home() {
                 <br />
                 about <span className="italic text-customBg">Krishly</span>
               </h2>
-            </TestimonialsSection>
+        </TestimonialsSection>
       <Contactsection />
       <FaqSection faqs={faqs} comparisonData={comparisonData} />
     </main>

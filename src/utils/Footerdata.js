@@ -10,10 +10,10 @@ import {
 } from "lucide-react";
 
 export const aboutUsItems = [
-  { text: "Company History", link: "#" },
+  { text: "About us", link: "/about-us" },
   { text: "Meet the Team", link: "#" },
-  { text: "Employee Handbook", link: "#" },
-  { text: "Careers", link: "#" },
+  { text: "Our Story", link: "#" },
+  { text: "Contact Us", link: "/contact-us" },
 ];
 
 export const servicesItems = [

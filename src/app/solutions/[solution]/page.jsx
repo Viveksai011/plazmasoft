@@ -4,7 +4,6 @@ import DevelopmentServices from "@/components/servicescomponent/Developmentservi
 import PartnersSection from "@/components/servicescomponent/Partnersection";
 import ProjectsSection from "@/components/servicescomponent/Projectsection";
 import { Servicetoolkit } from "@/components/servicescomponent/Servicetoolkit";
-import TestimonialCarousel from "@/components/servicescomponent/TestimonialCarousel";
 import { ProcessSection } from "@/components/Process";
 import FaqSection from "@/components/FaqSection";
 import { TestimonialsSection } from "@/components/Testimonial/testimonials-section";
