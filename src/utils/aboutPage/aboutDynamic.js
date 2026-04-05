@@ -160,39 +160,32 @@
   const differentCard = [
     {
       id: 1,
-      title: "Speak Your Language",
+      title: "Speak Language",
       icon: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1758387390/1-1_m1i1ex.webp",
-      description:
-        "No confusing tech jargon. We explain everything in plain English and focus on how it impacts your business.",
+      desc:
+        "No confusing tech jargon. We explain everything in plain English on how it impacts your business.",
     },
     {
       id: 2,
       title: "Transparent Pricing ",
       icon: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1758387390/1-3_jpnj5g.webp",
-      description:
+      desc:
         "Fixed-price projects with no hidden costs. You know exactly what you're paying for before we start.",
     },
     {
       id: 3,
-      title: "Fast Response Times",
+      title: "Fast Response",
       icon: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1758387390/1-2_epieby.webp",
-      description:
+      desc:
         "Questions answered within 4 hours during business days. Emergency support available 24/7.",
     },
     {
       id: 4,
-      title: "Long-term Partnership",
+      title: "Long-term",
       icon: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1758387390/1-2_epieby.webp",
-      description:
-        "We're not just vendors - we're your tech team. We grow with your business and adapt solutions as you scale.  ",
-    },
-    {
-      id: 5,
-      title: "Results Guarantee",
-      icon: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1758387390/1-2_epieby.webp",
-      description:
-        "If our solution doesn't improve your key metrics within 90 days, we'll work for free until it does.",
-    },
+      desc:
+        "We're not just vendors - we're your tech team. We grow with business adapt solutions as you scale.",
+    }
   ];
     const OurStory = {
     description:

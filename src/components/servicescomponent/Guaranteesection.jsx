@@ -3,13 +3,19 @@ import { Card } from "@/components/ui/card"
 import { Check } from "lucide-react"
 
 
-export default function GuaranteeSection({ items }) {
+export default function GuaranteeSection({ items, customTitle }) {
   return (
     <section className="space-y-10 container mx-auto px-5 lg:px-0 py-20 max-w-[70rem]">
       <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 md:col-span-2 lg:col-span-3">
-        {"Our "}
-        <span className="text-customBg ">{"Guarantee"}</span>
-        {" to You"}
+        {customTitle ? (
+          customTitle
+        ) : (
+          <>
+            {"Our "}
+            <span className="text-customBg">{"Guarantee"}</span>
+            {" to You"}
+          </>
+        )}
       </h2>
 
       <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
