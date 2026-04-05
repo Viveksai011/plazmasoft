@@ -36,3 +36,20 @@ export const faqs = [
       "Yes, we have comprehensive terms and conditions that outline usage rights, limitations, and legal obligations. You can review them during the purchase process.",
   },
 ];
+
+export const comparisonData = {
+  withoutUs: [
+    "Your idea stays an idea while competitors launch",
+    "You spend months finding the 'perfect' developer",
+    "You waste $20K+ learning expensive lessons",
+    "That perfect market opportunity passes you by",
+    
+  ],
+  withUs: [
+    "Working MVP in your hands within 8 days",
+    "Real user feedback guiding smart iterations",
+    "Professional development team that gets it",
+    "Peace of mind building the right thing",
+  ],
+};
+

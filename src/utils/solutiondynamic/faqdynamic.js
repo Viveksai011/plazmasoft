@@ -34,7 +34,13 @@ export const fintechFaq = [
     question: "What is the typical development timeline for a fintech app?",
     answer:
       "The development timeline varies depending on the features and complexity, but on average, a fintech app takes 4 to 6 months to develop.",
-  }
+  },
+    {
+    id: "item-7",
+    question: "Can you integrate payment gateways into fintech apps?",
+    answer:
+      "Yes, we can integrate various payment gateways, including PayPal, Stripe, and custom solutions, to provide secure and seamless transactions.",
+  },
 ];
 
 

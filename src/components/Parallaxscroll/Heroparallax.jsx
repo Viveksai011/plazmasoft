@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import Circlecurve from "@/Icons/Circlecurve";
 import Inversecirclecurve from "@/Icons/Inversecirclecurve";
 import Image from "next/image";

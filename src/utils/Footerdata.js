@@ -10,17 +10,17 @@ import {
 } from "lucide-react";
 
 export const aboutUsItems = [
-  { text: "Company History", link: "#" },
+  { text: "About us", link: "/about-us" },
   { text: "Meet the Team", link: "#" },
-  { text: "Employee Handbook", link: "#" },
-  { text: "Careers", link: "#" },
+  { text: "Our Story", link: "#" },
+  { text: "Contact Us", link: "/contact-us" },
 ];
 
 export const servicesItems = [
-  { text: "Web Development", link: "#" },
-  { text: "Web Design", link: "#" },
-  { text: "Marketing", link: "#" },
-  { text: "Google Ads", link: "#" },
+  { text: "Web App Development", link: "/web-app-development" },
+  { text: "Mobile App Development", link: "/mobile-app-development" },
+  { text: "E-Commerce Development", link: "/e-commerce-development" },
+  { text: "UI/UX Design", link: "/ui-ux-design" },
 ];
 
 export const locationItems = [
@@ -34,11 +34,10 @@ export const locationItems = [
 ];
 
 export const resourcesItems = [
-  { text: "Online Guides", link: "#" },
-  { text: "Conference Notes", link: "#" },
-  { text: "Forum", link: "#" },
-  { text: "Downloads", link: "#" },
-  { text: "Upcoming Events", link: "#" },
+  { text: "Fintech App Development", link: "/fintech-app-development" },
+  { text: "Taxi App Development", link: "/taxi-app-development" },
+  { text: "Grocery App Development", link: "/grocery-app-development" },
+  { text: "Food Ordering App Development", link: "/food-ordering-app-development" },
 ];
 
 export const helpfulLinksItems = [

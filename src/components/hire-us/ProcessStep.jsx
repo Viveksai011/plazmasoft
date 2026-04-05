@@ -3,7 +3,8 @@ import * as motion from "motion/react-client";
 import { processstepsHire } from "@/utils/Ourprocess";
 
 
-const ProcessSteps = () => {
+const ProcessSteps = ({processstepsHire}) => {
+
   return (
     <section className="bg-[#EAF6FE] py-16 px-4">
       <h2 className="text-center text-3xl md:text-5xl font-bold mb-12">

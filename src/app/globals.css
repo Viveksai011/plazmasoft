@@ -90,6 +90,20 @@
   will-change: transform;
 }
 
+.stroke-text {
+  -webkit-text-stroke: 2px #0871ac;
+  color: transparent;
+}
+.stroke-animate {
+  background: linear-gradient(to top, #0871ac 50%, transparent 50%);
+  background-size: 100% 200%;
+  background-position: 0% 100%; /* 👈 start FULLY hidden */
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #0ea5e9;
+}
+
 .cursor-circle {
   transition: transform 0.2s ease;
 }

@@ -8,7 +8,7 @@ export const navItems = [
 ];
 
 export const Subnav = [
-  { name: "Tech Blog", href: "#blog" },
+  { name: "Contact Us", href: "/contact-us" },
   {name: "Why Hire Us", href: "/hire-us"}
 ];
 
@@ -178,45 +178,6 @@ export const navigationData = {
       title: "Video Streaming App Development",
       href: "/solutions/video-streaming-app-development",
       description: "We build video streaming websites and web applications",
-    },
-  ],
-
-  "Hire Developers": [
-    {
-      title: "Flutter Developer",
-      href: "#flutter-developer",
-      description:
-        "Our Flutter developers excel in creating seamless and engaging user experiences.",
-    },
-    {
-      title: "ReactJS Developer",
-      href: "#reactjs-developer",
-      description:
-        "TechnoYuga ReactJS developers are proficient in creating interactive user interfaces and user satisfaction.",
-    },
-    {
-      title: "Full Stack Developer",
-      href: "#full-stack-developer",
-      description:
-        "Our Full Stack developers bring efficiency and expertise to your project, ensuring a seamless experience.",
-    },
-    {
-      title: "MERN Stack Developer",
-      href: "#mern-stack-developer",
-      description:
-        "Explore our MERN Stack developers skilled in utilizing MongoDB, React, and Node.js to build robust web apps.",
-    },
-    {
-      title: "React Native Developer",
-      href: "#react-native-developer",
-      description:
-        "Find top-notch React Native developers proficient in building high-quality mobile apps for both platforms.",
-    },
-    {
-      title: "Dedicated Developer",
-      href: "#dedicated-developer",
-      description:
-        "Find top-notch dedicated developers proficient in building high-quality apps for any platforms.",
     },
   ],
 

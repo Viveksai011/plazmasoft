@@ -14,7 +14,9 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { title } from "@/utils/Comapanytitle";
+import Image from "next/image";
+import { ChevronRight } from "lucide-react";
+
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,14 +29,17 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+const [openIndex, setOpenIndex] = useState(null);
 
-;
-
-
+const toggleAccordion = (index) => {
+  setOpenIndex(openIndex === index ? null : index);
+};
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300  ${
-        isScrolled ? "bg-white/30 backdrop-blur-sm " : "bg-transparent text-black"
+        isScrolled
+          ? "bg-white/30 backdrop-blur-sm "
+          : "bg-transparent text-black"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +48,13 @@ const Header = () => {
             href="/"
             className="flex items-center text-gray-700 hover:text-black space-x-2 h-28 w-40 relative"
           >
-            {title}
+          <Image
+            src="https://res.cloudinary.com/dko4n7zoc/image/upload/v1758613823/Transparent_5_1_1_jdcqyh.png"
+            alt="Logo"
+            width={500}
+            height={200}
+            className="w-full h-auto"
+          />
           </Link>
 
           <nav className="hidden lg:flex items-center space-x-8">
@@ -127,17 +138,61 @@ const Header = () => {
         </div>
 
         <div className={`lg:hidden ${isMobileMenuOpen ? "block" : "hidden"}`}>
-          <div className="py-4 space-y-4 bg-white/95 backdrop-blur-md rounded-lg mt-2">
-            {navItems.map((item) => (
-              <a
+          <div className="py-4 space-y-3 bg-white/10 backdrop-blur-md rounded-lg mt-2">
+            {Object.entries(navigationData).map(([key, items], index) => (
+              <div key={key} className="border-b border-gray-200">
+                {/* Accordion Header */}
+                <button
+                  onClick={() => toggleAccordion(index)}
+                  className="w-full flex justify-between items-center px-4 py-3 text-left font-medium text-gray-800"
+                >
+                  {key}
+                  <span
+                    className={`transition-transform duration-300 ${
+                      openIndex === index ? "rotate-90" : ""
+                    }`}
+                  >
+                   <ChevronRight
+  className={`transition-transform duration-300 ${
+    openIndex === index ? "rotate-90" : ""
+  }`}
+/>
+                  </span>
+                </button>
+
+                {/* Accordion Content */}
+                <div
+                  className={`overflow-auto transition-all duration-300 ${
+                    openIndex === index ? "max-h-96 py-2" : "max-h-0"
+                  }`}
+                >
+                  {items.map((item) => (
+                    <Link
+                      key={item.title}
+                      href={item.href}
+                      className="block px-6 py-2 text-sm text-gray-600 hover:text-blue-600"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            {/* Normal Links */}
+            {Subnav.map((item) => (
+              <Link
                 key={item.name}
                 href={item.href}
-                className="block px-4 py-2  hover:text-blue-600 transition-colors"
+                className="block px-4 py-2 text-gray-800 hover:text-blue-600"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
+
+            {/* Button */}
             <div className="px-4">
               <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                 Schedule Demo

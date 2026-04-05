@@ -6,24 +6,11 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Faqcurve from "@/Icons/Faqcurve";
-import { ArrowRight, CircleX, Shield } from "lucide-react";
-import { CircleCheck } from "lucide-react";
+import { ArrowRight, CircleAlert , Shield } from "lucide-react";
+import { BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const comparisonData = {
-  withoutUs: [
-    "Your idea stays an idea while competitors launch",
-    "You spend months finding the 'perfect' developer",
-    "You waste $20K+ learning expensive lessons",
-    "That perfect market opportunity passes you by",
-  ],
-  withUs: [
-    "Working MVP in your hands within 8 days",
-    "Real user feedback guiding smart iterations",
-    "Professional development team that gets it",
-    "Peace of mind building the right thing",
-  ],
-};
+
 
 // Animation variants
 const containerVariants = {
@@ -131,7 +118,7 @@ const circleVariants = {
   }
 };
 
-export default function FaqSection({ faqs }) {
+export default function FaqSection({ faqs, comparisonData }) {
   return (
     <motion.div 
       className="flex flex-col lg:flex-row lg:justify-between relative max-w-[92rem] max-md:p-4 w-full mx-auto"
@@ -193,7 +180,7 @@ export default function FaqSection({ faqs }) {
       </div>
 
       <motion.div 
-        className="bg-gradient-to-br lg:mt-[210px] max-lg:container mx-auto h-fit from-customBg to-[#033049] text-primary-foreground rounded-2xl px-4 py-7 md:p-8 shadow-xl relative overflow-hidden"
+        className="bg-gradient-to-br lg:mt-[220px] lg:min-w-[30%] max-lg:container mx-auto h-fit from-customBg to-[#033049] text-primary-foreground rounded-2xl px-4 py-7 md:p-8 shadow-xl relative overflow-hidden"
         variants={comparisonCardVariants}
       >
         <div className="absolute inset-0 opacity-10">
@@ -214,7 +201,7 @@ export default function FaqSection({ faqs }) {
             <h4 className="text-lg font-semibold mb-4 text-white">
               Without us:
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {comparisonData.withoutUs.map((item, index) => (
                 <motion.li 
                   key={index} 
@@ -224,7 +211,7 @@ export default function FaqSection({ faqs }) {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <CircleX className="w-5 h-5 text-white mt-0.5 flex-shrink-0" />
+                  <CircleAlert  className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
                   <span className="text-sm text-white/90">{item}</span>
                 </motion.li>
               ))}
@@ -236,7 +223,7 @@ export default function FaqSection({ faqs }) {
             variants={itemVariants}
           >
             <h4 className="text-lg font-semibold mb-4">With us:</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {comparisonData.withUs.map((item, index) => (
                 <motion.li 
                   key={index} 
@@ -246,7 +233,7 @@ export default function FaqSection({ faqs }) {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <CircleCheck className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                  <BadgeCheck className="w-4 h-4 mt-0.5 flex-shrink-0" />
                   <span className="text-sm text-white/90">{item}</span>
                 </motion.li>
               ))}

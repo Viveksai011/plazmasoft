@@ -150,7 +150,7 @@ const Footer = () => {
         >
           <div className="px-6 lg:px-8 pt-7 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <motion.div className="text-left" variants={itemVariants}>
-              <p className="text-lg font-medium text-gray-100">About Us</p>
+              <p className="text-lg font-medium text-gray-100">Company</p>
               <ListItem items={aboutUsItems} />
             </motion.div>
 
@@ -160,7 +160,7 @@ const Footer = () => {
             </motion.div>
 
             <motion.div className="text-left" variants={itemVariants}>
-              <p className="text-lg font-medium text-gray-100">Resources</p>
+              <p className="text-lg font-medium text-gray-100">Solutions</p>
               <ListItem items={resourcesItems} />
             </motion.div>
 
@@ -226,7 +226,7 @@ const Footer = () => {
             </div>
             
             <motion.hr 
-              className="my-7 border border-white/10"
+              className="my-5 border border-white/10"
               initial={{ width: 0 }}
               whileInView={{ width: "100%" }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -237,7 +237,7 @@ const Footer = () => {
               className="sm:flex sm:items-center px-6 lg:px-8 text-gray-200 sm:justify-between"
               variants={fadeInUp}
             >
-              <p className="text-xl">{title}</p>
+              <Image src="https://res.cloudinary.com/dko4n7zoc/image/upload/v1774902143/WhatsApp_Image_2026-03-27_at_9.13.51_PM-removebg-preview_y40lhg.png" alt="Logo" width={100} height={100} className="w-[250px] h-[50px] object-cover"/>
               <p className="mt-4 text-center text-sm sm:mt-0 sm:text-right">
                 Copyright &copy; 2022. All rights reserved.
               </p>

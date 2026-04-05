@@ -2,7 +2,7 @@ export  const mobileAppDevTestimonials = [
   {
     id: 1,
     name: "Sam L.",
-    role: "Mobile Developer",
+    title: "Mobile Developer",
     avatar: null,
     content: "The mobile app development service was exceptional. They delivered exactly what we envisioned.",
     rating: 5,
@@ -10,7 +10,7 @@ export  const mobileAppDevTestimonials = [
   {
     id: 2,
     name: "Emma G.",
-    role: "CTO",
+    title: "CTO",
     avatar: null,
     content: "Their team understood our needs and built a flawless app with perfect UI. Highly recommend!",
     rating: 5,
@@ -18,7 +18,7 @@ export  const mobileAppDevTestimonials = [
   {
     id: 3,
     name: "Daniel B.",
-    role: "Product Manager",
+    title: "Product Manager",
     avatar: null,
     content: "We needed a cross-platform solution, and their Flutter expertise delivered beyond our expectations.",
     rating: 5,
@@ -26,7 +26,7 @@ export  const mobileAppDevTestimonials = [
   {
     id: 4,
     name: "Alex T.",
-    role: "Founder",
+    title: "Founder",
     avatar: null,
     content: "Great experience. The app is not only functional but also beautifully designed.",
     rating: 5,
@@ -34,7 +34,7 @@ export  const mobileAppDevTestimonials = [
   {
     id: 5,
     name: "Mia W.",
-    role: "CEO",
+    title: "CEO",
     avatar: null,
     content: "The mobile app development team provided top-tier support from start to finish. The app is smooth and fast.",
     rating: 5,
@@ -45,7 +45,7 @@ export  const webAppDevTestimonials = [
   {
     id: 1,
     name: "Mark S.",
-    role: "Full Stack Developer",
+    title: "Full Stack Developer",
     avatar: null,
     content: "The web app development service was top-notch! They delivered a scalable and efficient solution.",
     rating: 5,
@@ -53,7 +53,7 @@ export  const webAppDevTestimonials = [
   {
     id: 2,
     name: "Sophia R.",
-    role: "Product Lead",
+    title: "Product Lead",
     avatar: null,
     content: "Our web platform now works seamlessly thanks to their expertise in developing robust web applications.",
     rating: 5,
@@ -61,7 +61,7 @@ export  const webAppDevTestimonials = [
   {
     id: 3,
     name: "John H.",
-    role: "Technical Director",
+    title: "Technical Director",
     avatar: null,
     content: "From wireframes to production, the entire web development process was smooth and efficient.",
     rating: 5,
@@ -69,7 +69,7 @@ export  const webAppDevTestimonials = [
   {
     id: 4,
     name: "Olivia F.",
-    role: "Senior Developer",
+    title: "Senior Developer",
     avatar: null,
     content: "We were able to deploy our project on time with zero hiccups thanks to their development expertise.",
     rating: 5,
@@ -77,7 +77,7 @@ export  const webAppDevTestimonials = [
   {
     id: 5,
     name: "Liam K.",
-    role: "CEO",
+    title: "CEO",
     avatar: null,
     content: "Our web app looks amazing and works flawlessly. This team is incredible at making ideas come to life.",
     rating: 5,
@@ -88,7 +88,7 @@ export  const uiUxDesignTestimonials = [
   {
     id: 1,
     name: "James C.",
-    role: "Designer",
+    title: "Designer",
     avatar: null,
     content: "The UI/UX design team brought our ideas to life with exceptional design skills and attention to detail.",
     rating: 5,
@@ -96,7 +96,7 @@ export  const uiUxDesignTestimonials = [
   {
     id: 2,
     name: "Emily P.",
-    role: "Product Owner",
+    title: "Product Owner",
     avatar: null,
     content: "Their designs are clean, modern, and user-friendly. We couldn't be happier with the results.",
     rating: 5,
@@ -104,7 +104,7 @@ export  const uiUxDesignTestimonials = [
   {
     id: 3,
     name: "Michael J.",
-    role: "UI Designer",
+    title: "UI Designer",
     avatar: null,
     content: "The user interface was intuitive and visually stunning. The overall design made a huge difference in user engagement.",
     rating: 5,
@@ -112,7 +112,7 @@ export  const uiUxDesignTestimonials = [
   {
     id: 4,
     name: "Chloe W.",
-    role: "Marketing Director",
+    title: "Marketing Director",
     avatar: null,
     content: "From the first prototype to the final product, the design was spot-on. They really understand user needs.",
     rating: 5,
@@ -120,7 +120,7 @@ export  const uiUxDesignTestimonials = [
   {
     id: 5,
     name: "Lucas B.",
-    role: "Creative Director",
+    title: "Creative Director",
     avatar: null,
     content: "The UI/UX team helped us craft a seamless experience for our users. Highly recommend their design services.",
     rating: 5,
@@ -131,7 +131,7 @@ export  const mvpDevTestimonials = [
   {
     id: 1,
     name: "Olivia M.",
-    role: "Startup Founder",
+    title: "Startup Founder",
     avatar: null,
     content: "Thanks to their MVP development service, we were able to launch our product in just 2 months.",
     rating: 5,
@@ -139,7 +139,7 @@ export  const mvpDevTestimonials = [
   {
     id: 2,
     name: "Ethan N.",
-    role: "Product Manager",
+    title: "Product Manager",
     avatar: null,
     content: "The MVP helped us validate our concept and secure investors. This team exceeded our expectations.",
     rating: 5,
@@ -147,7 +147,7 @@ export  const mvpDevTestimonials = [
   {
     id: 3,
     name: "Charlotte L.",
-    role: "Entrepreneur",
+    title: "Entrepreneur",
     avatar: null,
     content: "They helped us bring our ideas to life quickly and efficiently. The MVP was a huge success in attracting users.",
     rating: 5,
@@ -155,7 +155,7 @@ export  const mvpDevTestimonials = [
   {
     id: 4,
     name: "Benjamin D.",
-    role: "CEO",
+    title: "CEO",
     avatar: null,
     content: "Their expertise in MVP development allowed us to get feedback from real users and improve our product.",
     rating: 5,
@@ -163,7 +163,7 @@ export  const mvpDevTestimonials = [
   {
     id: 5,
     name: "Grace R.",
-    role: "Product Owner",
+    title: "Product Owner",
     avatar: null,
     content: "They understood our vision and built an MVP that gave us the insights we needed to grow our startup.",
     rating: 5,
@@ -174,7 +174,7 @@ export  const appMaintenanceTestimonials = [
   {
     id: 1,
     name: "William T.",
-    role: "Operations Manager",
+    title: "Operations Manager",
     avatar: null,
     content: "The app maintenance team ensures everything runs smoothly, and they fix any issues quickly.",
     rating: 5,
@@ -182,7 +182,7 @@ export  const appMaintenanceTestimonials = [
   {
     id: 2,
     name: "Lily P.",
-    role: "CTO",
+    title: "CTO",
     avatar: null,
     content: "Their app maintenance service is proactive and helps us keep our app up-to-date and bug-free.",
     rating: 5,
@@ -190,7 +190,7 @@ export  const appMaintenanceTestimonials = [
   {
     id: 3,
     name: "Oliver D.",
-    role: "Tech Lead",
+    title: "Tech Lead",
     avatar: null,
     content: "We’ve been using their app maintenance service for years. They keep everything running without any downtime.",
     rating: 5,
@@ -198,7 +198,7 @@ export  const appMaintenanceTestimonials = [
   {
     id: 4,
     name: "Zoe S.",
-    role: "Founder",
+    title: "Founder",
     avatar: null,
     content: "The team is always on top of updates, ensuring that our app stays fresh and secure. Highly recommend their service.",
     rating: 5,
@@ -206,7 +206,7 @@ export  const appMaintenanceTestimonials = [
   {
     id: 5,
     name: "Mason J.",
-    role: "Product Director",
+    title: "Product Director",
     avatar: null,
     content: "App maintenance is key to keeping our service reliable, and this team does a fantastic job at it.",
     rating: 5,
@@ -217,7 +217,7 @@ export  const chatGptDevTestimonials = [
   {
     id: 1,
     name: "Jack L.",
-    role: "AI Specialist",
+    title: "AI Specialist",
     avatar: null,
     content: "Integrating ChatGPT into our app was smooth, and the results were exactly what we needed.",
     rating: 5,
@@ -225,7 +225,7 @@ export  const chatGptDevTestimonials = [
   {
     id: 2,
     name: "Nina H.",
-    role: "Tech Founder",
+    title: "Tech Founder",
     avatar: null,
     content: "The ChatGPT integration significantly improved our user interaction. The team did an excellent job tailoring the solution.",
     rating: 5,
@@ -233,7 +233,7 @@ export  const chatGptDevTestimonials = [
   {
     id: 3,
     name: "Aiden W.",
-    role: "Data Scientist",
+    title: "Data Scientist",
     avatar: null,
     content: "The ChatGPT API integration was flawless, and our users love the interactive experience we now offer.",
     rating: 5,
@@ -241,7 +241,7 @@ export  const chatGptDevTestimonials = [
   {
     id: 4,
     name: "Isabella F.",
-    role: "Product Lead",
+    title: "Product Lead",
     avatar: null,
     content: "Harnessing ChatGPT for our app was a game-changer. It’s intuitive, smart, and enhanced the overall user experience.",
     rating: 5,
@@ -249,7 +249,7 @@ export  const chatGptDevTestimonials = [
   {
     id: 5,
     name: "Eli K.",
-    role: "Engineering Manager",
+    title: "Engineering Manager",
     avatar: null,
     content: "We utilized ChatGPT for customer service, and it’s helped streamline communication and improve response time.",
     rating: 5,
