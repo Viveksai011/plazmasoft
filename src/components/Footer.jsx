@@ -160,7 +160,7 @@ const Footer = () => {
             </motion.div>
 
             <motion.div className="text-left" variants={itemVariants}>
-              <p className="text-lg font-medium text-gray-100">Resources</p>
+              <p className="text-lg font-medium text-gray-100">Solutions</p>
               <ListItem items={resourcesItems} />
             </motion.div>
 

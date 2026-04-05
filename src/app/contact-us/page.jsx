@@ -7,11 +7,10 @@ import * as motion from "motion/react-client";
 
 const page = () => {
   return (
-    <div className="mt-8">
+    <div className="mt-8 ">
       <Contactsection />
-        <section className=" w-full max-w-[90rem] w-full overflow-hidden mx-auto mt-8 rounded-3xl bg-customBg p-5 lg:px-[30px] py-20 lg:py-[60px]">
-      <div className="">
-        <div className="grid grid-cols-1 gap-8 md:gap-12 lg:grid-cols-2 items-center">
+        <section className=" w-full max-w-[80rem] p-5 overflow-hidden mx-auto mt-8 ">
+        <div className="grid grid-cols-1  bg-customBg rounded-3xl p-5 lg:px-[30px] py-20 lg:py-[60px] gap-8 md:gap-12 lg:grid-cols-2 items-center">
           {/* Left side - Illustration */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -123,7 +122,6 @@ const page = () => {
             </motion.div>
           </motion.div>
         </div>
-      </div>
     </section>
     </div>
   )
