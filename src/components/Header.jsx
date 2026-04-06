@@ -4,8 +4,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-// import { ModalDemo } from '@/components/ModalDemo';
-import { navItems, Subnav, navigationData } from "@/utils/Headerdata";
+import { Subnav, navigationData } from "@/utils/Headerdata";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,7 +15,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
-
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,44 +27,40 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null);
 
-const toggleAccordion = (index) => {
-  setOpenIndex(openIndex === index ? null : index);
-};
+  const toggleAccordion = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300  ${
-        isScrolled
-          ? "bg-white/30 backdrop-blur-sm "
-          : "bg-transparent text-black"
+      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white/30 backdrop-blur-sm " : "bg-transparent text-black"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 ">
+        <div className="flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="flex items-center text-gray-700 hover:text-black space-x-2 h-28 w-40 relative"
+            className="relative flex h-28 w-40 items-center space-x-2 text-gray-700 hover:text-black"
           >
-          <Image
-            src="https://res.cloudinary.com/dko4n7zoc/image/upload/v1758613823/Transparent_5_1_1_jdcqyh.png"
-            alt="Logo"
-            width={500}
-            height={200}
-            className="w-full h-auto"
-          />
+            <Image
+              src="https://res.cloudinary.com/dko4n7zoc/image/upload/v1758613823/Transparent_5_1_1_jdcqyh.png"
+              alt="Logo"
+              width={500}
+              height={200}
+              className="h-auto w-full"
+            />
           </Link>
 
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden items-center space-x-8 lg:flex">
             <NavigationMenu>
               <NavigationMenuList>
                 {Object.entries(navigationData).map(([key, items]) => (
                   <NavigationMenuItem key={key}>
                     <NavigationMenuTrigger
-                      className={`bg-transparent hover:bg-transparent data-[state=open]:hover:bg-transparent  ${
-                        isScrolled
-                          ? "text-gray-700"
-                          : "text-gray-700 hover:text-black "
+                      className={`bg-transparent hover:bg-transparent data-[state=open]:hover:bg-transparent ${
+                        isScrolled ? "text-gray-700" : "text-gray-700 hover:text-black "
                       }`}
                     >
                       {key}
@@ -80,9 +74,7 @@ const toggleAccordion = (index) => {
                                 className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                                 href={item.href}
                               >
-                                <div className="text-sm font-medium leading-none">
-                                  {item.title}
-                                </div>
+                                <div className="text-sm font-medium leading-none">{item.title}</div>
                                 <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                   {item.description}
                                 </p>
@@ -100,11 +92,9 @@ const toggleAccordion = (index) => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium whitespace-nowrap ${
-                  isScrolled
-                    ? "text-gray-900"
-                    : "text-gray-700 hover:text-black"
-                }  transition-colors`}
+                className={`whitespace-nowrap text-sm font-medium ${
+                  isScrolled ? "text-gray-900" : "text-gray-700 hover:text-black"
+                } transition-colors`}
               >
                 {item.name}
               </Link>
@@ -112,39 +102,28 @@ const toggleAccordion = (index) => {
           </nav>
 
           <div className="hidden lg:block">
-            <Button className="bg-customBg hover:bg-customBg/80 text-white px-6 py-2 rounded-full transition-all duration-200">
+            <Button className="rounded-full bg-customBg px-6 py-2 text-white transition-all duration-200 hover:bg-customBg/80">
               Book Consultation
             </Button>
           </div>
 
-          <button
-            className="lg:hidden p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
+          <button className="p-2 lg:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? (
-              <X
-                className={`h-6 w-6 ${
-                  isScrolled ? "text-gray-900" : "text-white"
-                }`}
-              />
+              <X className={`h-6 w-6 ${isScrolled ? "text-gray-900" : "text-white"}`} />
             ) : (
-              <Menu
-                className={`h-6 w-6 ${
-                  isScrolled ? "text-gray-900" : "text-white"
-                }`}
-              />
+              <Menu className={`h-6 w-6 ${isScrolled ? "text-gray-900" : "text-white"}`} />
             )}
           </button>
         </div>
 
         <div className={`lg:hidden ${isMobileMenuOpen ? "block" : "hidden"}`}>
-          <div className="py-4 space-y-3 bg-white/10 backdrop-blur-md rounded-lg mt-2">
+          <div className="mt-2 space-y-3 rounded-lg bg-white/10 py-4 backdrop-blur-md">
             {Object.entries(navigationData).map(([key, items], index) => (
               <div key={key} className="border-b border-gray-200">
                 {/* Accordion Header */}
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full flex justify-between items-center px-4 py-3 text-left font-medium text-gray-800"
+                  className="flex w-full items-center justify-between px-4 py-3 text-left font-medium text-gray-800"
                 >
                   {key}
                   <span
@@ -152,11 +131,11 @@ const toggleAccordion = (index) => {
                       openIndex === index ? "rotate-90" : ""
                     }`}
                   >
-                   <ChevronRight
-  className={`transition-transform duration-300 ${
-    openIndex === index ? "rotate-90" : ""
-  }`}
-/>
+                    <ChevronRight
+                      className={`transition-transform duration-300 ${
+                        openIndex === index ? "rotate-90" : ""
+                      }`}
+                    />
                   </span>
                 </button>
 
@@ -194,7 +173,7 @@ const toggleAccordion = (index) => {
 
             {/* Button */}
             <div className="px-4">
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+              <Button className="w-full bg-blue-600 text-white hover:bg-blue-700">
                 Schedule Demo
               </Button>
             </div>

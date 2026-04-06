@@ -24,8 +24,7 @@ const StructureTemplate = (useCase, userInput) => {
     },
     [STORY]: {
       intro: "You are an expert storyteller.",
-      instructions:
-        "Your task is to generate a compelling story based on this description.",
+      instructions: "Your task is to generate a compelling story based on this description.",
       goals: [
         "Clear narrative structure",
         "Interesting characters",
@@ -46,14 +45,12 @@ const StructureTemplate = (useCase, userInput) => {
     },
     [CREATIVITY]: {
       intro: "You are a creative expert.",
-      instructions:
-        "Your task is to generate a creative solution or concept based on this idea.",
+      instructions: "Your task is to generate a creative solution or concept based on this idea.",
       goals: ["Innovative", "Unique", "Feasible", "Clear and impactful"],
     },
     [OPTIMIZE_PROMPT]: {
       intro: "You are an expert in optimizing prompts.",
-      instructions:
-        "Your task is to generate an optimized prompt based on this description.",
+      instructions: "Your task is to generate an optimized prompt based on this description.",
       goals: [
         "Goal-driven",
         "Detailed",

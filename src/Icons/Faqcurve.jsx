@@ -8,19 +8,9 @@ const Faqcurve = ({ className }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path
-        d="M439,345 C6,204 400,100 396,108"
-        stroke="#06507A"
-        strokeWidth="2"
-        fill="none"
-      />
+      <path d="M439,345 C6,204 400,100 396,108" stroke="#06507A" strokeWidth="2" fill="none" />
 
-      <path
-        d="M761,345 C1194,204 800,100 804,108"
-        stroke="#06507A"
-        strokeWidth="2"
-        fill="none"
-      />
+      <path d="M761,345 C1194,204 800,100 804,108" stroke="#06507A" strokeWidth="2" fill="none" />
 
       <defs>
         <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">

@@ -35,14 +35,13 @@ export const fintechFaq = [
     answer:
       "The development timeline varies depending on the features and complexity, but on average, a fintech app takes 4 to 6 months to develop.",
   },
-    {
+  {
     id: "item-7",
     question: "Can you integrate payment gateways into fintech apps?",
     answer:
       "Yes, we can integrate various payment gateways, including PayPal, Stripe, and custom solutions, to provide secure and seamless transactions.",
   },
 ];
-
 
 export const onDemandFaq = [
   {
@@ -83,7 +82,6 @@ export const onDemandFaq = [
   },
 ];
 
-
 export const taxiBookingFaq = [
   {
     id: "item-1",
@@ -116,7 +114,6 @@ export const taxiBookingFaq = [
       "Typically, a taxi booking app can be developed within 4 to 6 months, depending on the features and complexity.",
   },
 ];
-
 
 export const socialMediaFaq = [
   {
@@ -151,7 +148,6 @@ export const socialMediaFaq = [
   },
 ];
 
-
 export const stockTradingFaq = [
   {
     id: "item-1",
@@ -184,7 +180,6 @@ export const stockTradingFaq = [
       "The typical development timeline for a stock trading app is around 6 to 8 months, depending on the complexity and features required.",
   },
 ];
-
 
 export const restaurantAppFaq = [
   {
@@ -219,7 +214,6 @@ export const restaurantAppFaq = [
   },
 ];
 
-
 export const fantasyAppFaq = [
   {
     id: "item-1",
@@ -252,7 +246,6 @@ export const fantasyAppFaq = [
       "Typically, fantasy sports apps are developed within 5 to 7 months, depending on the features and functionalities involved.",
   },
 ];
-
 
 export const healthcareAppFaq = [
   {
@@ -287,7 +280,6 @@ export const healthcareAppFaq = [
   },
 ];
 
-
 export const datingAppFaq = [
   {
     id: "item-1",
@@ -320,7 +312,6 @@ export const datingAppFaq = [
       "Typically, dating apps can be developed in 5 to 7 months, depending on the complexity and features such as user matching, messaging, and profile creation.",
   },
 ];
-
 
 export const groceryDeliveryFaq = [
   {
@@ -388,7 +379,6 @@ export const qrCodeFoodOrderingFaq = [
   },
 ];
 
-
 export const transportIndustryFaq = [
   {
     id: "item-1",
@@ -421,7 +411,6 @@ export const transportIndustryFaq = [
       "The timeline typically ranges from 4 to 6 months depending on the complexity, including features like GPS, scheduling, and payment integration.",
   },
 ];
-
 
 export const fitnessAppFaq = [
   {
@@ -456,7 +445,6 @@ export const fitnessAppFaq = [
   },
 ];
 
-
 export const sportsBettingFaq = [
   {
     id: "item-1",
@@ -489,7 +477,6 @@ export const sportsBettingFaq = [
       "Sports betting apps typically take 6 to 8 months to develop, depending on the features such as real-time betting, odds integration, and payment systems.",
   },
 ];
-
 
 export const videoStreamingFaq = [
   {

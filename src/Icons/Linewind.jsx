@@ -1,8 +1,8 @@
 import React from "react";
 
-const Linewind = ({className}) => {
+const Linewind = ({ className }) => {
   return (
-   <div className={`${className}`}>
+    <div className={`${className}`}>
       <svg
         width="364"
         height="201"

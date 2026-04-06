@@ -9,11 +9,16 @@ export const toolkitData = {
     technologies: [
       { name: "React", level: "Expert", icon: "⚛️", category: "Frontend" },
       { name: "Next.js", level: "Expert", icon: "▲", category: "Full-stack" },
-      { name: "Vue.js", level: "Advanced", icon: <Vueicons width="30px"/>, category: "Frontend" },
+      { name: "Vue.js", level: "Advanced", icon: <Vueicons width="30px" />, category: "Frontend" },
       { name: "Angular", level: "Advanced", icon: "🅰️", category: "Frontend" },
       { name: "Node.js", level: "Expert", icon: <NodeIcons width="30px" />, category: "Backend" },
       { name: "Django", level: "Advanced", icon: "🐍", category: "Backend" },
-      { name: "Laravel", level: "Advanced", icon: <CodeIcon className="w-6 h-6 text-purple-700" />, category: "Backend" },
+      {
+        name: "Laravel",
+        level: "Advanced",
+        icon: <CodeIcon className="h-6 w-6 text-purple-700" />,
+        category: "Backend",
+      },
       { name: "Express", level: "Expert", icon: "⚡", category: "Backend" },
       { name: ".Net", level: "Advanced", icon: "🖥️", category: "Frontend" },
     ],
@@ -30,7 +35,7 @@ export const toolkitData = {
       { name: "Dart", level: "Expert", icon: "🎯", category: "Language" },
       { name: "Xamarin", level: "Advanced", icon: "🔷", category: "Cross-platform" },
       { name: "Ionic", level: "Advanced", icon: "⚡", category: "Hybrid" },
-       { name: ".Net", level: "Advanced", icon: "🖥️", category: "Frontend" },
+      { name: ".Net", level: "Advanced", icon: "🖥️", category: "Frontend" },
     ],
   },
   "Database & Backend": {
@@ -45,7 +50,7 @@ export const toolkitData = {
       { name: "AWS", level: "Expert", icon: "☁️", category: "Cloud" },
       { name: "Docker", level: "Advanced", icon: "🐳", category: "DevOps" },
       { name: "GraphQL", level: "Advanced", icon: "🔗", category: "API" },
-       { name: "Oracle SQL", level: "Advanced", icon: "🛢️", category: "Database" },
+      { name: "Oracle SQL", level: "Advanced", icon: "🛢️", category: "Database" },
     ],
   },
   "DevOps & Cloud": {

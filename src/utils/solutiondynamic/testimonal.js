@@ -1,5 +1,5 @@
 export const fintechTestimonials = [
-    {
+  {
     id: 1,
     name: "Vikram T.",
     title: "Startup Founder",
@@ -22,8 +22,7 @@ export const fintechTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
   {
@@ -31,8 +30,7 @@ export const fintechTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
   {
@@ -40,8 +38,7 @@ export const fintechTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
   {
@@ -49,8 +46,7 @@ export const fintechTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
 ];
@@ -79,8 +75,7 @@ export const taxiTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
 ];
@@ -109,8 +104,7 @@ export const groceryTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
 ];
@@ -139,8 +133,7 @@ export const foodOrderingTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
 ];
@@ -169,8 +162,7 @@ export const healthcareTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
 ];
@@ -199,8 +191,7 @@ export const fitnessTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
 ];
@@ -229,8 +220,7 @@ export const socialMediaTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
   {
@@ -238,8 +228,7 @@ export const socialMediaTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
   {
@@ -247,8 +236,7 @@ export const socialMediaTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
   {
@@ -256,8 +244,7 @@ export const socialMediaTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
 ];
@@ -286,8 +273,7 @@ export const datingTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
   {
@@ -295,8 +281,7 @@ export const datingTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
   {
@@ -304,8 +289,7 @@ export const datingTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
   {
@@ -313,8 +297,7 @@ export const datingTestimonials = [
     name: "Kiran D.",
     title: "Product Owner",
     avatar: null,
-    content:
-      "The user experience is smooth and intuitive. Our customers love the booking flow.",
+    content: "The user experience is smooth and intuitive. Our customers love the booking flow.",
     rating: 5,
   },
 ];

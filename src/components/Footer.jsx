@@ -1,5 +1,4 @@
 import * as motion from "motion/react-client";
-import React from "react";
 import ListItem from "@/components/Listiteam";
 import {
   aboutUsItems,
@@ -27,9 +26,9 @@ const Footer = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.3
-      }
-    }
+        delayChildren: 0.3,
+      },
+    },
   };
 
   const itemVariants = {
@@ -39,9 +38,9 @@ const Footer = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const fadeInUp = {
@@ -51,9 +50,9 @@ const Footer = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const slideInFromLeft = {
@@ -63,9 +62,9 @@ const Footer = () => {
       opacity: 1,
       transition: {
         duration: 0.7,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const slideInFromRight = {
@@ -75,9 +74,9 @@ const Footer = () => {
       opacity: 1,
       transition: {
         duration: 0.7,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
@@ -98,10 +97,7 @@ const Footer = () => {
           <defs>
             <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
               <stop stopColor="rgba(59, 7, 100, 1)" offset="0%"></stop>
-              <stop
-                stopColor="rgba(3, 48, 73, 1)"
-                offset="100%"
-              ></stop>
+              <stop stopColor="rgba(3, 48, 73, 1)" offset="100%"></stop>
             </linearGradient>
           </defs>
           <path
@@ -112,9 +108,9 @@ const Footer = () => {
         </svg>
       </motion.div>
 
-      <footer className="w-full bg-[#033049] flex flex-col xl:flex-row">
-        <motion.div 
-          className="flex flex-col m-5 gap-6 justify-center bg-[#06507A] border border-[#90C0DC] rounded-lg text-white px-4 py-4 sm:px-6 lg:px-8 xl:w-[30%]"
+      <footer className="flex w-full flex-col bg-[#033049] xl:flex-row">
+        <motion.div
+          className="m-5 flex flex-col justify-center gap-6 rounded-lg border border-[#90C0DC] bg-[#06507A] px-4 py-4 text-white sm:px-6 lg:px-8 xl:w-[30%]"
           variants={slideInFromLeft}
           initial="hidden"
           whileInView="visible"
@@ -122,33 +118,29 @@ const Footer = () => {
         >
           <motion.p variants={itemVariants}>{title}</motion.p>
 
-          <motion.p 
-            className="text-gray-200"
-            variants={itemVariants}
-          >
-            Proptifi is an AI-driven platform empowering property owners and
-            investors with smart tools to streamline renovations, save costs,
-            and maximise value. Our innovative solutions include virtual
-            staging, design tools, and market intelligence, simplifying property
-            transformations. With a focus on sustainability and accessibility,
-            Proptifi is redefining the real estate and renovation landscape.
+          <motion.p className="text-gray-200" variants={itemVariants}>
+            Proptifi is an AI-driven platform empowering property owners and investors with smart
+            tools to streamline renovations, save costs, and maximise value. Our innovative
+            solutions include virtual staging, design tools, and market intelligence, simplifying
+            property transformations. With a focus on sustainability and accessibility, Proptifi is
+            redefining the real estate and renovation landscape.
           </motion.p>
 
           <motion.div variants={itemVariants}>
-            <Button className="bg-customBg hover:bg-customBg/80 w-fit group text-white px-8 py-6 text-base font-medium rounded-full">
+            <Button className="group w-fit rounded-full bg-customBg px-8 py-6 text-base font-medium text-white hover:bg-customBg/80">
               Book Now
             </Button>
           </motion.div>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="w-full py-4"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="px-6 lg:px-8 pt-7 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 px-6 pt-7 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
             <motion.div className="text-left" variants={itemVariants}>
               <p className="text-lg font-medium text-gray-100">Company</p>
               <ListItem items={aboutUsItems} />
@@ -165,25 +157,20 @@ const Footer = () => {
             </motion.div>
 
             <motion.div className="text-left" variants={itemVariants}>
-              <p className="text-lg font-medium text-gray-100">
-                Location Section
-              </p>
+              <p className="text-lg font-medium text-gray-100">Location Section</p>
               <ListItem items={locationItems} isLocation />
             </motion.div>
           </div>
 
-          <motion.div 
+          <motion.div
             className="mt-16"
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
           >
-            <div className="flex flex-col px-6 lg:px-8 md:flex-row justify-between items-start sm:items-center gap-6">
-              <motion.div 
-                className="flex gap-6"
-                variants={slideInFromLeft}
-              >
+            <div className="flex flex-col items-start justify-between gap-6 px-6 sm:items-center md:flex-row lg:px-8">
+              <motion.div className="flex gap-6" variants={slideInFromLeft}>
                 {Logos.map((logo, index) => (
                   <motion.div
                     key={index}
@@ -195,18 +182,18 @@ const Footer = () => {
                       alt={logo.alt}
                       width={100}
                       height={100}
-                      className="h-14 w-14 sm:h-20 sm:w-20 object-cover"
+                      className="h-14 w-14 object-cover sm:h-20 sm:w-20"
                     />
                   </motion.div>
                 ))}
               </motion.div>
 
-              <motion.ul 
-                className="flex justify-center gap-6 sm:justify-end mt-4"
+              <motion.ul
+                className="mt-4 flex justify-center gap-6 sm:justify-end"
                 variants={slideInFromRight}
               >
                 {socialMediaLinks.map((social, index) => (
-                  <motion.li 
+                  <motion.li
                     key={index}
                     whileHover={{ scale: 1.2, y: -3 }}
                     transition={{ duration: 0.2 }}
@@ -215,7 +202,7 @@ const Footer = () => {
                       href={social.link}
                       rel="noreferrer"
                       target="_blank"
-                      className="text-secondarycustomBg transition hover:text-white/65 hover:transition duration-200"
+                      className="text-secondarycustomBg transition duration-200 hover:text-white/65 hover:transition"
                     >
                       <span className="sr-only">{social.name}</span>
                       {social.icon}
@@ -224,20 +211,26 @@ const Footer = () => {
                 ))}
               </motion.ul>
             </div>
-            
-            <motion.hr 
+
+            <motion.hr
               className="my-5 border border-white/10"
               initial={{ width: 0 }}
               whileInView={{ width: "100%" }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             />
-            
-            <motion.div 
-              className="sm:flex sm:items-center px-6 lg:px-8 text-gray-200 sm:justify-between"
+
+            <motion.div
+              className="px-6 text-gray-200 sm:flex sm:items-center sm:justify-between lg:px-8"
               variants={fadeInUp}
             >
-              <Image src="https://res.cloudinary.com/dko4n7zoc/image/upload/v1774902143/WhatsApp_Image_2026-03-27_at_9.13.51_PM-removebg-preview_y40lhg.png" alt="Logo" width={100} height={100} className="w-[250px] h-[50px] object-cover"/>
+              <Image
+                src="https://res.cloudinary.com/dko4n7zoc/image/upload/v1774902143/WhatsApp_Image_2026-03-27_at_9.13.51_PM-removebg-preview_y40lhg.png"
+                alt="Logo"
+                width={100}
+                height={100}
+                className="h-[50px] w-[250px] object-cover"
+              />
               <p className="mt-4 text-center text-sm sm:mt-0 sm:text-right">
                 Copyright &copy; 2022. All rights reserved.
               </p>

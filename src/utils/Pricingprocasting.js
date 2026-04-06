@@ -1,4 +1,3 @@
-
 export const pricingContent = {
   header: {
     title: "The Price of Procrastination",
@@ -44,32 +43,29 @@ export const pricingContent = {
   },
 };
 
-
-export const Guaranteestext = 
-[
-    {
-      image: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1758548647/Guarantees-4_fypfpk.webp",
-      alt: "On-Time Delivery ",
-      text1: "On-Time Delivery ",
-      text2:"Guarantee",
-    },
-    {
-      image: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1758548647/Guarantees-3_ybwuns.webp",
-      alt: "Results ",
-      text1: "Results ",
-      text2:"Guarantee",
-    },
-    {
-      image: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1758548647/Guarantees-1_oyimtd.webp",
-      alt: "Bug-Free ",
-      text1: "Bug-Free ",
-      text2:"Guarantee",
-    },
-    {
-      image: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1758548648/Guarantees-2_axq4wl.webp",
-      alt: "Communication ",
-      text1: "Communication ",
-      text2:"Guarantee",
-    },
-
-]
+export const Guaranteestext = [
+  {
+    image: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1758548647/Guarantees-4_fypfpk.webp",
+    alt: "On-Time Delivery ",
+    text1: "On-Time Delivery ",
+    text2: "Guarantee",
+  },
+  {
+    image: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1758548647/Guarantees-3_ybwuns.webp",
+    alt: "Results ",
+    text1: "Results ",
+    text2: "Guarantee",
+  },
+  {
+    image: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1758548647/Guarantees-1_oyimtd.webp",
+    alt: "Bug-Free ",
+    text1: "Bug-Free ",
+    text2: "Guarantee",
+  },
+  {
+    image: "https://res.cloudinary.com/dko4n7zoc/image/upload/v1758548648/Guarantees-2_axq4wl.webp",
+    alt: "Communication ",
+    text1: "Communication ",
+    text2: "Guarantee",
+  },
+];

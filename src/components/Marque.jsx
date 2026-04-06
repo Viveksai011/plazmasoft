@@ -1,4 +1,3 @@
-import React from "react";
 import Airbnb from "@/Icons/airbnb";
 import Disney from "@/Icons/disney";
 import Facebook from "@/Icons/facebook";
@@ -26,7 +25,7 @@ const Marque = () => {
   return (
     <div className="w-full overflow-hidden">
       <motion.h2
-        className="text-xl mx-auto text-customBg  font-semibold text-center p-3  "
+        className="mx-auto p-3 text-center text-xl font-semibold text-customBg"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -36,7 +35,7 @@ const Marque = () => {
       </motion.h2>
       <div className="flex animate-infinite-scroll gap-16 whitespace-nowrap py-4">
         {duplicatedLogos.map(({ Component, alt }, index) => (
-          <div key={index} className="flex-shrink-0 h-16 flex items-center">
+          <div key={index} className="flex h-16 flex-shrink-0 items-center">
             <Component color="#000" aria-label={alt} />
           </div>
         ))}

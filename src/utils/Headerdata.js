@@ -4,68 +4,67 @@ export const navItems = [
   { name: "Solutions", href: "#solutions" },
   { name: "Hire Developers", href: "#apps" },
   { name: "About Us", href: "#about" },
-  {name: "Why Hire Us", href: "/hire-us"}
+  { name: "Why Hire Us", href: "/hire-us" },
 ];
 
 export const Subnav = [
   { name: "Contact Us", href: "/contact-us" },
-  {name: "Why Hire Us", href: "/hire-us"}
+  { name: "Why Hire Us", href: "/hire-us" },
 ];
 
 export const navigationData = {
-//   Industry: [
-//     {
-//       title: "FMS",
-//       href: "#fms",
-//       description: "Facility Management Services for streamlined operations",
-//     },
-//     {
-//       title: "Retail",
-//       href: "#retail",
-//       description: "Retail management systems and e-commerce solutions",
-//     },
-//     {
-//       title: "Software",
-//       href: "#software",
-//       description: "Custom software development and integration",
-//     },
-//     {
-//       title: "Logistics",
-//       href: "#logistics",
-//       description: "Supply chain and logistics technology",
-//     },
-//     {
-//       title: "Education",
-//       href: "#education",
-//       description: "EdTech solutions for schools and universities",
-//     },
-//     {
-//       title: "Insurance",
-//       href: "#insurance",
-//       description: "Insurance technology for better risk management",
-//     },
-//     {
-//       title: "Real Estate",
-//       href: "#real-estate",
-//       description: "Real estate management and automation solutions",
-//     },
-//     {
-//       title: "E-Commerce",
-//       href: "#e-commerce",
-//       description: "End-to-end e-commerce solutions for businesses",
-//     },
-//     {
-//       title: "Manufacturing",
-//       href: "#manufacturing",
-//       description: "Industrial automation and IoT solutions",
-//     },
-//   ],
+  //   Industry: [
+  //     {
+  //       title: "FMS",
+  //       href: "#fms",
+  //       description: "Facility Management Services for streamlined operations",
+  //     },
+  //     {
+  //       title: "Retail",
+  //       href: "#retail",
+  //       description: "Retail management systems and e-commerce solutions",
+  //     },
+  //     {
+  //       title: "Software",
+  //       href: "#software",
+  //       description: "Custom software development and integration",
+  //     },
+  //     {
+  //       title: "Logistics",
+  //       href: "#logistics",
+  //       description: "Supply chain and logistics technology",
+  //     },
+  //     {
+  //       title: "Education",
+  //       href: "#education",
+  //       description: "EdTech solutions for schools and universities",
+  //     },
+  //     {
+  //       title: "Insurance",
+  //       href: "#insurance",
+  //       description: "Insurance technology for better risk management",
+  //     },
+  //     {
+  //       title: "Real Estate",
+  //       href: "#real-estate",
+  //       description: "Real estate management and automation solutions",
+  //     },
+  //     {
+  //       title: "E-Commerce",
+  //       href: "#e-commerce",
+  //       description: "End-to-end e-commerce solutions for businesses",
+  //     },
+  //     {
+  //       title: "Manufacturing",
+  //       href: "#manufacturing",
+  //       description: "Industrial automation and IoT solutions",
+  //     },
+  //   ],
 
   Services: [
     {
       title: "Mobile App Development",
-      description:
-        "iOS Development, Android Development, Flutter, React Native",
+      description: "iOS Development, Android Development, Flutter, React Native",
       href: "/services/mobile-app-development",
     },
     {
@@ -124,8 +123,7 @@ export const navigationData = {
     {
       title: "Fantasy App Development",
       href: "/solutions/fantasy-app-development",
-      description:
-        "iOS and Android mobile applications in an industry-driving structure",
+      description: "iOS and Android mobile applications in an industry-driving structure",
     },
     {
       title: "Transport Industry App Development",
@@ -135,8 +133,7 @@ export const navigationData = {
     {
       title: "Taxi Booking App Development",
       href: "/solutions/taxi-booking-app-development",
-      description:
-        "We build easy-to-use taxi booking websites and web applications",
+      description: "We build easy-to-use taxi booking websites and web applications",
     },
     {
       title: "Healthcare App Development",
@@ -146,8 +143,7 @@ export const navigationData = {
     {
       title: "Fitness App Development",
       href: "/solutions/fitness-app-development",
-      description:
-        "Empower businesses with our skilled technology capabilities in AR/VR",
+      description: "Empower businesses with our skilled technology capabilities in AR/VR",
     },
     {
       title: "Social Media App Development",
@@ -181,7 +177,7 @@ export const navigationData = {
     },
   ],
 
-  "ToolKit": [
+  ToolKit: [
     {
       title: "Prompt Generator",
       href: "/toolpage/prompt-generator",

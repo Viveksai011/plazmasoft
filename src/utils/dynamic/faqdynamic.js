@@ -37,7 +37,6 @@ export const mobileapp = [
   },
 ];
 
-
 export const webapp = [
   {
     id: "item-1",

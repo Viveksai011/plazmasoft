@@ -1,12 +1,12 @@
-import AboutKrishly from '@/components/Parallaxscroll/About'
-import React from 'react'
+import AboutKrishly from "@/components/Parallaxscroll/About";
+import React from "react";
 
 const page = () => {
   return (
     <div>
-      <AboutKrishly/>
+      <AboutKrishly />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

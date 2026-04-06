@@ -1,13 +1,4 @@
-import {
-  Instagram,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Github,
-  MapPin,
-  Mail,
-  Phone,
-} from "lucide-react";
+import { Instagram, Linkedin, Twitter, Facebook, Github, MapPin, Mail, Phone } from "lucide-react";
 
 export const aboutUsItems = [
   { text: "About us", link: "/about-us" },
@@ -24,10 +15,24 @@ export const servicesItems = [
 ];
 
 export const locationItems = [
-  { icon: <MapPin className="h-5 w-5 text-customBg transition hover:text-white/65 hover:transition duration-200 " />, text: "England", link: "#" },
-  { icon: <Mail className="h-5 w-5 text-customBg transition hover:text-white/65 hover:transition duration-200 " />, text: "+91 987656789", link: "#" },
   {
-    icon: <Phone className="h-5 w-5 text-customBg transition hover:text-white/65 hover:transition duration-200 " />,
+    icon: (
+      <MapPin className="h-5 w-5 text-customBg transition duration-200 hover:text-white/65 hover:transition" />
+    ),
+    text: "England",
+    link: "#",
+  },
+  {
+    icon: (
+      <Mail className="h-5 w-5 text-customBg transition duration-200 hover:text-white/65 hover:transition" />
+    ),
+    text: "+91 987656789",
+    link: "#",
+  },
+  {
+    icon: (
+      <Phone className="h-5 w-5 text-customBg transition duration-200 hover:text-white/65 hover:transition" />
+    ),
     text: "Marketing@gmail.com",
     link: "#",
   },
@@ -47,7 +52,7 @@ export const helpfulLinksItems = [
 
 // Social media links and their corresponding icons
 export const socialMediaLinks = [
-  { icon: <Instagram className="size-6 text-customBg " />, link: "#", name: "Instagram" },
+  { icon: <Instagram className="size-6 text-customBg" />, link: "#", name: "Instagram" },
   { icon: <Github className="size-6 text-customBg" />, link: "#", name: "GitHub" },
   { icon: <Linkedin className="size-6 text-customBg" />, link: "#", name: "LinkedIn" },
   { icon: <Facebook className="size-6 text-customBg" />, link: "#", name: "Facebook" },

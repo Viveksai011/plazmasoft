@@ -1,35 +1,39 @@
-import React from "react";
 import { CardContent } from "@/components/ui/card";
-import { cardTexts } from "@/utils/Carddata"; 
-import Image from "next/image"; 
+import { cardTexts } from "@/utils/Carddata";
+import Image from "next/image";
 import * as motion from "motion/react-client";
 
 const Techsection = () => {
   return (
-    <div className="py-16 px-4 w-full mx-auto max-w-[92rem] ">
-      <div className="w-full mb-12">
-        <h2 className="font-Poppins max-w-[52rem] mx-auto text-center w-full font-bold text-[1.87rem] lg:text-[3.1rem] text-gray-900">
+    <div className="mx-auto w-full max-w-[92rem] px-4 py-16">
+      <div className="mb-12 w-full">
+        <h2 className="font-Poppins mx-auto w-full max-w-[52rem] text-center text-[1.87rem] font-bold text-gray-900 lg:text-[3.1rem]">
           We turn <span>Tech Headaches</span> into
           <span> Competitve Advantages</span> through
         </h2>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-8 max-w-[78rem] w-full mx-auto">
-        {cardTexts.map((category) => ( 
+      <div className="mx-auto flex w-full max-w-[78rem] flex-wrap items-center justify-center gap-8">
+        {cardTexts.map((category) => (
           <motion.div
             key={category.id}
-            className="bg-white p-1 relative rounded-lg shadow-sm border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            className="relative rounded-lg border-0 bg-white p-1 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: category.id * 0.1 }}
             viewport={{ once: true }}
             whileHover={{ y: -5 }}
           >
-            <CardContent className="p-0 bg-gradient-to-b from-customBg/15 rounded-md to-white">
-              <div className="flex justify-center items-center mb-6">
-                <Image src={category.icon} width={100} height={100} className="object-fill w-52 h-52" />
+            <CardContent className="rounded-md bg-gradient-to-b from-customBg/15 to-white p-0">
+              <div className="mb-6 flex items-center justify-center">
+                <Image
+                  src={category.icon}
+                  width={100}
+                  height={100}
+                  className="h-52 w-52 object-fill"
+                />
               </div>
-              <h3 className="text-xl font-semibold w-[250px] text-center text-customBg pb-4">
+              <h3 className="w-[250px] pb-4 text-center text-xl font-semibold text-customBg">
                 {category.title}
               </h3>
             </CardContent>

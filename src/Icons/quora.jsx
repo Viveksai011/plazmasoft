@@ -1,6 +1,6 @@
 import React from "react";
 
-const Quora = ({ color, width="82", height="22" }) => {
+const Quora = ({ color, width = "82", height = "22" }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height}>
       <path

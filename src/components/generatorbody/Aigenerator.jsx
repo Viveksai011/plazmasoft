@@ -48,8 +48,7 @@ const Aigenerator = () => {
       } else {
         toast({
           title: "Error",
-          description:
-            data.error || "Something went wrong while generating prompts.",
+          description: data.error || "Something went wrong while generating prompts.",
           variant: "destructive",
         });
       }
@@ -76,22 +75,22 @@ const Aigenerator = () => {
   return (
     <div className="mb-8">
       <div
-        className="min-h-[200px] rounded-lg flex flex-col justify-between overflow-auto bg-gray-50  p-4 shadow-md"
+        className="flex min-h-[200px] flex-col justify-between overflow-auto rounded-lg bg-gray-50 p-4 shadow-md"
         style={{
           boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
         }}
       >
         <Textarea
           placeholder="Describe your requirements or scenario in detail. For example: 'I need to create a marketing plan for a new eco-friendly product targeting millennials.'"
-          className="w-full min-h-[125px] h-full resize-none border-none focus:outline-none focus:ring-0 focus:border-none shadow-none  focus-visible:ring-transparent p-0"
+          className="h-full min-h-[125px] w-full resize-none border-none p-0 shadow-none focus:border-none focus:outline-none focus:ring-0 focus-visible:ring-transparent"
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
         />
-        <div className="flex flex-wrap gap-y-2 items-center justify-end sm:justify-between mt-2">
+        <div className="mt-2 flex flex-wrap items-center justify-end gap-y-2 sm:justify-between">
           <Dropdownselect setUseCase={setUseCase} useCase={useCase} />
           <Button
             onClick={handleGenerate}
-            className="bg-customBg hover:bg-customBg/60 rounded-xl"
+            className="rounded-xl bg-customBg hover:bg-customBg/60"
             disabled={isGenerating}
           >
             {isGenerating ? (
@@ -113,7 +112,7 @@ const Aigenerator = () => {
         {generatedPrompts && (
           <div className="mt-4 space-y-2">
             <div>
-              <pre className="border p-4 rounded-md shadow-md max-h-80 overflow-auto bg-gray-50  whitespace-pre-wrap">
+              <pre className="max-h-80 overflow-auto whitespace-pre-wrap rounded-md border bg-gray-50 p-4 shadow-md">
                 <code>{generatedPrompts}</code>
               </pre>
 

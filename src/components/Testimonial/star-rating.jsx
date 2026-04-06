@@ -4,9 +4,7 @@ export function StarRating({ rating, maxRating = 5 }) {
       {Array.from({ length: maxRating }, (_, index) => (
         <svg
           key={index}
-          className={`w-4 h-4 ${
-            index < rating ? "text-customBg" : "text-gray-300"
-          }`}
+          className={`h-4 w-4 ${index < rating ? "text-customBg" : "text-gray-300"}`}
           fill="currentColor"
           viewBox="0 0 20 20"
         >

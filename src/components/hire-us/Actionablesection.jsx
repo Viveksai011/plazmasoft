@@ -1,5 +1,4 @@
 import * as motion from "motion/react-client";
-import React from "react";
 
 const differenceData = [
   {
@@ -42,13 +41,13 @@ const differenceData = [
 
 const Actionablesection = () => {
   return (
-    <section className=" w-full mx-auto max-md:px-6 py-24">
-      <h3 className="text-center text-3xl md:text-4xl font-bold mb-12 md:col-span-4">
-        Actionable Tips for 
+    <section className="mx-auto w-full py-24 max-md:px-6">
+      <h3 className="mb-12 text-center text-3xl font-bold md:col-span-4 md:text-4xl">
+        Actionable Tips for
         <span className="text-customBg"> Immediate Value </span>
       </h3>
 
-      <section className="grid md:grid-cols-2 max-w-[67rem] w-full mx-auto lg:grid-cols-2 gap-9">
+      <section className="mx-auto grid w-full max-w-[67rem] gap-9 md:grid-cols-2 lg:grid-cols-2">
         {differenceData.map((service, index) => (
           <motion.div
             key={index}
@@ -56,20 +55,20 @@ const Actionablesection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ delay: index * 0.1 + 0.2, duration: 0.6 }}
-            className="bg-gradient-to-b from-customBg/5 to-white hover:from-white hover:to-white hover:scale-110 transform p-8 rounded-2xl hover:shadow-lg transition-all duration-300 relative border-2 border-white"
+            className="relative transform rounded-2xl border-2 border-white bg-gradient-to-b from-customBg/5 to-white p-8 transition-all duration-300 hover:scale-110 hover:from-white hover:to-white hover:shadow-lg"
           >
             <div className="group" key={index}>
-              <div className="absolute -top-[30px] right-[-20px] p-6 bg-[#E7F6FE] rounded-full flex items-center justify-center">
-                <div className="w-[60px] h-[60px] bg-white rounded-full group-hover:scale-x-[-1] bg-gradient-to-b from-customBg/5 to-white hover:from-white hover:to-white transition-all duration-300 flex items-center justify-center text-2xl">
+              <div className="absolute -top-[30px] right-[-20px] flex items-center justify-center rounded-full bg-[#E7F6FE] p-6">
+                <div className="flex h-[60px] w-[60px] items-center justify-center rounded-full bg-white bg-gradient-to-b from-customBg/5 to-white text-2xl transition-all duration-300 hover:from-white hover:to-white group-hover:scale-x-[-1]">
                   {service.icon}
                 </div>
               </div>
 
-              <h3 className="text-xl w-fit font-semibold border-b border-customBg/40 text-[#1D74CF] pb-3 mb-4">
+              <h3 className="mb-4 w-fit border-b border-customBg/40 pb-3 text-xl font-semibold text-[#1D74CF]">
                 {service.title}
               </h3>
 
-              <ul className="list-disc-none font-semibold ml-3 space-y-2 text-md text-gray-700">
+              <ul className="list-disc-none text-md ml-3 space-y-2 font-semibold text-gray-700">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex}>{feature}</li>
                 ))}

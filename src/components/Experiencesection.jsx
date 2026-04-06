@@ -87,24 +87,21 @@ export function ExperienceSection() {
 
   return (
     <motion.section
-      className="py-12 sm:py-16 lg:py-20 overflow-x-hidden"
+      className="overflow-x-hidden py-12 sm:py-16 lg:py-20"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={containerVariants}
     >
-      <div className="flex max-w-[92rem] flex-col lg:flex-row justify-between gap-8 lg:gap-12 items-center mx-auto px-8">
-        <motion.div
-          className="relative order-2 lg:order-1"
-          variants={imageVariants}
-        >
+      <div className="mx-auto flex max-w-[92rem] flex-col items-center justify-between gap-8 px-8 lg:flex-row lg:gap-12">
+        <motion.div className="relative order-2 lg:order-1" variants={imageVariants}>
           <motion.div
-            className="relative xs:w-[350px] xs:h-[350px] sm:w-96 sm:h-96 lg:w-[500px] lg:h-[500px] mx-auto"
+            className="xs:w-[350px] xs:h-[350px] relative mx-auto sm:h-96 sm:w-96 lg:h-[500px] lg:w-[500px]"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="w-full h-full rounded-full overflow-hidden shadow-2xl"
+              className="h-full w-full overflow-hidden rounded-full shadow-2xl"
               whileHover={{ rotate: 5 }}
               transition={{ duration: 0.5 }}
             >
@@ -113,7 +110,7 @@ export function ExperienceSection() {
                 alt="Team collaboration"
                 width={384}
                 height={384}
-                className="w-full h-full object-cover rounded-full"
+                className="h-full w-full rounded-full object-cover"
               />
             </motion.div>
 
@@ -122,13 +119,13 @@ export function ExperienceSection() {
               variants={badgeVariants}
             >
               <motion.div
-                className="bg-white/95 backdrop-blur-sm rounded-full w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 flex flex-col items-center justify-center shadow-xl border border-green-100"
+                className="flex h-32 w-32 flex-col items-center justify-center rounded-full border border-green-100 bg-white/95 shadow-xl backdrop-blur-sm sm:h-40 sm:w-40 lg:h-48 lg:w-48"
                 animate={pulseAnimation}
               >
-                <div className="text-3xl sm:text-4xl lg:text-6xl font-bold text-customBg mb-1 lg:mb-2">
+                <div className="mb-1 text-3xl font-bold text-customBg sm:text-4xl lg:mb-2 lg:text-6xl">
                   15+
                 </div>
-                <div className="text-gray-700 font-medium text-center leading-tight text-xs sm:text-sm lg:text-base">
+                <div className="text-center text-xs font-medium leading-tight text-gray-700 sm:text-sm lg:text-base">
                   Years
                   <br />
                   Experience
@@ -137,7 +134,7 @@ export function ExperienceSection() {
             </motion.div>
 
             <motion.div
-              className="hidden sm:block absolute -top-4 -right-4 w-6 h-6 lg:w-8 lg:h-8 bg-customBg/50 rounded-full opacity-80"
+              className="absolute -right-4 -top-4 hidden h-6 w-6 rounded-full bg-customBg/50 opacity-80 sm:block lg:h-8 lg:w-8"
               variants={floatingOrbs}
               animate={{
                 y: [0, -10, 0],
@@ -149,7 +146,7 @@ export function ExperienceSection() {
               }}
             />
             <motion.div
-              className="hidden sm:block absolute -bottom-6 -left-6 w-8 h-8 lg:w-12 lg:h-12 bg-customBg rounded-full opacity-60"
+              className="absolute -bottom-6 -left-6 hidden h-8 w-8 rounded-full bg-customBg opacity-60 sm:block lg:h-12 lg:w-12"
               variants={floatingOrbs}
               animate={{
                 y: [0, 12, 0],
@@ -162,7 +159,7 @@ export function ExperienceSection() {
               }}
             />
             <motion.div
-              className="hidden sm:block absolute top-1/4 -left-8 w-4 h-4 lg:w-6 lg:h-6 bg-green-400 rounded-full opacity-70"
+              className="absolute -left-8 top-1/4 hidden h-4 w-4 rounded-full bg-green-400 opacity-70 sm:block lg:h-6 lg:w-6"
               variants={floatingOrbs}
               animate={{
                 y: [0, -8, 0],
@@ -178,46 +175,40 @@ export function ExperienceSection() {
         </motion.div>
 
         <motion.div
-          className="space-y-4 sm:space-y-6 lg:max-w-[50%] w-full order-1 lg:order-2"
+          className="order-1 w-full space-y-4 sm:space-y-6 lg:order-2 lg:max-w-[50%]"
           variants={contentVariants}
         >
-          <motion.div
-            className="space-y-3 sm:space-y-4"
-            variants={containerVariants}
-          >
+          <motion.div className="space-y-3 sm:space-y-4" variants={containerVariants}>
             <motion.div
-              className="text-customBg font-semibold text-xs sm:text-sm uppercase tracking-wider"
+              className="text-xs font-semibold uppercase tracking-wider text-customBg sm:text-sm"
               variants={itemVariants}
             >
               FAST & EFFECTIVE
             </motion.div>
 
             <motion.h2
-              className="text-[27px] sm:text-3xl lg:text-5xl font-bold text-gray-900 leading-tight"
+              className="text-[27px] font-bold leading-tight text-gray-900 sm:text-3xl lg:text-5xl"
               variants={itemVariants}
             >
-              We're a global stakeholder relations and partnership building
-              consultancy.
+              We're a global stakeholder relations and partnership building consultancy.
             </motion.h2>
 
             <motion.p
-              className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed"
+              className="text-sm leading-relaxed text-gray-600 sm:text-base lg:text-lg"
               variants={itemVariants}
             >
-              Get instant helpful resources about anything on the go, easily
-              implement secure money transfer solutions, boost your daily
-              efficiency, connect to other app users and create your own
-              network, and much more with just a few taps. We deliver
-              comprehensive IT solutions that drive business growth and digital
-              transformation.
+              Get instant helpful resources about anything on the go, easily implement secure money
+              transfer solutions, boost your daily efficiency, connect to other app users and create
+              your own network, and much more with just a few taps. We deliver comprehensive IT
+              solutions that drive business growth and digital transformation.
             </motion.p>
           </motion.div>
 
           <Button
             size="lg"
-            className="bg-customBg hover:bg-customBg/80  hover:scale-105 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-3xl font-semibold transition-all duration-300 hover:shadow-lg text-sm sm:text-base w-full sm:w-auto"
+            className="w-full rounded-3xl bg-customBg px-6 py-2 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-customBg/80 hover:shadow-lg sm:w-auto sm:px-8 sm:py-3 sm:text-base"
           >
-            <Calendar className="h-2.5 w-2.5 mr-1" /> Get Started
+            <Calendar className="mr-1 h-2.5 w-2.5" /> Get Started
           </Button>
         </motion.div>
       </div>

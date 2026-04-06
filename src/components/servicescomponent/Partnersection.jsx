@@ -20,9 +20,9 @@ const logos = [
 
 const PartnersSection = () => {
   return (
-    <section className="py-16 max-w-[86rem] w-full container mx-auto px-6">
-      <div className="flex flex-col items-start gap-5 mb-12">
-        <h2 className="text-4xl font-semibold text-black border-b-4 border-customBg w-fit pb-4">
+    <section className="container mx-auto w-full max-w-[86rem] px-6 py-16">
+      <div className="mb-12 flex flex-col items-start gap-5">
+        <h2 className="w-fit border-b-4 border-customBg pb-4 text-4xl font-semibold text-black">
           OUR PARTNERS
         </h2>
         <p className="text-lg text-black/80">Companies we've worked with</p>
@@ -30,7 +30,7 @@ const PartnersSection = () => {
 
       <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 md:gap-x-16 lg:justify-between">
         {logos.map(({ Component, alt }) => (
-          <div key={alt} className="flex-shrink-0 h-16 flex items-center">
+          <div key={alt} className="flex h-16 flex-shrink-0 items-center">
             <Component color="#000" aria-label={alt} />
           </div>
         ))}

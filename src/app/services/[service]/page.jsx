@@ -13,53 +13,68 @@ import GuaranteeSection from "@/components/servicescomponent/Guaranteesection";
 import Bannersection from "@/components/servicescomponent/Bannersection";
 
 export async function generateMetadata({ params }) {
-  const service = servicesData[params.service] || servicesData.default;
-  return {
-    title: service.heroTitle || "PlazmaSoft Services",
-    description:
-      service.description ||
-      "PlazmaSoft offers comprehensive IT services and solutions.",
-  };
+  const service = servicesData[params.service];
+  if (!service) {
+    return {
+      title: "Services | Krishly - IT Consulting & Development",
+      description:
+        "Krishly offers comprehensive IT services and solutions to help businesses grow with modern technology.",
+    };
+  }
+  const hero = service.heroSection || {};
+  const title = hero.heroTitle
+    ? `${hero.heroTitle} ${hero.subtitle || ""} | Krishly`.trim()
+    : "Services | Krishly - IT Consulting & Development";
+  const description =
+    hero.description ||
+    "Krishly offers comprehensive IT services and solutions to help businesses grow with modern technology.";
+  return { title, description };
 }
 
 export default function ServicePage({ params }) {
   const serviceSlug = params.service;
-  console.log("Service Slug:", serviceSlug); // Debugging line
   const currentService = servicesData[serviceSlug] || servicesData.default;
 
   return (
-    <div className="w-full mx-auto">
-      <HeroSection HeroSection={currentService.heroSection || {
-        heroTitle: currentService.heroTitle,
-        subtitle: "",
-        description: currentService.description,
-        cta: "Contact Us",
-        image: ""
-      }} />
+    <div className="mx-auto w-full">
+      <HeroSection
+        HeroSection={
+          currentService.heroSection || {
+            heroTitle: currentService.heroTitle,
+            subtitle: "",
+            description: currentService.description,
+            cta: "Contact Us",
+            image: "",
+          }
+        }
+      />
       <PartnersSection />
       {currentService.Stoplosing && <Stoplosingcustomer Stoplosing={currentService.Stoplosing} />}
-      {currentService.BenefitsSectiontext && <BenefitsSection groups={currentService.BenefitsSectiontext} />}
+      {currentService.BenefitsSectiontext && (
+        <BenefitsSection groups={currentService.BenefitsSectiontext} />
+      )}
       {currentService.Ourservices && <Ourservices differenceData={currentService.Ourservices} />}
-      {currentService.developmenttool && <Servicetoolkit developmenttool={currentService.developmenttool} />}
+      {currentService.developmenttool && (
+        <Servicetoolkit developmenttool={currentService.developmenttool} />
+      )}
 
-      {currentService.processsteps && <ProcessSteps processstepsHire={currentService.processsteps} />}
+      {currentService.processsteps && (
+        <ProcessSteps processstepsHire={currentService.processsteps} />
+      )}
 
       {currentService.projects && <ProjectsSection projects={currentService.projects} />}
       {currentService.testimonal && (
         <TestimonialsSection testimonials={currentService.testimonal}>
-          <h2 className="font-serif font-bold text-3xl lg:text-5xl text-gray-900">
-            <span className=" text-customBg">23k+ </span>
+          <h2 className="font-serif text-3xl font-bold text-gray-900 lg:text-5xl">
+            <span className="text-customBg">23k+ </span>
             Customers gave their Feedback
             <br />
           </h2>
         </TestimonialsSection>
       )}
-      
+
       {(currentService.faq || currentService.comparisonData) && (
-        <FaqSection
-          faqs={currentService.faq}
-          comparisonData={currentService.comparisonData}
-        />
+        <FaqSection faqs={currentService.faq} comparisonData={currentService.comparisonData} />
       )}
       {currentService.Guarantee && <GuaranteeSection items={currentService.Guarantee} />}
       <Bannersection />

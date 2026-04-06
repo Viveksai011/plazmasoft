@@ -1,7 +1,6 @@
 import React from "react";
 
-const Html = ({width="100", color="#E65100",
-      height="100"}) => {
+const Html = ({ width = "100", color = "#E65100", height = "100" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

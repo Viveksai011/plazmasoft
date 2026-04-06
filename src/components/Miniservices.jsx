@@ -1,36 +1,33 @@
-import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carddata } from "@/utils/Carddata";
-import * as motion from "motion/react-client"
+import * as motion from "motion/react-client";
 
 const Miniservices = () => {
   return (
-    <section className="py-16 px-4 max-w-[92rem] mx-auto">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section className="mx-auto max-w-[92rem] px-4 py-16">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {Carddata.map((category) => (
           <motion.div
             key={category.id}
-            className="bg-white p-8 relative rounded-lg shadow-sm border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-              initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: category.id * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
+            className="relative rounded-lg border-0 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: category.id * 0.1 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -5 }}
           >
             <CardContent className="p-0">
-              <span className="text-gray-400 text-sm absolute top-[-15px] right-[-19px] font-medium h-[80px] flex items-center justify-center w-[80px] bg-[#E7F6FE]  rounded-full">
-                <span className="p-4 bg-white rounded-full text-customBg font-semibold">
+              <span className="absolute right-[-19px] top-[-15px] flex h-[80px] w-[80px] items-center justify-center rounded-full bg-[#E7F6FE] text-sm font-medium text-gray-400">
+                <span className="rounded-full bg-white p-4 font-semibold text-customBg">
                   {String(category.id).padStart(2, "0")}
                 </span>
               </span>
-              <h3 className="text-xl font-semibold w-[250px] text-gray-900 mb-4 border-b pb-4">
+              <h3 className="mb-4 w-[250px] border-b pb-4 text-xl font-semibold text-gray-900">
                 {category.title}
               </h3>
-              <div className="flex justify-between items-start mb-6">
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {category.description}
-                </p>
-                <div className="w-[100px] h-12 rounded-lg hover:animate-tada flex items-center justify-center">
+              <div className="mb-6 flex items-start justify-between">
+                <p className="text-sm leading-relaxed text-gray-600">{category.description}</p>
+                <div className="hover:animate-tada flex h-12 w-[100px] items-center justify-center rounded-lg">
                   {category.icon}
                 </div>
               </div>

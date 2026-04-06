@@ -1,6 +1,6 @@
 import React from "react";
 
-const Airbnb = ({ color, width="107", height="37" }) => {
+const Airbnb = ({ color, width = "107", height = "37" }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height}>
       <path

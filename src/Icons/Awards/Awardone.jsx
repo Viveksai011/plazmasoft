@@ -11,12 +11,7 @@ const Awardone = () => {
     >
       <path fill="url(#a)" d="M.336 0H198v180H.336z" />
       <defs>
-        <pattern
-          id="a"
-          patternContentUnits="objectBoundingBox"
-          width="1"
-          height="1"
-        >
+        <pattern id="a" patternContentUnits="objectBoundingBox" width="1" height="1">
           <use href="#b" transform="scale(.00426 .00467)" />
         </pattern>
         <image

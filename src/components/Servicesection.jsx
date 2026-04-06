@@ -24,34 +24,34 @@ import React from "react";
 import Photoshopicons from "@/Icons/Photoshopicons";
 
 const featureIcons = {
-  "React Native": <Reacticon className="w-2 h-2" />,
-  Flutter: <Flutter className="w-6 h-6 " />,
-  "Android App": <Androidicon className="w-2 h-2" />,
-  "iOS App": <Appstore className="w-6 h-6" />,
+  "React Native": <Reacticon className="h-2 w-2" />,
+  Flutter: <Flutter className="h-6 w-6" />,
+  "Android App": <Androidicon className="h-2 w-2" />,
+  "iOS App": <Appstore className="h-6 w-6" />,
 
-  Laravel: <CodeIcon className="w-6 h-6 text-customBg" />,
-  "Node.js": <NodeIcons className="w-6 h-6 " />,
-  "Angular.js": <Angular className="w-6 h-6 " />,
-  "React.js": <Reacttwo className="w-6 h-6 " />,
+  Laravel: <CodeIcon className="h-6 w-6 text-customBg" />,
+  "Node.js": <NodeIcons className="h-6 w-6" />,
+  "Angular.js": <Angular className="h-6 w-6" />,
+  "React.js": <Reacttwo className="h-6 w-6" />,
 
-  Figma: <Figmaicons className="w-6 h-6 " />,
-  "Adobe XD": <Adobexdicons className="w-6 h-6 " />,
-  Sketch: <DesignIcon className="w-6 h-6 text-customBg" />,
-  Photoshop: <Photoshopicons className="w-6 h-6 " />,
+  Figma: <Figmaicons className="h-6 w-6" />,
+  "Adobe XD": <Adobexdicons className="h-6 w-6" />,
+  Sketch: <DesignIcon className="h-6 w-6 text-customBg" />,
+  Photoshop: <Photoshopicons className="h-6 w-6" />,
 
-  "React Native App Maintenance": <Reacticon className="w-2 h-2" />,
-  "Flutter App Maintenance": <Flutter className="w-6 h-6 " />,
-  "Android App Maintenance": <Androidicon className="w-2 h-2" />,
-  "iOS App Maintenance": <Appstore className="w-6 h-6" />,
+  "React Native App Maintenance": <Reacticon className="h-2 w-2" />,
+  "Flutter App Maintenance": <Flutter className="h-6 w-6" />,
+  "Android App Maintenance": <Androidicon className="h-2 w-2" />,
+  "iOS App Maintenance": <Appstore className="h-6 w-6" />,
 
-  "IoT Apps": <IoTIcon className="w-6 h-6 text-customBg" />,
-  "IoT Dashboard & Analytics": <WebIcon className="w-6 h-6 text-customBg" />,
-  "SaaS App Development": <ServerIcon className="w-6 h-6 text-customBg" />,
-  "IoT Software": <IoTIcon className="w-6 h-6 text-customBg" />,
+  "IoT Apps": <IoTIcon className="h-6 w-6 text-customBg" />,
+  "IoT Dashboard & Analytics": <WebIcon className="h-6 w-6 text-customBg" />,
+  "SaaS App Development": <ServerIcon className="h-6 w-6 text-customBg" />,
+  "IoT Software": <IoTIcon className="h-6 w-6 text-customBg" />,
 
-  OpenAI: <BrainIcon className="w-6 h-6 text-customBg" />,
-  "ChatGPT Development": <AIIcon className="w-6 h-6 text-customBg" />,
-  "ChatGPT Bots": <ChatIcon className="w-6 h-6 text-customBg" />,
+  OpenAI: <BrainIcon className="h-6 w-6 text-customBg" />,
+  "ChatGPT Development": <AIIcon className="h-6 w-6 text-customBg" />,
+  "ChatGPT Bots": <ChatIcon className="h-6 w-6 text-customBg" />,
 };
 
 const services = [
@@ -93,12 +93,7 @@ const services = [
     title: "IoT Development",
     description:
       "Develop IoT solutions including apps, dashboards, SaaS applications, and IoT software for smarter operations.",
-    features: [
-      "IoT Apps",
-      "IoT Dashboard & Analytics",
-      "SaaS App Development",
-      "IoT Software",
-    ],
+    features: ["IoT Apps", "IoT Dashboard & Analytics", "SaaS App Development", "IoT Software"],
   },
   {
     icon: AIIcon,
@@ -111,18 +106,16 @@ const services = [
 
 export function Servicesection() {
   return (
-    <section className="py-20 max-w-[92rem] mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center space-y-4 mb-16">
-        <h2 className="font-serif font-bold text-3xl lg:text-5xl text-gray-900">
-          OUR SERVICES
-        </h2>
-        <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
-          Comprehensive IT solutions designed to accelerate your business growth
-          and digital transformation journey.
+    <section className="mx-auto max-w-[92rem] px-4 py-20 sm:px-6 lg:px-8">
+      <div className="mb-16 space-y-4 text-center">
+        <h2 className="font-serif text-3xl font-bold text-gray-900 lg:text-5xl">OUR SERVICES</h2>
+        <p className="mx-auto max-w-4xl px-4 text-sm leading-relaxed text-gray-600 sm:text-base lg:text-lg">
+          Comprehensive IT solutions designed to accelerate your business growth and digital
+          transformation journey.
         </p>
       </div>
 
-      <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <motion.div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -130,23 +123,19 @@ export function Servicesection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ delay: index * 0.2 + 0.3, duration: 0.8 }}
-            className="bg-thirdbg p-8 hover:border-t-4 group hover:border-t-customBg relative rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            className="group relative rounded-lg bg-thirdbg p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-t-4 hover:border-t-customBg hover:shadow-xl"
           >
             <div className="p-0">
-              <span className="text-gray-400 text-sm  group-hover:border-4 group-hover:border-customBg transition-all duration-300 hover:-translate-y-2 absolute top-[-15px] right-[-19px] font-medium h-[80px] flex items-center justify-center w-[80px] bg-[#E7F6FE] rounded-full">
-                <span className="p-4 bg-white rounded-full text-gray-500 font-semibold">
+              <span className="absolute right-[-19px] top-[-15px] flex h-[80px] w-[80px] items-center justify-center rounded-full bg-[#E7F6FE] text-sm font-medium text-gray-400 transition-all duration-300 hover:-translate-y-2 group-hover:border-4 group-hover:border-customBg">
+                <span className="rounded-full bg-white p-4 font-semibold text-gray-500">
                   {React.createElement(service.icon, {
                     className: "!text-customBg ",
                   })}
                 </span>
               </span>
-              <h3 className="text-xl text-gray-900 font-bold mb-4">
-                {service.title}
-              </h3>
+              <h3 className="mb-4 text-xl font-bold text-gray-900">{service.title}</h3>
               <div className="space-y-4">
-                <p className="text-gray-600 leading-relaxed">
-                  {service.description}
-                </p>
+                <p className="leading-relaxed text-gray-600">{service.description}</p>
                 <ul className="space-y-3">
                   {service.features.map((feature, featureIndex) => (
                     <li

@@ -3,13 +3,11 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
-import CustomCursor from "@/components/CustomCursor";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title:
-    "PlazmaSoft IT Consulting and Services - Empowering Businesses with Innovative Technology",
+  title: "PlazmaSoft IT Consulting and Services - Empowering Businesses with Innovative Technology",
   description:
     "PlazmaSoft is a leading IT consulting and services firm offering cutting-edge solutions in software development, cloud computing, AI, and digital transformation to help businesses achieve operational excellence and drive growth.",
 };
@@ -18,13 +16,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} min-h-screen flex bg-[#E7F6FE] flex-col overflow-x-hidden`}
+        className={`${inter.className} flex min-h-screen flex-col overflow-x-hidden bg-[#E7F6FE]`}
       >
         <Header />
         {children}
         <Footer />
         <Toaster />
-        {/* <CustomCursor /> */}
       </body>
     </html>
   );

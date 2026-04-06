@@ -1,12 +1,11 @@
 import * as motion from "motion/react-client";
-import { Card } from "@/components/ui/card"
-import { Check } from "lucide-react"
-
+import { Card } from "@/components/ui/card";
+import { Check } from "lucide-react";
 
 export default function GuaranteeSection({ items, customTitle }) {
   return (
-    <section className="space-y-10 container mx-auto px-5 lg:px-0 py-20 max-w-[70rem]">
-      <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 md:col-span-2 lg:col-span-3">
+    <section className="container mx-auto max-w-[70rem] space-y-10 px-5 py-20 lg:px-0">
+      <h2 className="mb-12 text-center text-3xl font-bold md:col-span-2 md:text-5xl lg:col-span-3">
         {customTitle ? (
           customTitle
         ) : (
@@ -27,18 +26,18 @@ export default function GuaranteeSection({ items, customTitle }) {
             viewport={{ once: true, amount: 0.4 }}
             transition={{ delay: i * 0.05, duration: 0.4, ease: "easeOut" }}
           >
-            <div className=" lg:max-w-[250px] w-full ">
+            <div className="w-full lg:max-w-[250px]">
               <div className="flex justify-center">
                 <div
-                  className="h-14 w-14 rounded-full flex items-center justify-center border-4 border-dashed border-rose-700"
-                    aria-hidden="true"
+                  className="flex h-14 w-14 items-center justify-center rounded-full border-4 border-dashed border-rose-700"
+                  aria-hidden="true"
                 >
-                  <Check className="h-10 w-10  text-rose-700" aria-hidden="true" />
+                  <Check className="h-10 w-10 text-rose-700" aria-hidden="true" />
                   <span className="sr-only">Guaranteed</span>
                 </div>
               </div>
-              <Card className="mt-4 text-center space-y-2 min-w-[200px] w-full bg-gradient-to-b from-customBg/5 to-white hover:from-white hover:to-white hover:scale-110 transform p-8 rounded-2xl hover:shadow-lg transition-all duration-300 relative border-2 border-white">
-                <h3 className="text-base md:text-lg font-semibold text-customBg">{item.title}</h3>
+              <Card className="relative mt-4 w-full min-w-[200px] transform space-y-2 rounded-2xl border-2 border-white bg-gradient-to-b from-customBg/5 to-white p-8 text-center transition-all duration-300 hover:scale-110 hover:from-white hover:to-white hover:shadow-lg">
+                <h3 className="text-base font-semibold text-customBg md:text-lg">{item.title}</h3>
                 <hr className="border border-customBg" />
                 <p className="text-sm leading-relaxed text-black">{item.desc}</p>
               </Card>
@@ -47,5 +46,5 @@ export default function GuaranteeSection({ items, customTitle }) {
         ))}
       </div>
     </section>
-  )
+  );
 }

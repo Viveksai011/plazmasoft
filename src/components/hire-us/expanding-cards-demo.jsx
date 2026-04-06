@@ -1,4 +1,3 @@
-import React from "react";
 import { ExpandingCards } from "@/components/hire-us/expanding-cards";
 
 const painPoints = [
@@ -18,8 +17,7 @@ const painPoints = [
     title: "Scope Creep & Hidden Costs",
     description:
       "'$500 extra' becomes their favorite phrase. $5,000 projects become $12,000 disasters.",
-    content:
-      "Fixed-price guarantee. If we underestimated, that's our problem, not yours.",
+    content: "Fixed-price guarantee. If we underestimated, that's our problem, not yours.",
     imgSrc: "",
     icon: null,
     linkHref: "#",
@@ -39,8 +37,8 @@ const painPoints = [
 
 export default function ExpandingCardsDemo() {
   return (
-    <div className="flex w-full flex-col items-center justify-center py-24 space-y-8 p-4 md:p-8">
-      <div className="text-center mb-8">
+    <div className="flex w-full flex-col items-center justify-center space-y-8 p-4 py-24 md:p-8">
+      <div className="mb-8 text-center">
         <h1 className="text-3xl font-bold tracking-tight text-foreground md:text-5xl">
           Pain Points We Address
         </h1>

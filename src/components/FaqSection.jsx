@@ -6,11 +6,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Faqcurve from "@/Icons/Faqcurve";
-import { ArrowRight, CircleAlert , Shield } from "lucide-react";
+import { ArrowRight, CircleAlert, Shield } from "lucide-react";
 import { BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-
 
 // Animation variants
 const containerVariants = {
@@ -19,9 +17,9 @@ const containerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.15,
-      delayChildren: 0.3
-    }
-  }
+      delayChildren: 0.3,
+    },
+  },
 };
 
 const itemVariants = {
@@ -31,9 +29,9 @@ const itemVariants = {
     opacity: 1,
     transition: {
       duration: 0.6,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 };
 
 const titleVariants = {
@@ -43,9 +41,9 @@ const titleVariants = {
     opacity: 1,
     transition: {
       duration: 0.8,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 };
 
 const accordionItemVariants = {
@@ -55,9 +53,9 @@ const accordionItemVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 };
 
 const comparisonCardVariants = {
@@ -67,9 +65,9 @@ const comparisonCardVariants = {
     opacity: 1,
     transition: {
       duration: 0.7,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 };
 
 const buttonVariants = {
@@ -79,19 +77,19 @@ const buttonVariants = {
     opacity: 1,
     transition: {
       duration: 0.4,
-      ease: "easeOut"
-    }
+      ease: "easeOut",
+    },
   },
   hover: {
     scale: 1.05,
     transition: {
       duration: 0.2,
-      ease: "easeOut"
-    }
+      ease: "easeOut",
+    },
   },
   tap: {
-    scale: 0.98
-  }
+    scale: 0.98,
+  },
 };
 
 const starVariants = {
@@ -101,9 +99,9 @@ const starVariants = {
     transition: {
       duration: 4,
       repeat: Infinity,
-      ease: "easeInOut"
-    }
-  }
+      ease: "easeInOut",
+    },
+  },
 };
 
 const circleVariants = {
@@ -113,62 +111,95 @@ const circleVariants = {
     transition: {
       duration: 6,
       repeat: Infinity,
-      ease: "easeInOut"
-    }
-  }
+      ease: "easeInOut",
+    },
+  },
 };
 
 export default function FaqSection({ faqs, comparisonData }) {
   return (
-    <motion.div 
-      className="flex flex-col lg:flex-row lg:justify-between relative max-w-[92rem] max-md:p-4 w-full mx-auto"
+    <motion.div
+      className="relative mx-auto flex w-full max-w-[92rem] flex-col max-md:p-4 lg:flex-row lg:justify-between"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
     >
-      <motion.div className="absolute top-20 right-20 text-yellow-400 text-4xl" variants={starVariants} animate="animate">✦</motion.div>
-      <motion.div className="absolute bottom-20 right-20 text-yellow-400 text-4xl" variants={starVariants} animate="animate" transition={{ delay: 0.5 }}>✦</motion.div>
-      <motion.div className="absolute top-1/2 right-[20%] text-yellow-400 text-4xl" variants={starVariants} animate="animate" transition={{ delay: 1 }}>✦</motion.div>
-      <motion.div className="absolute top-1/2 left-[20%] text-yellow-400 text-4xl" variants={starVariants} animate="animate" transition={{ delay: 1.5 }}>✦</motion.div>
-      <motion.div className="absolute top-20 left-20 text-yellow-400 text-4xl" variants={starVariants} animate="animate" transition={{ delay: 0.7 }}>✦</motion.div>
-      <motion.div className="absolute bottom-20 left-20 text-yellow-400 text-4xl" variants={starVariants} animate="animate" transition={{ delay: 1.2 }}>✦</motion.div>
+      <motion.div
+        className="absolute right-20 top-20 text-4xl text-yellow-400"
+        variants={starVariants}
+        animate="animate"
+      >
+        ✦
+      </motion.div>
+      <motion.div
+        className="absolute bottom-20 right-20 text-4xl text-yellow-400"
+        variants={starVariants}
+        animate="animate"
+        transition={{ delay: 0.5 }}
+      >
+        ✦
+      </motion.div>
+      <motion.div
+        className="absolute right-[20%] top-1/2 text-4xl text-yellow-400"
+        variants={starVariants}
+        animate="animate"
+        transition={{ delay: 1 }}
+      >
+        ✦
+      </motion.div>
+      <motion.div
+        className="absolute left-[20%] top-1/2 text-4xl text-yellow-400"
+        variants={starVariants}
+        animate="animate"
+        transition={{ delay: 1.5 }}
+      >
+        ✦
+      </motion.div>
+      <motion.div
+        className="absolute left-20 top-20 text-4xl text-yellow-400"
+        variants={starVariants}
+        animate="animate"
+        transition={{ delay: 0.7 }}
+      >
+        ✦
+      </motion.div>
+      <motion.div
+        className="absolute bottom-20 left-20 text-4xl text-yellow-400"
+        variants={starVariants}
+        animate="animate"
+        transition={{ delay: 1.2 }}
+      >
+        ✦
+      </motion.div>
 
-      <div className="min-h-screen flex relative overflow-hidden lg:w-2/3">
-        <Faqcurve className="absolute top-0 right-0 inset-[9px] w-full h-[800px]" />
-        <div className="container mx-auto md:px-4 py-16 relative z-10">
-          <motion.div className="text-center mb-16" variants={titleVariants}>
-            <p className="text-customBg font-medium text-sm tracking-wider uppercase mb-6">
+      <div className="relative flex min-h-screen overflow-hidden lg:w-2/3">
+        <Faqcurve className="absolute inset-[9px] right-0 top-0 h-[800px] w-full" />
+        <div className="container relative z-10 mx-auto py-16 md:px-4">
+          <motion.div className="mb-16 text-center" variants={titleVariants}>
+            <p className="mb-6 text-sm font-medium uppercase tracking-wider text-customBg">
               FREQUENTLY ASK QUESTION
             </p>
-            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-8">
-              You ask? We <em className="italic font-light">answer</em>
+            <h2 className="mb-8 text-3xl font-bold text-gray-900 lg:text-5xl">
+              You ask? We <em className="font-light italic">answer</em>
             </h2>
           </motion.div>
 
-          <motion.div 
-            className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 md:p-8 shadow-lg"
+          <motion.div
+            className="rounded-2xl bg-white/60 p-4 shadow-lg backdrop-blur-sm md:p-8"
             variants={containerVariants}
           >
-            <Accordion
-              type="single"
-              collapsible
-              defaultValue="item-1"
-              className="space-y-4"
-            >
+            <Accordion type="single" collapsible defaultValue="item-1" className="space-y-4">
               {faqs.map((faq) => (
-                <motion.div
-                  key={faq.id}
-                  variants={accordionItemVariants}
-                >
+                <motion.div key={faq.id} variants={accordionItemVariants}>
                   <AccordionItem
                     value={faq.id}
-                    className="border border-customBg/10 rounded-lg px-6 py-2 bg-white/80 hover:bg-white/90 transition-colors"
+                    className="rounded-lg border border-customBg/10 bg-white/80 px-6 py-2 transition-colors hover:bg-white/90"
                   >
-                    <AccordionTrigger className="text-left text-lg font-semibold text-gray-800 hover:text-customBg transition-colors">
+                    <AccordionTrigger className="text-left text-lg font-semibold text-gray-800 transition-colors hover:text-customBg">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-gray-600 pt-4 pb-2">
+                    <AccordionContent className="pb-2 pt-4 text-gray-600">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -179,90 +210,95 @@ export default function FaqSection({ faqs, comparisonData }) {
         </div>
       </div>
 
-      <motion.div 
-        className="bg-gradient-to-br lg:mt-[220px] lg:min-w-[30%] max-lg:container mx-auto h-fit from-customBg to-[#033049] text-primary-foreground rounded-2xl px-4 py-7 md:p-8 shadow-xl relative overflow-hidden"
+      <motion.div
+        className="relative mx-auto h-fit overflow-hidden rounded-2xl bg-gradient-to-br from-customBg to-[#033049] px-4 py-7 text-primary-foreground shadow-xl max-lg:container md:p-8 lg:mt-[220px] lg:min-w-[30%]"
         variants={comparisonCardVariants}
       >
         <div className="absolute inset-0 opacity-10">
-          <motion.div className="absolute top-8 right-8 w-16 h-16 border-2 border-primary-foreground rounded-full" variants={circleVariants} animate="animate"></motion.div>
-          <motion.div className="absolute bottom-12 left-8 w-12 h-12 border-2 border-primary-foreground rounded-full" variants={circleVariants} animate="animate" transition={{ delay: 1 }}></motion.div>
-          <motion.div className="absolute top-1/2 right-16 w-8 h-8 border-2 border-primary-foreground rounded-full" variants={circleVariants} animate="animate" transition={{ delay: 2 }}></motion.div>
+          <motion.div
+            className="absolute right-8 top-8 h-16 w-16 rounded-full border-2 border-primary-foreground"
+            variants={circleVariants}
+            animate="animate"
+          ></motion.div>
+          <motion.div
+            className="absolute bottom-12 left-8 h-12 w-12 rounded-full border-2 border-primary-foreground"
+            variants={circleVariants}
+            animate="animate"
+            transition={{ delay: 1 }}
+          ></motion.div>
+          <motion.div
+            className="absolute right-16 top-1/2 h-8 w-8 rounded-full border-2 border-primary-foreground"
+            variants={circleVariants}
+            animate="animate"
+            transition={{ delay: 2 }}
+          ></motion.div>
         </div>
 
         <div className="relative z-10">
-          <motion.h3 className="text-2xl font-bold mb-8" variants={itemVariants}>
+          <motion.h3 className="mb-8 text-2xl font-bold" variants={itemVariants}>
             Stop Waiting. Start Building.
           </motion.h3>
 
-          <motion.div 
-            className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-6 mb-6"
+          <motion.div
+            className="mb-6 rounded-xl bg-primary-foreground/10 p-6 backdrop-blur-sm"
             variants={itemVariants}
           >
-            <h4 className="text-lg font-semibold mb-4 text-white">
-              Without us:
-            </h4>
+            <h4 className="mb-4 text-lg font-semibold text-white">Without us:</h4>
             <ul className="space-y-2">
               {comparisonData.withoutUs.map((item, index) => (
-                <motion.li 
-                  key={index} 
+                <motion.li
+                  key={index}
                   className="flex items-start gap-3"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <CircleAlert  className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
+                  <CircleAlert className="mt-0.5 h-4 w-4 flex-shrink-0 text-white" />
                   <span className="text-sm text-white/90">{item}</span>
                 </motion.li>
               ))}
             </ul>
           </motion.div>
 
-          <motion.div 
-            className="bg-primary-foreground/10 text-white backdrop-blur-sm rounded-xl p-6 mb-8"
+          <motion.div
+            className="mb-8 rounded-xl bg-primary-foreground/10 p-6 text-white backdrop-blur-sm"
             variants={itemVariants}
           >
-            <h4 className="text-lg font-semibold mb-4">With us:</h4>
+            <h4 className="mb-4 text-lg font-semibold">With us:</h4>
             <ul className="space-y-2">
               {comparisonData.withUs.map((item, index) => (
-                <motion.li 
-                  key={index} 
+                <motion.li
+                  key={index}
                   className="flex items-start gap-3"
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <BadgeCheck className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                  <BadgeCheck className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <span className="text-sm text-white/90">{item}</span>
                 </motion.li>
               ))}
             </ul>
           </motion.div>
 
-          <motion.div 
-            className="text-center"
-            variants={itemVariants}
-          >
-            <motion.div
-              variants={buttonVariants}
-              whileHover="hover"
-              whileTap="tap"
-            >
-              <Button className="bg-primary-foreground text-primary font-bold py-5 px-8 rounded-full shadow-lg hover:bg-primary-foreground/90 transition-all duration-300 flex items-center gap-2 mx-auto">
+          <motion.div className="text-center" variants={itemVariants}>
+            <motion.div variants={buttonVariants} whileHover="hover" whileTap="tap">
+              <Button className="mx-auto flex items-center gap-2 rounded-full bg-primary-foreground px-8 py-5 font-bold text-primary shadow-lg transition-all duration-300 hover:bg-primary-foreground/90">
                 Start Your Project Now
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="h-5 w-5" />
               </Button>
             </motion.div>
 
-            <motion.p 
-              className="text-primary-foreground/80 text-sm mt-4 flex items-center justify-center gap-2"
+            <motion.p
+              className="mt-4 flex items-center justify-center gap-2 text-sm text-primary-foreground/80"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <Shield className="w-4 h-4" />
+              <Shield className="h-4 w-4" />
               Secure process. No credit card required.
             </motion.p>
           </motion.div>

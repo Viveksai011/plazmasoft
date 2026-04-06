@@ -43,7 +43,6 @@ export const comparisonData = {
     "You spend months finding the 'perfect' developer",
     "You waste $20K+ learning expensive lessons",
     "That perfect market opportunity passes you by",
-    
   ],
   withUs: [
     "Working MVP in your hands within 8 days",
@@ -52,4 +51,3 @@ export const comparisonData = {
     "Peace of mind building the right thing",
   ],
 };
-

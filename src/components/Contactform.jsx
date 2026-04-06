@@ -60,12 +60,7 @@ const Contactform = () => {
 
     const { firstName, lastName, email, company, message } = formData;
 
-    if (
-      !firstName.trim() ||
-      !lastName.trim() ||
-      !email.trim() ||
-      !message.trim()
-    ) {
+    if (!firstName.trim() || !lastName.trim() || !email.trim() || !message.trim()) {
       toast("Missing Fields", {
         description: "Please fill in all required fields",
         variant: "destructive",
@@ -84,11 +79,7 @@ const Contactform = () => {
       return;
     }
 
-    if (
-      !emailConfig.serviceId ||
-      !emailConfig.templateId ||
-      !emailConfig.userId
-    ) {
+    if (!emailConfig.serviceId || !emailConfig.templateId || !emailConfig.userId) {
       toast("Configuration Error", {
         description: "Email service is not properly configured.",
         variant: "destructive",
@@ -136,31 +127,31 @@ const Contactform = () => {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-      <div className="flex max-md:flex-col gap-2">
-        <div className="flex flex-col gap-2 w-full md:w-1/2">
+      <div className="flex gap-2 max-md:flex-col">
+        <div className="flex w-full flex-col gap-2 md:w-1/2">
           <Label className="text-sm text-gray-600">First name</Label>
           <Input
             name="firstName"
             value={formData.firstName}
             onChange={handleChange}
             placeholder="Jane"
-            className="bg-white/5 border ring-1 ring-[#E7F6FE]rounded-lg px-4 py-2 text-customBg placeholder:text-gray-400 outline-none"
+            className="ring-[#E7F6FE]rounded-lg border bg-white/5 px-4 py-2 text-customBg outline-none ring-1 placeholder:text-gray-400"
           />
         </div>
-        <div className="flex flex-col gap-2 w-full md:w-1/2">
+        <div className="flex w-full flex-col gap-2 md:w-1/2">
           <Label className="text-sm text-gray-600">Last name</Label>
           <Input
             name="lastName"
             value={formData.lastName}
             onChange={handleChange}
             placeholder="Smith"
-            className="bg-white/5 border ring-1 ring-[#E7F6FE]rounded-lg px-4 py-2 text-customBg placeholder:text-gray-400 outline-none"
+            className="ring-[#E7F6FE]rounded-lg border bg-white/5 px-4 py-2 text-customBg outline-none ring-1 placeholder:text-gray-400"
           />
         </div>
       </div>
 
-      <div className="flex max-md:flex-col gap-2">
-        <div className="flex flex-col gap-2 w-full md:w-1/2">
+      <div className="flex gap-2 max-md:flex-col">
+        <div className="flex w-full flex-col gap-2 md:w-1/2">
           <Label className="text-sm text-gray-600">Email</Label>
           <Input
             type="email"
@@ -168,17 +159,17 @@ const Contactform = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="jane@framer.com"
-            className="bg-white/5 border ring-1 ring-[#E7F6FE]rounded-lg px-4 py-2 text-customBg placeholder:text-gray-400 outline-none"
+            className="ring-[#E7F6FE]rounded-lg border bg-white/5 px-4 py-2 text-customBg outline-none ring-1 placeholder:text-gray-400"
           />
         </div>
-        <div className="flex flex-col gap-2 w-full md:w-1/2">
+        <div className="flex w-full flex-col gap-2 md:w-1/2">
           <Label className="text-sm text-gray-600">Company name</Label>
           <Input
             name="company"
             value={formData.company}
             onChange={handleChange}
             placeholder="Framer"
-            className="bg-white/5 border ring-1 ring-[#E7F6FE]rounded-lg px-4 py-2 text-customBg placeholder:text-gray-400 outline-none"
+            className="ring-[#E7F6FE]rounded-lg border bg-white/5 px-4 py-2 text-customBg outline-none ring-1 placeholder:text-gray-400"
           />
         </div>
       </div>
@@ -191,13 +182,13 @@ const Contactform = () => {
           onChange={handleChange}
           rows={4}
           placeholder="Describe your problem"
-          className="bg-white/5 border ring-1 ring-[#E7F6FE]rounded-lg px-4 py-2 text-customBg placeholder:text-gray-400 outline-none"
+          className="ring-[#E7F6FE]rounded-lg border bg-white/5 px-4 py-2 text-customBg outline-none ring-1 placeholder:text-gray-400"
         />
       </div>
 
       <Button
         type="submit"
-        className="bg-customBg text-white hover:bg-customBg/80 w-full sm:w-auto sm:justify-self-center px-8"
+        className="w-full bg-customBg px-8 text-white hover:bg-customBg/80 sm:w-auto sm:justify-self-center"
         disabled={isSubmitting}
       >
         {isSubmitting ? (

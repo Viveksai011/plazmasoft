@@ -3,31 +3,29 @@ import ProjectModal from "@/components/servicescomponent/Projectmodal";
 import * as motion from "motion/react-client";
 
 export default function ProjectsSection({ projects }) {
-
   const circle1Variants = {
     initial: { x: 0, y: 0 },
-    hover: { x: 40, y: -30 }
+    hover: { x: 40, y: -30 },
   };
-  
+
   const circle2Variants = {
     initial: { x: 0, y: 0 },
-    hover: { x: -50, y: 40 }
+    hover: { x: -50, y: 40 },
   };
-  
+
   const circle3Variants = {
     initial: { x: 0, y: 0 },
-    hover: { x: 60, y: 50 }
+    hover: { x: 60, y: 50 },
   };
-  
 
   const cardVariants = {
-    initial: { 
-      opacity: 0, 
+    initial: {
+      opacity: 0,
       y: 30,
-      scale: 0.95
+      scale: 0.95,
     },
-    animate: { 
-      opacity: 1, 
+    animate: {
+      opacity: 1,
       y: 0,
       scale: 1,
       transition: {
@@ -57,50 +55,46 @@ export default function ProjectsSection({ projects }) {
   };
 
   return (
-    <motion.section 
-      className="py-16 relative px-4 max-w-[86rem] mx-auto overflow-hidden"
+    <motion.section
+      className="relative mx-auto max-w-[86rem] overflow-hidden px-4 py-16"
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <motion.div 
-        className="absolute inset-0 opacity-10"
-        whileHover="hover"
-        initial="initial"
-      >
-        <motion.div 
+      <motion.div className="absolute inset-0 opacity-10" whileHover="hover" initial="initial">
+        <motion.div
           variants={circle1Variants}
           initial="initial"
           whileHover="hover"
           transition={{ type: "spring", stiffness: 100, damping: 10 }}
-          className="absolute top-8 right-8 w-40 h-40 border-2 bg-rose-500 border-primary-foreground rounded-full"
+          className="absolute right-8 top-8 h-40 w-40 rounded-full border-2 border-primary-foreground bg-rose-500"
         />
-        <motion.div 
+        <motion.div
           variants={circle2Variants}
           initial="initial"
           whileHover="hover"
           transition={{ type: "spring", stiffness: 100, damping: 10 }}
-          className="absolute top-8 left-8 w-40 h-40 border-2 bg-rose-500 border-primary-foreground rounded-full"
+          className="absolute left-8 top-8 h-40 w-40 rounded-full border-2 border-primary-foreground bg-rose-500"
         />
-        <motion.div 
+        <motion.div
           variants={circle3Variants}
           initial="initial"
           whileHover="hover"
           transition={{ type: "spring", stiffness: 100, damping: 10 }}
-          className="absolute bottom-12 left-8 w-40 h-40 border-2 bg-yellow-500 border-primary-foreground rounded-full"
+          className="absolute bottom-12 left-8 h-40 w-40 rounded-full border-2 border-primary-foreground bg-yellow-500"
         />
-        <motion.div 
+        <motion.div
           variants={circle3Variants}
           initial="initial"
           whileHover="hover"
           transition={{ type: "spring", stiffness: 100, damping: 10 }}
-          className="absolute top-1/2 right-16 w-40 h-40 border-2 bg-blue-600 border-primary-foreground rounded-full"
+          className="absolute right-16 top-1/2 h-40 w-40 rounded-full border-2 border-primary-foreground bg-blue-600"
         />
       </motion.div>
 
-      <div className="text-center mb-12 relative z-10">
-        <motion.h2 
-          className="text-4xl text-center font-semibold text-black"
+      <div className="relative z-10 mb-12 text-center">
+        <motion.h2
+          className="text-center text-4xl font-semibold text-black"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -109,16 +103,16 @@ export default function ProjectsSection({ projects }) {
           OUR PROJECT
         </motion.h2>
 
-        <motion.div 
-          className="mt-4 mb-6 h-1 w-32 bg-secondarycustomBg mx-auto"
+        <motion.div
+          className="mx-auto mb-6 mt-4 h-1 w-32 bg-secondarycustomBg"
           initial={{ width: 0 }}
           whileInView={{ width: 128 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
         />
-        
-        <motion.p 
-          className="text-gray-600 text-lg max-w-2xl mx-auto"
+
+        <motion.p
+          className="mx-auto max-w-2xl text-lg text-gray-600"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -128,8 +122,8 @@ export default function ProjectsSection({ projects }) {
         </motion.p>
       </div>
 
-      <motion.div 
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 relative z-10"
+      <motion.div
+        className="relative z-10 mb-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
         variants={containerVariants}
         initial="initial"
         whileInView="animate"
@@ -140,8 +134,8 @@ export default function ProjectsSection({ projects }) {
             <motion.div
               variants={cardVariants}
               whileHover="hover"
-              className={`group relative backdrop-blur-sm bg-white/70 border border-white/20 shadow-lg rounded-2xl overflow-hidden hover:border-purple-500/30 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 ${
-                project.featured ? "ring-2 ring-purple-500/20 bg-white/80" : ""
+              className={`group relative overflow-hidden rounded-2xl border border-white/20 bg-white/70 shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-purple-500/30 hover:shadow-xl hover:shadow-purple-500/10 ${
+                project.featured ? "bg-white/80 ring-2 ring-purple-500/20" : ""
               }`}
             >
               <div className="relative h-48 overflow-hidden">
@@ -149,13 +143,13 @@ export default function ProjectsSection({ projects }) {
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
               </div>
 
               <div className="p-6 backdrop-blur-sm">
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="mb-4 flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIndex) => (
                     <motion.span
                       key={tagIndex}
@@ -163,10 +157,10 @@ export default function ProjectsSection({ projects }) {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: tagIndex * 0.1 }}
-                      className={`px-3 py-1 rounded-full text-xs font-medium ${
+                      className={`rounded-full px-3 py-1 text-xs font-medium ${
                         project.featured && tagIndex === 0
                           ? "bg-customBg text-white"
-                          : "bg-gray-100 group-hover:bg-customBg text-gray-700 group-hover:text-white transition-colors duration-300 border border-gray-200"
+                          : "border border-gray-200 bg-gray-100 text-gray-700 transition-colors duration-300 group-hover:bg-customBg group-hover:text-white"
                       }`}
                     >
                       {tag}
@@ -174,8 +168,8 @@ export default function ProjectsSection({ projects }) {
                   ))}
                 </div>
 
-                <motion.h3 
-                  className="text-xl font-bold text-gray-900 mb-3 group-hover:text-customBg transition-colors duration-300"
+                <motion.h3
+                  className="mb-3 text-xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-customBg"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -184,8 +178,8 @@ export default function ProjectsSection({ projects }) {
                   {project.title}
                 </motion.h3>
 
-                <motion.p 
-                  className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-900 transition-colors duration-300"
+                <motion.p
+                  className="text-sm leading-relaxed text-gray-600 transition-colors duration-300 group-hover:text-gray-900"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -195,7 +189,7 @@ export default function ProjectsSection({ projects }) {
                 </motion.p>
               </div>
 
-              <div className="absolute inset-0 bg-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-purple-500/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </motion.div>
           </ProjectModal>
         ))}

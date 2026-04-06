@@ -7,18 +7,18 @@ export function TestimonialsSection({ children, testimonials = [] }) {
   const secondRow = data.slice(Math.ceil(data.length / 2));
 
   return (
-    <section className="py-20 px-4 max-w-[92rem] w-full relative overflow-hidden mx-auto">
-      <div className="text-center mb-16">{children}</div>
+    <section className="relative mx-auto w-full max-w-[92rem] overflow-hidden px-4 py-20">
+      <div className="mb-16 text-center">{children}</div>
 
-      <div className="z-10 absolute left-0 h-[75%] top-[28%] inset-y-0 w-[15%] bg-gradient-to-r from-[#E7F6FE] to-transparent" />
-      <div className="z-10 absolute right-0 h-[75%] top-[28%] inset-y-0 w-[15%] bg-gradient-to-l from-[#E7F6FE] to-transparent" />
+      <div className="absolute inset-y-0 left-0 top-[28%] z-10 h-[75%] w-[15%] bg-gradient-to-r from-[#E7F6FE] to-transparent" />
+      <div className="absolute inset-y-0 right-0 top-[28%] z-10 h-[75%] w-[15%] bg-gradient-to-l from-[#E7F6FE] to-transparent" />
 
       {firstRow.length > 0 && (
-        <div className="flex animate-marquee-left hover:[animation-play-state:paused] mb-8">
+        <div className="animate-marquee-left mb-8 flex hover:[animation-play-state:paused]">
           {[...firstRow, ...firstRow, ...firstRow].map((testimonial, index) => (
             <div
               key={`${testimonial.id}-${index}`}
-              className="flex-shrink-0 max-w-[26rem] w-full mx-4"
+              className="mx-4 w-full max-w-[26rem] flex-shrink-0"
             >
               <TestimonialCard testimonial={testimonial} />
             </div>
@@ -27,17 +27,15 @@ export function TestimonialsSection({ children, testimonials = [] }) {
       )}
 
       {secondRow.length > 0 && (
-        <div className="flex animate-marquee-right hover:[animation-play-state:paused]">
-          {[...secondRow, ...secondRow, ...secondRow].map(
-            (testimonial, index) => (
-              <div
-                key={`${testimonial.id}-${index}`}
-                className="flex-shrink-0 max-w-[26rem] w-full mx-4"
-              >
-                <TestimonialCard testimonial={testimonial} />
-              </div>
-            )
-          )}
+        <div className="animate-marquee-right flex hover:[animation-play-state:paused]">
+          {[...secondRow, ...secondRow, ...secondRow].map((testimonial, index) => (
+            <div
+              key={`${testimonial.id}-${index}`}
+              className="mx-4 w-full max-w-[26rem] flex-shrink-0"
+            >
+              <TestimonialCard testimonial={testimonial} />
+            </div>
+          ))}
         </div>
       )}
     </section>

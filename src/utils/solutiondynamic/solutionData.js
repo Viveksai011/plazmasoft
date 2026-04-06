@@ -30,7 +30,7 @@ export const solutionData = {
       description:
         "We create secure and high-performance fintech applications that simplify payments, improve customer experience, and support long-term business growth.",
       cta: "Book Your Free Consultation Now",
-       image: "/img/svgviewer.svg",
+      image: "/img/svgviewer.svg",
       imageText: "Get your custom fintech app estimate in 72 hours",
     },
 
@@ -109,8 +109,7 @@ export const solutionData = {
       {
         title: "Payment & Wallet Solutions",
         icon: "🔐",
-        subpara:
-          "Reliable payment systems and digital wallet experiences built for modern users",
+        subpara: "Reliable payment systems and digital wallet experiences built for modern users",
         icones: ["💳", "🔐", "📊", "⚡"],
         features: [
           "Create smooth transaction and wallet management flows",
@@ -121,8 +120,7 @@ export const solutionData = {
       {
         title: "Analytics & User Insights",
         icon: "📊",
-        subpara:
-          "Track product performance and user behavior to improve financial experiences",
+        subpara: "Track product performance and user behavior to improve financial experiences",
         icones: ["💳", "🔐", "📊", "⚡"],
         features: [
           "Measure onboarding, engagement, and transaction success",
@@ -133,8 +131,7 @@ export const solutionData = {
       {
         title: "Performance & Scalability",
         icon: "⚡",
-        subpara:
-          "Fintech products engineered for speed, reliability, and future expansion",
+        subpara: "Fintech products engineered for speed, reliability, and future expansion",
         icones: ["💳", "🔐", "📊", "⚡"],
         features: [
           "Optimize core flows for fast performance",
@@ -245,14 +242,7 @@ export const solutionData = {
         title: "Fintech App Design",
         description:
           "A secure and scalable fintech application built for smooth transactions, intuitive onboarding, and modern financial user experiences.",
-        techStack: [
-          "React Native",
-          "Node.js",
-          "JavaScript",
-          "Figma",
-          "MongoDB",
-          "CSS",
-        ],
+        techStack: ["React Native", "Node.js", "JavaScript", "Figma", "MongoDB", "CSS"],
         demoLink: "https://example.com/fintech-app-demo",
         category: "Fintech Development",
       },
@@ -387,8 +377,7 @@ export const solutionData = {
       {
         title: "Live Tracking & Dispatch",
         icon: "📍",
-        subpara:
-          "Real-time location tracking and trip coordination for better ride management",
+        subpara: "Real-time location tracking and trip coordination for better ride management",
         icones: ["🚕", "📍", "💳", "⚙️"],
         features: [
           "Enable real-time ride and driver tracking",
@@ -399,8 +388,7 @@ export const solutionData = {
       {
         title: "Payments & Booking Flows",
         icon: "💳",
-        subpara:
-          "Smooth booking and payment journeys built for reliability and ease of use",
+        subpara: "Smooth booking and payment journeys built for reliability and ease of use",
         icones: ["🚕", "📍", "💳", "⚙️"],
         features: [
           "Design fast and intuitive ride booking flows",
@@ -523,14 +511,7 @@ export const solutionData = {
         title: "Taxi Booking System",
         description:
           "A real-time taxi booking application with rider booking, driver tracking, admin controls, and optimized ride management workflows.",
-        techStack: [
-          "React Native",
-          "Node.js",
-          "Google Maps API",
-          "JavaScript",
-          "MongoDB",
-          "Figma",
-        ],
+        techStack: ["React Native", "Node.js", "Google Maps API", "JavaScript", "MongoDB", "Figma"],
         demoLink: "https://example.com/taxi-booking-demo",
         category: "Taxi App Development",
       },
@@ -608,8 +589,7 @@ export const solutionData = {
         {
           title: "Product Catalog & Search",
           icon: "🛒",
-          subpara:
-            "Organized product listings with powerful search and filtering capabilities",
+          subpara: "Organized product listings with powerful search and filtering capabilities",
           icones: ["🛒", "🔍", "💳", "⚙️"],
           features: [
             "Build searchable product catalogs with categories and filters",
@@ -620,8 +600,7 @@ export const solutionData = {
         {
           title: "Real-Time Order Tracking",
           icon: "📍",
-          subpara:
-            "Live tracking of orders from placement to delivery for enhanced transparency",
+          subpara: "Live tracking of orders from placement to delivery for enhanced transparency",
           icones: ["🛒", "🔍", "💳", "⚙️"],
           features: [
             "Enable real-time order status updates",
@@ -632,8 +611,7 @@ export const solutionData = {
         {
           title: "Inventory Management",
           icon: "📦",
-          subpara:
-            "Real-time inventory tracking and stock management for businesses",
+          subpara: "Real-time inventory tracking and stock management for businesses",
           icones: ["🛒", "🔍", "💳", "⚙️"],
           features: [
             "Track product stock levels in real-time",
@@ -644,8 +622,7 @@ export const solutionData = {
         {
           title: "Payments & Checkout",
           icon: "💳",
-          subpara:
-            "Secure and seamless payment integration for easy transactions",
+          subpara: "Secure and seamless payment integration for easy transactions",
           icones: ["🛒", "🔍", "💳", "⚙️"],
           features: [
             "Integrate multiple payment gateways",
@@ -757,14 +734,7 @@ export const solutionData = {
         title: "Online Grocery Delivery App",
         description:
           "A comprehensive grocery delivery platform with product catalog, real-time order tracking, inventory management, and seamless payment integration.",
-        techStack: [
-          "React Native",
-          "Node.js",
-          "MongoDB",
-          "Stripe API",
-          "JavaScript",
-          "Figma",
-        ],
+        techStack: ["React Native", "Node.js", "MongoDB", "Stripe API", "JavaScript", "Figma"],
         demoLink: "https://example.com/grocery-app-demo",
         category: "E-Commerce App Development",
       },
@@ -812,5 +782,4 @@ export const solutionData = {
       },
     ],
   },
-  
 };

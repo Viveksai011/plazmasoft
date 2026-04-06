@@ -1,4 +1,4 @@
-export const  Testimonaldata = [
+export const Testimonaldata = [
   {
     id: 1,
     name: "Jerome Bell",

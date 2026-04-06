@@ -53,10 +53,6 @@ export const processSteps = [
   },
 ];
 
-
-
-
-
 export const processstepsHire = [
   {
     step: "01",

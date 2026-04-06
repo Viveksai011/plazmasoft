@@ -1,1 +1,1 @@
-export const title = "PlazmeSoft"
+export const title = "PlazmeSoft";
